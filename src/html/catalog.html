@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Главная'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="main">
+		<section id="catalog">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="underlined header-block">
+							<h1>Каталог продукции</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/product_card.html', './data/catalog.json')
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

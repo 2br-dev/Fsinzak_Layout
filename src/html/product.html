@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Главная'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="product">
+		<section id="product-details">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<ul class="breadcrumbs">
+							<li><a class="home" href=""><span>Главная</span></a></li>
+							<li><a href=""><span>Каталог</span></a></li>
+							<li><span>Бакалея</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row flex vcenter">
+					<div class="col xl4 offset-xl1 l5 m5 s12">
+						<div class="lazy q product-image" data-src="/img/fish/bakalea.jpg"></div>
+					</div>
+					<div class="col xl5 offset-xl1 l7 m7 s12">
+						<div class="product-details">
+							<h1>Вермишель 60 г Анаком с говяжьим бульоном</h1>
+							<h2>Подробней о товаре</h2>
+							<div class="kv-pair">
+								<div class="key">Количество упаковок</div>
+								<div class="separator"></div>
+								<div class="value">4 шт.</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Вкус</div>
+								<div class="separator"></div>
+								<div class="value">говядина</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Количество порций</div>
+								<div class="separator"></div>
+								<div class="value">1</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Упаковка</div>
+								<div class="separator"></div>
+								<div class="value">пакет</div>
+							</div>
+							<div class="kv-pair">
+								<div class="key">Добавки</div>
+								<div class="separator"></div>
+								<div class="value">кусочки грибов</div>
+							</div>
+							<div class="price-wrapper">
+								<div class="row flex">
+									<div class="col m6 s12 align-right-m-down">
+										Цена: <span class="price">980₽</span>
+									</div>
+									<div class="col m6 s12">
+										<div class="card-basket-wrapper">
+											<a href="" class="btn @@class basket-add">В корзину</a>
+											<div class="basket-count hidden">
+												<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
+												<div class="counter-wrapper"><input type="number" value=1></div>
+												<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="similar">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="underlined header-block">
+							<h2>Похожие товары</h2>
+							<a href="./catalog.html">
+								<span class="hide-m-down">Смотреть все</span>
+								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/product_card.html', './data/gastronomy_small.json')
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

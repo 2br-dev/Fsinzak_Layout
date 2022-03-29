@@ -1,0 +1,560 @@
+body{
+
+	& .explanation-tooltip-wrapper{
+	
+		position: relative;
+		display: inline-block;
+
+		& .explanation-tooltip{
+
+			position: relative;
+			position: absolute;
+			pointer-events: none;
+			min-width: 200px;
+			bottom: calc(100% + 8px);
+			left: 50%;
+			transform: translate(-50%, -20px);
+			z-index: 2;
+			background: #fff;
+			white-space: nowrap;
+			padding: 6px;
+			border-radius: 6px;
+			box-shadow: 0 2px 8px rgba(black, .2);
+			font-style: normal;
+			display: none;
+
+			& *{
+				color: $text;
+			}
+
+			&:before{
+				position: absolute;
+				content: '';
+				display: block;
+				width: 0;
+				height: 0;
+				border: 8px solid transparent;
+				bottom: -16px;
+				left: calc(50% - 8px);
+				border-top-color: #fff;
+			}
+		}
+
+		&:hover .explanation-tooltip{
+			display: block;
+		}
+	}
+
+	& .search-wrapper{
+		display: inline-block;
+		height: 55px;
+		padding: 8px;
+		width: 100%;
+
+		& .input-wrapper{
+			height: 39px;
+			background: #efefef;
+			display: flex;
+			padding: 2px;
+			border-radius: 4px;
+			box-shadow: 0 1px 3px #ccc inset;
+			
+			& input{
+				border: 0;
+				background: transparent;
+				display: block;
+				height: 35px;
+				padding: 0 6px;
+				width: 100%;
+
+				&::placeholder{
+					color: $placeholder;
+				}
+
+				&:focus{
+					outline: none;
+				}
+			}
+			
+			& .btn{
+				width: 35px;
+				height: 35px;
+				line-height: 35px;
+				text-align: center;
+				border-radius: 4px;
+				padding: 0;
+				flex-shrink: 0;
+			}
+		}
+	}
+
+	& .mobile-sticky{
+		background: #fff;
+		position: sticky;
+		top: 0;
+	}
+
+	& .btn{
+		line-height: 36px;
+		padding: 0 16px;
+		display: inline-block;
+		border-radius: 6px;
+		background: $accent-gradient;
+		color: #fff;
+		white-space: nowrap;
+
+		&.disabled{
+			box-shadow: 0 0 0 1px $fogged inset;
+			background: #fff;
+			color: $fogged;
+			cursor: not-allowed;
+		}
+
+		&.outlined{
+			box-shadow: 0 0 0 1px $accent inset;
+			background: #fff;
+			color: $accent;
+		}
+	}
+
+	& .lazy{
+
+		background-size: cover;
+		display: block;
+		width: 100%;
+
+		&.h{
+			padding-bottom: 75%;
+		}
+
+		&.q{
+			padding-bottom: 100%;
+		}
+
+		&.v{
+			padding-bottom: 120%;
+		}
+	}
+
+	& .product-card{
+
+		margin-bottom: 1.5rem;
+		box-shadow: 0 0 0 1px #efefef inset;
+		padding: 10px;
+		border-radius: 12px;
+		transition: box-shadow .2s;
+
+		& .lazy{
+			
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			border-radius: 12px;
+			margin-bottom: 20px;
+			transition: box-shadow .4s;
+			display: block;
+		}
+		
+		&:hover{
+
+			box-shadow: 0 0 0 1px #efefef inset, 0 2px 12px rgba(black, .2);;
+
+			& .title{
+				color: $accent;
+			}
+		}
+		
+		& .title{
+			color: $text;
+			margin-bottom: 10px;
+			font-weight: 600;
+			transition: color .2s;
+		}
+		
+		& .remains{
+			margin-bottom: 10px;
+		}
+		
+		& .product-card-footer{
+			
+			display: flex;
+			align-items: center;
+			
+			& .pcf-left{
+				flex-grow: 1;
+			}
+		}
+
+		@media(max-width: $medium){
+			display: flex;
+			align-items: center;
+
+			& .product-image-wrapper{
+
+				flex-shrink: 0;
+				width: 30%;
+				
+				& .lazy{
+					margin: 0;
+					padding-bottom: 100%;
+				}
+			}
+
+			& .product-data-wrapper{
+				padding-left: 20px;
+			}
+		}
+	}
+
+	& .hidden{
+		display: none !important;
+	}
+
+	& .underlined{
+		border-bottom: 1px solid $primary;
+	}
+
+	& .fav-wrapper{
+
+		& input[type="checkbox"]{
+					
+			display: none;
+			
+			& + label{
+				
+				display: inline-block;
+				color: $accent;
+				font-size: 26px;
+				cursor: pointer;
+				
+				&:before{
+					content: '\F02D5';
+					font-family: 'Material Design Icons';
+				}
+			}
+			
+			&:checked + label{
+				
+				&:before{
+					content: '\F02D1';
+					font-family: 'Material Design Icons';
+				}
+			}
+		}
+	}
+
+	& .card-basket-wrapper{
+
+		& .basket-count{
+    
+			display: flex;
+			
+			& input{
+				
+				border: 0;
+				height: 100%;
+				width: 50px;
+				text-align: center;
+				font-size: 21px;
+
+				&:focus{
+					outline: none;
+				}
+				
+				&::-webkit-inner-spin-button{
+					display: none;
+				}
+			}
+		}
+
+		& .btn.disabled{
+    
+			position: relative;
+			pointer-events: all;
+			
+			& .limits{
+				position: relative;
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				transform: translateY(20px);
+				background: #fff;
+				width: 240px;
+				padding: 10px;
+				border-radius: 12px;
+				box-shadow: 0 2px 8px rgba(black, .2);
+				transition: transform .2s, opacity .2s;
+				opacity: 0;
+				pointer-events: none;
+
+				@media(max-width: $small){
+					left: 50%;
+					transform: translate(-50%, 20px);
+				}
+				
+				& ul{
+					margin: 0;
+
+					& li{
+
+						& i{
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+			
+			&:hover .limits{    
+				opacity: 1;
+				transform: translateY(0);
+				pointer-events: all;
+
+				@media(max-width: $small){
+					left: 50%;
+					transform: translate(-50%, 0px);
+				}
+			}
+		}
+	}
+
+	& section{
+		padding: 4vmin 0;
+	}
+
+	& .pop-card{
+    
+		display: flex;
+		padding: 20px;
+		border-radius: 6px;
+		align-items: center;
+		background: #fff;
+
+		@media(max-width: $medium){
+			flex-direction: column;
+		}
+		
+		& .image-wrapper{
+
+			width: 30%;
+			flex-shrink: 0;
+
+			@media(max-width: $medium){
+				width: 70%;
+				margin-bottom: 20px;
+			}
+			
+			& .lazy{
+				
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+		
+		& .data-wrapper{
+			
+			flex-grow: 1;
+			padding-left: 20px;
+			
+			& .title{
+
+				font-size: 21px;
+				font-weight: 600;
+			}
+			
+			& .remains{
+				margin: 10px 0;
+			}
+			
+			& .pop-card-bottom{
+				
+				display: flex;
+				align-items: center;
+				
+				& .pcb-left{
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+
+	& .success{
+		color: $success;
+	}
+
+	& .warning{
+		color: $warning;
+	}
+
+	& .error{
+		color: $error;
+	}
+
+	& .swiper-pagination{
+
+		height: 32px;
+		text-align: center;
+		margin: 10px 0;
+
+		& .swiper-pagination-bullet{
+
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			border-radius: 50%;
+			transition: box-shadow .4s;
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: scale(.2);
+				background: $primary;
+				border-radius: 50%;
+				transition: transform .2s;
+			}
+
+			&.swiper-pagination-bullet-active{
+
+				&:before{
+
+					transform: scale(.5);
+				}
+			}
+		}
+	}
+
+	*:focus{
+		outline: none;
+	}
+
+	& .input-field{
+
+		position: relative;
+		border-bottom: 1px solid #fff;
+		flex-grow: 1;
+		
+		& input{
+			
+			display: block;
+			width: 100%;
+			height: 35px;
+			border: 0;
+			background: transparent;
+			font-family: 'Montserrat';
+			font-size: 16px;
+			
+			&::placeholder{
+				color: transparent;
+			}
+			
+			& ~ label{
+				position: absolute;
+				left: 3px;
+				top: 6px;
+				pointer-events: none;
+				transition: transform .2s, opacity .2s, font-size .2s;
+			}
+			
+			&:not(:placeholder-shown), &:focus{
+				
+				& ~ label{
+					font-size: 12px;
+					transform: translate(-2px, -17px);
+					opacity: .7
+				}
+			}
+		}
+	}
+
+	& .header-block{
+
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 10px;
+		
+		& h2{
+			flex-grow: 1;
+			margin: 0;
+		}
+	}
+
+	& ul.breadcrumbs{
+
+		display: flex;
+		
+		& li{
+			
+			& a{
+				
+				&:after{
+					content: '\F0142';
+					font-family: 'Material Design Icons';
+					color: $accent;
+					margin: 0 10px;
+				}
+				
+				&:before{
+					font-family: 'Material Design Icons';
+					margin-left: 0;
+				}
+			}
+			
+			
+			& .home{
+				
+				text-align: center;
+				
+				@media(max-width: $large){
+
+					&:before{
+						content: '\F02DC';
+						margin-left: 0;
+					}
+				}
+				
+				@media(max-width: $large){
+					
+					&:before{
+						margin: 0;
+					}
+					
+					
+					& span{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	& #service{
+		border: 12px dashed orange;
+		background: $text;
+	}
+
+	& .toast{
+
+		&.toast-success{
+			background: $success;
+		}
+		
+		&.toast-warning{
+			background: $warning;
+		}
+		
+		&.toast-error{
+			background: $error;
+		}
+		
+		&.toast-info{
+			background: $primary;
+		}
+	}
+}

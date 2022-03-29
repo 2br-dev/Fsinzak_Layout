@@ -1,0 +1,218 @@
+[
+	{
+		"id": "bak-1",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-2",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 50,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-3",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
+		"buttonText": "Ограничения",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-4",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-5",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет в наличии",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-6",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет получателя",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-1",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-2",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 50,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-3",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
+		"buttonText": "Ограничения",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-4",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-5",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет в наличии",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-6",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет получателя",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-1",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-2",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 50,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-3",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
+		"buttonText": "Ограничения",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-4",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-5",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет в наличии",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-6",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет получателя",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-1",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-2",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 50,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-3",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
+		"buttonText": "Ограничения",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-4",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 108,
+		"limits": "",
+		"buttonText": "В корзину",
+		"class": ""
+	},
+	{
+		"id": "bak-5",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет в наличии",
+		"class": "disabled"
+	},
+	{
+		"id": "bak-6",
+		"img": "/img/fish/bakalea.jpg",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"remains": 0,
+		"limits": "",
+		"buttonText": "Нет получателя",
+		"class": "disabled"
+	}
+]

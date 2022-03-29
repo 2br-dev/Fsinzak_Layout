@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Главная'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="main">
+		<section id="news">
+			<div class="container">
+				<div class="row">
+					<div class="news-wrapper">
+						<div class="news-entry-wrapper">
+							<div class="news-entry">
+								<div class="data-wrapper">
+									<div class="date">16 декабря 2021</div>
+									<div class="title">Предновогоднее расписание!</div>
+									<div class="intro">Уважаемые клиенты! На учреждения Хабаровска СИЗО-1, заказы принимаются до среды (22.12.2021г.) до 9:30. Доставка 27.12.2021г. На учреждения ИК№12, ИК ..</div>
+								</div>
+								<div class="link-wrapper">
+									<a href="" class="btn">Подробнее</a>
+								</div>
+								<div class="lazy" data-src="/img/news-entry.svg"></div>
+							</div>
+						</div>
+						<div class="news-entry-wrapper">
+							<div class="news-entry">
+								<div class="data-wrapper">
+									<div class="date">16 декабря 2021</div>
+									<div class="title">Предновогоднее расписание!</div>
+								</div>
+								<div class="link-wrapper">
+									<a href="" class="btn">Подробнее</a>
+								</div>
+								<div class="lazy" data-src="/img/news-entry.svg"></div>
+							</div>
+						</div>
+						<div class="news-entry-wrapper">
+							<div class="news-entry">
+								<div class="data-wrapper">
+									<div class="date">16 декабря 2021</div>
+									<div class="title">Предновогоднее расписание!</div>
+								</div>
+								<div class="link-wrapper">
+									<a href="" class="btn">Подробнее</a>
+								</div>
+								<div class="lazy" data-src="/img/news-entry.svg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper" id="news-slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="news-entry-wrapper">
+									<div class="news-entry">
+										<div class="data-wrapper">
+											<div class="date">16 декабря 2021</div>
+											<div class="title">Предновогоднее расписание!</div>
+										</div>
+										<div class="link-wrapper">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+										<div class="lazy" data-src="/img/news-entry.svg"></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="news-entry-wrapper">
+									<div class="news-entry">
+										<div class="data-wrapper">
+											<div class="date">16 декабря 2021</div>
+											<div class="title">Предновогоднее расписание!</div>
+										</div>
+										<div class="link-wrapper">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+										<div class="lazy" data-src="/img/news-entry.svg"></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="news-entry-wrapper">
+									<div class="news-entry">
+										<div class="data-wrapper">
+											<div class="date">16 декабря 2021</div>
+											<div class="title">Предновогоднее расписание!</div>
+										</div>
+										<div class="link-wrapper">
+											<a href="" class="btn">Подробнее</a>
+										</div>
+										<div class="lazy" data-src="/img/news-entry.svg"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination" id="news-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="service">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center-align">
+						<a href="" class="btn toast-trigger" data-text="Success" data-class="toast-success">Success</a>
+						<a href="" class="btn toast-trigger" data-text="Warning" data-class="toast-warning">Warning</a>
+						<a href="" class="btn toast-trigger" data-text="Error" data-class="toast-error">Error</a>
+						<a href="" class="btn toast-trigger" data-text="Info" data-class="toast-info">Info</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="bakalea">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="underlined header-block">
+							<h2>Бакалея</h2>
+							<a href="./catalog.html">
+								<span class="hide-m-down">Смотреть все</span>
+								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/product_card.html', './data/bakalea_small.json')
+				</div>
+			</div>
+		</section>
+		<section id="gastronomy">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="underlined header-block">
+							<h2>Гастрономия</h2>
+							<a href="./catalog.html">
+								<span class="hide-m-down">Смотреть все</span>
+								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/product_card.html', './data/gastronomy_small.json')
+				</div>
+			</div>
+		</section>
+		<section id="popular">
+			<div class="container">
+				<div class="col s12 center-align"><h2>Популярные товары</h2></div>
+				<div class="col s12">
+					<div class="swiper" id="popular-slider">
+						<div class="swiper-wrapper">
+							@@loop('./parts/pop-slide.html', './data/popular.json')
+						</div>
+					</div>
+					<div class="swiper-pagination" id="popular-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section id="healthy">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<div class="underlined header-block">
+							<h2>Здоровое питание</h2>
+							<a href="./catalog.html">
+								<span class="hide-m-down">Смотреть все</span>
+								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row flex">
+					@@loop('./parts/product_card.html', './data/healthy_small.json')
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

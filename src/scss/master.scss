@@ -1,0 +1,18 @@
+// Import frameworks
+@import './parts/vars';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import './framework/materialize';
+@import './framework/materialdesignicons';
+@import './framework/swiper';
+
+// // Import parts
+@import './parts/typography';
+@import './parts/media';
+@import './parts/custom_grid';
+@import './parts/helpers';
+@import './parts/header';
+@import './parts/footer';
+
+// Import pages
+@import './pages/main';
+@import './pages/product';
