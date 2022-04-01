@@ -7,6 +7,7 @@ const autoPrefixer	= require('gulp-autoprefixer');
 const source		= require('vinyl-source-stream');
 const babelify		= require('babelify');
 const browserify	= require('browserify');
+const replace 		= require('gulp-replace');
 const browserSync	= require('browser-sync').init({
 	server: {
 		baseDir: "./release/"
@@ -15,9 +16,8 @@ const browserSync	= require('browser-sync').init({
 
 gulp.task('scss', () => {
 	return gulp.src('./src/scss/**/*.scss')
-		.pipe(sass({
-			outputStyle: 'compressed',
-		}))
+		.pipe(sass())
+		.pipe(replace('url("/', 'url("../'))
 		.pipe(autoPrefixer())
 		.pipe(gulp.dest('./release/css'))
 		.pipe(browserSync.stream())
