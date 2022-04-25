@@ -1,0 +1,559 @@
+main.profile{
+
+	.profile-sections{
+	
+		& li{
+	
+			& a{
+	
+				padding-left: 10px;
+	
+				&.active{
+					border-left: 2px solid $accent;
+				}
+			}
+		}
+	
+		@media(max-width: $large){
+			display: flex;
+	
+			& li{
+	
+				flex-grow: 1;
+				text-align: center;
+	
+				& a{
+	
+					display: block;
+					padding: 0;
+	
+					& i{
+						font-size: 26px;
+					}
+	
+					&.active{
+						border-left: 0;
+						border-bottom: 2px solid $accent;
+					}
+				}
+			}
+		}
+	}
+
+	& #password{
+		display: none;
+	}
+
+	& table{
+
+		& thead{
+
+			& th{
+				font-weight: 700;
+				font-size: 10px;
+				text-transform: uppercase;
+				text-align: left;
+				border-bottom: 1px solid silver;
+			}
+		}
+	}
+	
+	& .orders{
+
+		width: 100%;
+		border-spacing: 0;
+		
+		& .main-row{
+			
+			cursor: pointer;
+			position: relative;
+			
+			& td{
+				border-bottom: 1px solid silver;
+				padding: 8px 0;
+			}
+			
+			&:hover{
+				background: linear-gradient(to bottom, #fff, #efefef);
+			}
+
+			& .mdi-plus{
+				display: inline-block;
+				transition: transform .2s;
+			}
+
+			&.active{
+
+				& .mdi-plus{
+					transform: rotate(135deg);
+				}
+			}
+
+			& [data-before="Расположение"]{
+				// max-width: 150px;
+				@media(max-width: 1100px){
+					width: 40%;
+				}
+			}
+
+			& .order-actions{
+				position: relative;
+				display: block;
+				padding: 0 6px;
+
+				@media(max-width: $medium){
+
+					position: absolute;
+					right: 10px;
+					top: 10px;
+				}
+			
+				& ul{
+					position: absolute;
+					margin: 0;
+					right: 0;
+					background: #fff;
+					z-index: 5;
+					transition: opacity .2s, transform .2s;
+					transform: translateY(-20px);
+					opacity: 0;
+					pointer-events: none;
+					border-radius: 6px;
+					box-shadow: 0 1px 4px rgba(black, .4);
+					
+					& li{
+						
+						& a{
+							
+							display: block;
+							white-space: nowrap;
+							padding: 0 10px;
+							line-height: 35px;
+							transition: background-color .2s;
+							
+							&:hover{
+								background-color: #efefef;
+							}
+						}
+					}
+				}
+				
+				&:hover ul{
+					transform: none;
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+
+		@media(max-width: $medium){
+
+			& thead{
+				display: none;
+			}
+
+			& .main-row{
+
+				display: flex;
+				padding: 10px;
+				box-shadow: 0 1px 2px rgba(black, .4);
+				border-radius: 6px;
+				padding: 0 10px;
+				z-index: 2;
+				position: relative;
+				background: #fff;
+				flex-wrap: wrap;
+				margin-bottom: 1.2rem;
+				transition: box-shadow .2s;
+				
+				&:hover{
+					background: #fff;
+					box-shadow: 0 6px 10px rgba(black, .2);
+				}
+	
+				& td{
+					display: block;
+					border: 0;
+					padding: 5px;
+					margin-bottom: 0px;
+					width: fit-content;
+					flex-grow: 1;
+
+					&[data-before="Получатель"]{
+						width: calc(100% - 100px);
+					}
+
+					&[data-before="Расположение"]{
+						width: 100%;
+					}
+
+					&[data-before="Дата"], &[data-before="Сумма"], &[data-before="Статус оплаты"]{
+						width: 30%;
+					}
+
+					&.expander{
+						width: 100%;
+						text-align: center;
+						border-top: 1px solid silver;
+					}
+
+					&:before{
+						content: attr(data-before);
+						display: block;
+						font-size: 10px;
+						font-weight: bold;
+						text-transform: uppercase;
+						color: $fogged;
+						line-height: 1.6em;
+					}
+
+					&.expander{
+						order: 2;
+					}
+				}
+			}
+		}
+		
+		& .details-row{
+			
+			& .details-row-wrapper{
+				
+				@media(max-width: $medium){
+					transform: translateY(-25px);
+				}
+				display: none;
+				padding: 20px;
+				background: #efefef;
+
+				& table{
+
+					width: 100%;
+					border-spacing: 0;
+					
+					& tr{
+
+						transition: background-color .2s;
+						
+						&:nth-child(odd){
+							background: rgba(black, .05);
+						}
+						
+						& td{
+
+							padding: 8px;
+
+							&:last-of-type{
+								white-space: nowrap;
+							}
+						}
+
+						&:hover{
+							background: rgba(black, .1);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& #available-returns{
+    
+		width: 100%;
+		border-spacing: 0;
+		
+		& td{
+			
+			padding: 6px;
+			border-bottom: 1px solid silver;
+			
+			&:last-of-type{
+				white-space: nowrap;
+			}
+
+			& .counter{
+				border: 1px solid ;
+				border-radius: 50%;
+				display: inline-block;
+				width: 26px;
+				height: 26px;
+				text-align: center;
+				line-height: 26px;
+				
+				&.disabled{
+					color: silver;
+					pointer-events: none;
+				}
+				
+				~ input{
+					border: 0;
+					width: 40px;
+					text-align: center;
+					
+					&::-webkit-inner-spin-button{
+						display: none;
+					}
+				}
+			}
+		}
+
+		@media(max-width: $medium){
+
+			& thead{
+				display: none;
+			}
+
+			& tr{
+
+				display: flex;
+				flex-wrap: wrap;
+				border-bottom: 1px solid silver;
+
+				& td{
+					flex-grow: 1;
+					border: 0;
+
+					&:nth-child(1){
+						width: 40px;
+						flex-grow: 0;
+					}
+
+					&:nth-child(2){
+						max-width: calc(100% - 40px);
+					}
+				}
+			}
+
+		}
+	}
+
+	& .total{
+		margin: 40px 0;
+		font-weight: bold;
+	}
+
+	& .requests-story{
+
+		& .col{
+			margin-bottom: 1.2rem;
+
+			& .request-entry{
+			
+				padding: 10px;
+				border-radius: 6px;
+				box-shadow: 0 1px 2px rgba(black, .4);
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				transition: box-shadow .2s;
+		
+				&:hover{
+					box-shadow: 0 6px 10px rgba(black, .2);
+				}
+				
+				& .request-label{
+					font-size: 10px;
+					line-height: 10px;
+				}
+				
+				& .request-header{
+					
+					display: flex;
+					
+					& h4{
+						margin: 0;
+						flex-grow: 1;
+					}
+					
+					& .state{
+						font-size: 10px;
+						text-transform: uppercase;
+						
+					}
+					
+				}
+				
+				& .return-data{
+					
+					display: flex;
+					margin: 10px 0;
+					flex-grow: 1;
+					
+					& .dates, & .sum{
+						width: 50%;
+		
+						& .date-label{
+							font-size: 10px;
+							text-transform: uppercase;
+							font-weight: bold;
+							line-height: 1.6em;
+							margin-top: 4px;
+						}
+						
+						& .date-value{
+							margin-bottom: 10px;
+						}
+		
+						& .request-sum{
+							font-weight: bold;
+						}
+					}
+				}
+				
+				& .action{
+					text-align: right;
+				}
+				
+			}
+		}
+	}
+
+	& .topic{
+    
+		box-shadow: 0 1px 2px rgba(black, .4);
+		padding: 10px;
+		border-radius: 6px;
+		margin-bottom: 1.2rem;
+		
+		& .topic-row{
+			
+			display: flex;
+			
+			&:first-of-type{        
+				margin-bottom: 20px;
+			}
+			
+			& .header{
+				flex-grow: 1;
+			}
+			
+			& .date-time{
+				flex-grow: 1;
+				
+				& .date{
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+	
+	& .chat-wrapper{
+    
+		position: relative;
+		margin-bottom: 40px;
+		
+		&:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 6px;
+			box-shadow: 0 1px 3px rgba(black, .4) inset;
+			z-index: 2;
+			pointer-events: none;
+		}
+		
+		.chat-content{
+	
+			background: #cecece;
+			padding: 20px;
+			border-radius: 6px;
+			max-height: 500px;
+			overflow-y: scroll;
+			overflow-x: hidden;
+			position: relative;
+	
+			& .chat-entry{
+	
+				display: flex;
+				margin-bottom: 1.6rem;
+				align-items: flex-end;
+				filter: drop-shadow(0px 1px 1px rgba(black, .4));
+	
+				&.foreign{
+	
+					& .chat-entry-content{
+						border-bottom-left-radius: 0;
+					}
+	
+					&:before{
+						content: '';
+						display: block;
+						border: 7px solid white;
+						border-top-color: transparent;
+						border-left-color: transparent;
+						width: 0;
+						height: 0;                
+					}
+				}
+	
+	
+				&.self{
+	
+					justify-content: flex-end;
+	
+					& .chat-entry-content{
+						background-color: #e1f7ff;
+						border-bottom-right-radius: 0;
+					}
+	
+					&:after{
+						content: '';
+						display: block;
+						border: 7px solid #e1f7ff;
+						border-top-color: transparent;
+						border-right-color: transparent;
+						width: 0;
+						height: 0;
+					}
+				}
+	
+				& .chat-entry-content{
+					width: fit-content;
+					padding: 10px;
+					background: #fff;
+					border-radius: 6px;
+	
+					& .chat-header{
+						font-size: 12px;
+						line-height: 1.4em;
+						font-weight: 500;
+						
+						& .date-time{
+							color: $fogged;
+						}
+						
+						& .author{
+							color: $text;
+							font-weight: 500;
+							font-style: italic;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	& table.recievers{
+
+		width: 100%;
+		border-spacing: 0;
+
+		& thead{
+
+			& th{
+				width: 12px;
+			}
+		}
+		
+		& tbody{
+			
+			& td{
+				
+				padding: 10px 5px;
+				border-bottom: 1px solid silver;
+			}
+		}
+	}
+}

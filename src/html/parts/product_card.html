@@ -5,14 +5,21 @@
 		</div>
 		<div class="product-data-wrapper">
 			<a class="title" href="/product.html">@@title</a>
-			<div class="remains @@if(remains>100){success} @@if(remains<=100 && remains>0){warning} @@if(remains==0){error}">В наличии: @@remains</div>
+			@@if(context.remains){
+				<div class="remains @@if(remains>100){success} @@if(remains<=100 && remains>0){warning} @@if(remains==0){error}">В наличии: @@remains</div>
+			}
+			@@if(!context.remains){
+				<div class="remains error">В наличии: 0</div>
+			}
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn @@class basket-add">
-						@@if(limits!=""){
-							<div class="limits">
-								@@limits
-							</div>
+						@@if(context.limits){
+							@@if(limits!=""){
+								<div class="limits">
+									@@limits
+								</div>
+							}
 						}
 						@@buttonText
 					</a>

@@ -50,6 +50,21 @@ $(function () {
     });
   }
 
+  if ($('.datepicker').length) {
+    $('.datepicker').datepicker({
+      i18n: {
+        cancel: "Отмена",
+        clear: "Очистить",
+        done: "OK",
+        months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+        monthsShort: ["Янв", "Фев", "Мрт", "Апр", "Май", "Июн", "Июл", "Авг", "Снб", "Окт", "Ноя", "Дек"],
+        weekdays: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+        weekdaysShort: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        weekdaysAbbrev: ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
+      }
+    });
+  }
+
   var tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
   $('.lazy').lazy();
   $('body').on('click', '.disabled', nop);
@@ -58,7 +73,77 @@ $(function () {
   $('body').on('click', '.basket-plus', basketPlus);
   $('body').on('blur', '.counter-wrapper', counterBlur);
   $('body').on('click', '.toast-trigger', showToast);
+  $('body').on('change', '.toggle-password', togglePassword);
+  $('body').on('click', '.main-row', toggleDetails);
+  $('body').on('click', '.list-field label', openList);
+  $('body').on('click', '.list-field a', setList);
+  $('body').on('click', closeList);
+  $('body').on('keyup', 'textarea', updateTextarea);
+  var tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
 });
+
+function updateTextarea() {
+  this.style.height = "1px";
+  this.style.height = this.scrollHeight + "px";
+}
+
+function updateSubject() {
+  debugger;
+
+  if ($(this).val() == "Новая тема") {
+    $('#subject').removeClass('hidden');
+  } else {
+    $('#subject').addClass('hidden');
+  }
+}
+
+function closeList(e) {
+  var el = e.target;
+  var path = composedPath(el);
+  var filtered = path.filter(function (element, index) {
+    return element.tagName == 'LABEL';
+  });
+
+  if (!filtered.length) {
+    $('.list-field ul').removeClass('shown');
+  }
+}
+
+function setList(e) {
+  e.preventDefault();
+  var val = $(this).text();
+  var $parent = $(this).parents('.list-field');
+  var $label = $parent.find('label');
+  var $input = $parent.find('input[type="hidden"]');
+  var $ul = $parent.find('ul');
+  $label.text(val);
+  $input.val(val);
+  $ul.removeClass('shown');
+  afterSetList(val);
+}
+
+function afterSetList(val) {
+  if (val == 'Новая тема') {
+    $('#subject').removeClass('hidden');
+  } else {
+    $('#subject').addClass('hidden');
+  }
+}
+
+function openList() {
+  $(this).parents('.list-field').find('ul').addClass('shown');
+}
+
+function toggleDetails() {
+  var $detailsRow = $(this).next();
+  var $detailsWrapper = $detailsRow.find('.details-row-wrapper');
+  $(this).toggleClass('active');
+  $detailsWrapper.slideToggle('fast');
+}
+
+function togglePassword() {
+  $('#password').slideToggle('fast');
+}
 
 function showToast(e) {
   e.preventDefault();
@@ -104,6 +189,22 @@ function basketMinus(e) {
 
   if ($input.val() == 0) {
     $(this).parents('.basket-count').addClass('hidden').prev().removeClass('hidden');
+  }
+}
+
+function composedPath(el) {
+  var path = [];
+
+  while (el) {
+    path.push(el);
+
+    if (el.tagName === 'HTML') {
+      path.push(document);
+      path.push(window);
+      return path;
+    }
+
+    el = el.parentElement;
   }
 }
 

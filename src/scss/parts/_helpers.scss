@@ -102,18 +102,34 @@ body{
 		background: $accent-gradient;
 		color: #fff;
 		white-space: nowrap;
-
+		
 		&.disabled{
 			box-shadow: 0 0 0 1px $fogged inset;
 			background: #fff;
 			color: $fogged;
 			cursor: not-allowed;
 		}
-
+		
 		&.outlined{
 			box-shadow: 0 0 0 1px $accent inset;
 			background: #fff;
 			color: $accent;
+		}
+	}
+	
+	& .btn-flat{
+		background: transparent;
+		border: 0;
+		color: $accent;
+		line-height: 36px;
+		padding: 0 16px;
+		border-radius: 6px;
+		display: inline-block;
+		cursor: pointer;
+		transition: background-color .2s;
+
+		&:hover{
+			background: rgba(black, .03);
 		}
 	}
 
@@ -437,14 +453,15 @@ body{
 	& .input-field{
 
 		position: relative;
-		border-bottom: 1px solid #fff;
 		flex-grow: 1;
+		border-bottom: 1px solid $primary;
+		margin-bottom: 20px;
 		
-		& input{
+		& input, & textarea{
 			
 			display: block;
 			width: 100%;
-			height: 35px;
+			min-height: 35px;
 			border: 0;
 			background: transparent;
 			font-family: 'Montserrat';
@@ -456,18 +473,67 @@ body{
 			
 			& ~ label{
 				position: absolute;
-				left: 3px;
-				top: 6px;
+				left: 1px;
+				top: 4px;
 				pointer-events: none;
 				transition: transform .2s, opacity .2s, font-size .2s;
+				font-size: 16px;
 			}
 			
 			&:not(:placeholder-shown), &:focus{
 				
 				& ~ label{
 					font-size: 12px;
-					transform: translate(-2px, -17px);
-					opacity: .7
+					transform: translate(-0px, -20px);
+					opacity: .7;
+				}
+			}
+		}
+
+		& textarea{
+
+			& ~ label{
+				top: -4px;
+			}
+		}
+	}
+
+	& .check-field{
+
+		display: inline-block;
+		width: fit-content;
+
+		& input{
+
+			display: none;
+
+			& ~ label{
+
+				user-select: none;
+				cursor: pointer;
+				line-height: 22px;
+
+				&:before{
+
+					content: '\F0131';
+					font-family: 'Material Design Icons';
+					color: $primary;
+					margin-right: 5px;
+					font-size: 22px;
+					line-height: 22px;
+					display: inline-block;
+					transform: translateY(2px);
+				}
+			}
+
+			&:checked{
+
+				& ~ label{
+
+					&:before{
+
+						content: '\F0132';
+					}
 				}
 			}
 		}
@@ -555,6 +621,160 @@ body{
 		
 		&.toast-info{
 			background: $primary;
+		}
+	}
+
+	& .modal{
+
+		&.datepicker-modal{
+
+			& .datepicker-date-display{
+
+				background-color: $primary;
+			}
+
+			& .is-today{
+
+				color: $primary;
+			}
+
+			& .is-selected{
+
+				background-color: $primary;
+
+				&.is-today{
+					color: #fff;
+				}
+			}
+
+			& .datepicker-day-button{
+
+				&:focus{
+
+					background: rgba($primary, .2);
+				}
+			}
+
+		}
+	}
+
+	& .dropdown-content, & .dropdown-content{
+
+		& li{
+
+			& > span, & > a{
+
+				color: $primary !important;
+			}
+		}
+	}
+
+	& .info{
+		border: 1px solid silver;
+		padding: 8px 16px;
+		background: rgba(silver, .2);
+		border-radius: 6px;
+		color: #777;
+	}
+
+	.list-field{
+
+		border-bottom: 1px solid $primary;
+		position: relative;
+		margin-bottom: 20px;
+
+		& label{
+			font-size: 16px;
+			color: $text;
+			cursor: pointer;
+			display: block;
+			height: 35px;
+			line-height: 35px;
+			position: relative;
+
+			&:after{
+				content: '\F035D';
+				font-family: 'Material Design Icons';
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 35px;
+				height: 35px;
+				text-align: center;
+				font-size: 21px;
+			}
+		}
+		
+		& ul{
+			position: absolute;
+			z-index: 2;
+			margin: 0;
+			border-radius: 4px;
+			background: #fff;
+			max-height: 300px;
+			overflow-y: auto;
+			overflow-x: hidden;
+			width: 100%;
+			max-width: 600px;
+			pointer-events: none;
+			transform: translateY(-40px);
+			opacity: 0;
+			transition: transform .2s, opacity .2s;
+			box-shadow: 0 4px 8px rgba(black, .4);
+			
+			&::-webkit-scrollbar{
+				width: 6px;
+				background: silver;
+			}
+			
+			&::-webkit-scrollbar-thumb{
+				background: $primary;
+				box-shadow: 0 0 0 2px silver inset;
+				border-radius: 2px;
+			}
+			
+			& a{
+				display: block;
+				padding: 6px 12px;
+				transition: background-color .2s;
+				
+				&:hover{
+					background: rgba($placeholder, .3);
+				}
+			}
+			
+			&.shown{
+				opacity: 1;
+				transform: none;
+				pointer-events: all;
+			}
+		}
+	}
+
+	& ul.tabs{
+
+		& .tab{
+
+			& a{
+
+				color: $fogged;
+
+				&.active{
+					color: $accent;
+
+					&:focus{
+						background: rgba($accent, .05);
+					}
+				}
+
+				&:hover{
+					color: $accent;
+				}
+			}
+		}
+
+		& .indicator{
+			background: $accent;
 		}
 	}
 }

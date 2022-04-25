@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Возвраты"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="returns" class="profile">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h1>Управление аккаунтом</h1>
+					</div>
+					<div class="col l2 m12">
+						<ul class="profile-sections">
+							<li><a href="/profile.html"><i class="hide-l-up mdi mdi-account"></i><span class="hide-l-down">Личные данные</span></a></li>
+							<li><a href="/orders.html"><i class="hide-l-up mdi mdi-package"></i><span class="hide-l-down">Заказы</span></a></li>
+							<li><a class="active" href="/returns.html"><i class="hide-l-up mdi mdi-history"></i><span class="hide-l-down">Возвраты</span></a></li>
+							<li><a href="/recievers.html"><i class="hide-l-up mdi mdi-card-account-details"></i><span class="hide-l-down">Получатели</span></a></li>
+							<li><a href="/support.html"><i class="hide-l-up mdi mdi-face-agent"></i><span class="hide-l-down">Поддержка</span></a></li>
+						</ul>
+					</div>
+					<form class="col l10 m12"  id="returns">
+						<div class="row">
+							<div class="col s12">
+								<h2>Заявление на возврат по заказу №747 от 12.04.2022</h2>
+								<p class="info">
+									С помощью данного раздела, вы сможете оформить заявку на возврат товара, а также распечатать бланк заявления на возврат товара. 
+									После оформления заявки с вами свяжется менеджер и расскажет о дальнейших действиях. Пожалуйста, ознакомьтесь 
+									с <a href="/rules.html">правилами возврата товаров</a> перед оформлением заявки.
+								</p>
+							</div>
+							<div class="col s12" id="returns">
+								<h3>Товары, доступные для возврата</h3>
+								<table id="available-returns">
+									<thead>
+										<th>&nbsp;</th>
+										<th>Название</th>
+										<th>Количество</th>
+										<th>Цена</th>
+									</thead>
+									<tbody>
+										@@loop('./parts/order-entry-check.html', './data/details.json')
+									</tbody>
+								</table>
+								<div class="total">Всего: 0₽</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<div class="divider"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col xl2 l4 m6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label><div class="indicator"></div></div>
+							</div>
+							<div class="col xl2 l4 m6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+							</div>
+							<div class="col xl2 l4 m12 s12">
+								<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+							</div>
+							<div class="col xl6 l12 s12">
+								<div class="input-field"><input type="text" placeholder="Причина возврата"><label for="">Причина возврата</label></div>
+							</div>
+							<div class="col xl3 l6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Серия паспорта"><label for="">Серия паспорта</label></div>
+							</div>
+							<div class="col xl3 l6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Номер паспорта"><label for="">Номер паспорта</label></div>
+							</div>
+							<div class="col xl6 s12">
+								<div class="input-field"><input type="text" placeholder="Кем и когда выдан"><label for="">Кем и когда выдан</label></div>
+							</div>
+							<div class="col xl3 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Контактный телефон"><label for="">Контактный телефон</label></div>
+							</div>
+							<div class="col xl3 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Наименование банка"><label for="">Наименование банка</label></div>
+							</div>
+							<div class="col xl2 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="БИК"><label for="">БИК</label></div>
+							</div>
+							<div class="col xl2 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Расчётный счёт"><label for="">Расчётный счёт</label></div>
+							</div>
+							<div class="col xl2 s12">
+								<div class="input-field"><input type="text" placeholder="Корреспондентский счёт"><label for="">Корреспондентский счёт</label></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12"><a href="" class="btn">Подать заявку</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

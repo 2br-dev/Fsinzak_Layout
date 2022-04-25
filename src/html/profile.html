@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Управление аккаунтом (Личные данные)"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="profile" class="profile">
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h1>Управление аккаунтом</h1>
+					</div>
+					<div class="col l2 m12">
+						<ul class="profile-sections">
+							<li><a class="active" href="/profile.html"><i class="hide-l-up mdi mdi-account"></i><span class="hide-l-down">Личные данные</span></a></li>
+							<li><a href="/orders.html"><i class="hide-l-up mdi mdi-package"></i><span class="hide-l-down">Заказы</span></a></li>
+							<li><a href="/returns.html"><i class="hide-l-up mdi mdi-history"></i><span class="hide-l-down">Возвраты</span></a></li>
+							<li><a href="/recievers.html"><i class="hide-l-up mdi mdi-card-account-details"></i><span class="hide-l-down">Получатели</span></a></li>
+							<li><a href="/support.html"><i class="hide-l-up mdi mdi-face-agent"></i><span class="hide-l-down">Поддержка</span></a></li>
+						</ul>
+					</div>
+					<form class="col l10 m12">
+						<h2>Личные данные</h2>
+						<p class="info">
+							Здесь вы можете изменить свои персональные или контактные данные.
+						</p>
+						<div class="row">
+							<div class="col s12"><h3>Контактная информация</h3></div>
+							<div class="col l4 m6 s12"><div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div></div>
+							<div class="col l4 m6 s12"><div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div></div>
+							<div class="col l4 m6 s12"><div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div></div>
+							<div class="col l3 m6 s12"><div class="input-field"><input type="text" placeholder="Телефон"><label for="">Телефон</label></div></div>
+							<div class="col l3 m6 s12"><div class="input-field"><input type="text" placeholder="E-mail"><label for="">E-mail</label></div></div>
+							<div class="col l3 m6 s12"><div class="input-field"><input type="text" class="datepicker" placeholder="Дата рождения"><label for="">Дата рождения</label></div></div>
+							<div class="col l3 m6 s12"><div class="input-field"><input type="text" placeholder="Серия паспорта"><label for="">Серия паспорта</label></div></div>
+						</div>
+						<div class="row">
+							<div class="col s12"><h3>Безопасность</h3></div>
+							<div class="col s12"><div class="check-field"><input type="checkbox" id="change-password" class="toggle-password"><label for="change-password">Изменить пароль</label></div></div>
+						</div>
+						<div class="row" id="password">
+							<div class="col l4 m6 s12"><div class="input-field"><input type="password" placeholder="Старый пароль"><label for="">Старый пароль</label></div></div>
+							<div class="col l4 s12"><div class="input-field"><input type="password" placeholder="Новый пароль"><label for="">Новый пароль</label></div></div>
+							<div class="col l4 s12"><div class="input-field"><input type="password" placeholder="Повторите пароль"><label for="">Повторите пароль</label></div></div>
+						</div>
+						<div class="row">
+							<div class="col s12"><a href="" class="btn">Сохранить</a></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/scripts.html')
+	@@include('./parts/footer.html')
+</body>
+</html>

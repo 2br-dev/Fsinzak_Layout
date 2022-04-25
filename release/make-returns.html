@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ФСИНЗАК – Главная</title>
+<title>ФСИНЗАК – Возвраты</title>
 <link rel="stylesheet" href="/css/master.css">
 </head>
 <body>
@@ -269,280 +269,149 @@
 		</a>
 	</div>
 </div>
-	<main id="product">
-		<section id="product-details">
+	<main id="returns" class="profile">
+		<section>
 			<div class="container">
 				<div class="row">
 					<div class="col s12">
-						<ul class="breadcrumbs">
-							<li><a class="home" href=""><span>Главная</span></a></li>
-							<li><a href=""><span>Каталог</span></a></li>
-							<li><span>Бакалея</span></li>
+						<h1>Управление аккаунтом</h1>
+					</div>
+					<div class="col l2 m12">
+						<ul class="profile-sections">
+							<li><a href="/profile.html"><i class="hide-l-up mdi mdi-account"></i><span class="hide-l-down">Личные данные</span></a></li>
+							<li><a href="/orders.html"><i class="hide-l-up mdi mdi-package"></i><span class="hide-l-down">Заказы</span></a></li>
+							<li><a class="active" href="/returns.html"><i class="hide-l-up mdi mdi-history"></i><span class="hide-l-down">Возвраты</span></a></li>
+							<li><a href="/recievers.html"><i class="hide-l-up mdi mdi-card-account-details"></i><span class="hide-l-down">Получатели</span></a></li>
+							<li><a href="/support.html"><i class="hide-l-up mdi mdi-face-agent"></i><span class="hide-l-down">Поддержка</span></a></li>
 						</ul>
 					</div>
-				</div>
-				<div class="row flex vcenter">
-					<div class="col xl4 offset-xl1 l5 m5 s12">
-						<div class="lazy q product-image" data-src="/img/fish/bakalea.jpg"></div>
-					</div>
-					<div class="col xl5 offset-xl1 l7 m7 s12">
-						<div class="product-details">
-							<h1>Вермишель 60 г Анаком с говяжьим бульоном</h1>
-							<h2>Подробней о товаре</h2>
-							<div class="kv-pair">
-								<div class="key">Количество упаковок</div>
-								<div class="separator"></div>
-								<div class="value">4 шт.</div>
+					<form class="col l10 m12"  id="returns">
+						<div class="row">
+							<div class="col s12">
+								<h2>Заявление на возврат по заказу №747 от 12.04.2022</h2>
+								<p class="info">
+									С помощью данного раздела, вы сможете оформить заявку на возврат товара, а также распечатать бланк заявления на возврат товара. 
+									После оформления заявки с вами свяжется менеджер и расскажет о дальнейших действиях. Пожалуйста, ознакомьтесь 
+									с <a href="/rules.html">правилами возврата товаров</a> перед оформлением заявки.
+								</p>
 							</div>
-							<div class="kv-pair">
-								<div class="key">Вкус</div>
-								<div class="separator"></div>
-								<div class="value">говядина</div>
-							</div>
-							<div class="kv-pair">
-								<div class="key">Количество порций</div>
-								<div class="separator"></div>
-								<div class="value">1</div>
-							</div>
-							<div class="kv-pair">
-								<div class="key">Упаковка</div>
-								<div class="separator"></div>
-								<div class="value">пакет</div>
-							</div>
-							<div class="kv-pair">
-								<div class="key">Добавки</div>
-								<div class="separator"></div>
-								<div class="value">кусочки грибов</div>
-							</div>
-							<div class="price-wrapper">
-								<div class="row flex">
-									<div class="col m6 s12 align-right-m-down">
-										Цена: <span class="price">980₽</span>
-									</div>
-									<div class="col m6 s12">
-										<div class="card-basket-wrapper">
-											<a href="" class="btn @@class basket-add">В корзину</a>
-											<div class="basket-count hidden">
-												<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-												<div class="counter-wrapper"><input type="number" value=1></div>
-												<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="col s12" id="returns">
+								<h3>Товары, доступные для возврата</h3>
+								<table id="available-returns">
+									<thead>
+										<th>&nbsp;</th>
+										<th>Название</th>
+										<th>Количество</th>
+										<th>Цена</th>
+									</thead>
+									<tbody>
+										<tr class="details-row">
+	<td><div class="check-field"><input type="checkbox" id="Acer beTouch E400"><label for="Acer beTouch E400"></label></div></td>
+	<td data-before="Название" class="name">Acer beTouch E400</td>
+	<td data-before="Количество" class="count">
+		<a href="" class="counter disabled"><i class="mdi mdi-minus"></i></a>
+		<input type="number" value="1">
+		<a href="" class="counter"><i class="mdi mdi-plus"></i></a>
+	</td>
+	<td data-before="Цена" class="price">0₽</td>
+</tr><tr class="details-row">
+	<td><div class="check-field"><input type="checkbox" id="Ноутбук Asus Eee PC 1015PEM Black"><label for="Ноутбук Asus Eee PC 1015PEM Black"></label></div></td>
+	<td data-before="Название" class="name">Ноутбук Asus Eee PC 1015PEM Black</td>
+	<td data-before="Количество" class="count">
+		<a href="" class="counter disabled"><i class="mdi mdi-minus"></i></a>
+		<input type="number" value="1">
+		<a href="" class="counter"><i class="mdi mdi-plus"></i></a>
+	</td>
+	<td data-before="Цена" class="price">13 500₽</td>
+</tr><tr class="details-row">
+	<td><div class="check-field"><input type="checkbox" id="Планшет Archos A9 PCtablet 16GB"><label for="Планшет Archos A9 PCtablet 16GB"></label></div></td>
+	<td data-before="Название" class="name">Планшет Archos A9 PCtablet 16GB</td>
+	<td data-before="Количество" class="count">
+		<a href="" class="counter disabled"><i class="mdi mdi-minus"></i></a>
+		<input type="number" value="1">
+		<a href="" class="counter"><i class="mdi mdi-plus"></i></a>
+	</td>
+	<td data-before="Цена" class="price">15 590₽</td>
+</tr><tr class="details-row">
+	<td><div class="check-field"><input type="checkbox" id="Планшет Samsung Galaxy Tab-P1000 16Gb"><label for="Планшет Samsung Galaxy Tab-P1000 16Gb"></label></div></td>
+	<td data-before="Название" class="name">Планшет Samsung Galaxy Tab-P1000 16Gb</td>
+	<td data-before="Количество" class="count">
+		<a href="" class="counter disabled"><i class="mdi mdi-minus"></i></a>
+		<input type="number" value="1">
+		<a href="" class="counter"><i class="mdi mdi-plus"></i></a>
+	</td>
+	<td data-before="Цена" class="price">24 680₽</td>
+</tr><tr class="details-row">
+	<td><div class="check-field"><input type="checkbox" id="Моноблок Acer Aspire Z5763"><label for="Моноблок Acer Aspire Z5763"></label></div></td>
+	<td data-before="Название" class="name">Моноблок Acer Aspire Z5763</td>
+	<td data-before="Количество" class="count">
+		<a href="" class="counter disabled"><i class="mdi mdi-minus"></i></a>
+		<input type="number" value="1">
+		<a href="" class="counter"><i class="mdi mdi-plus"></i></a>
+	</td>
+	<td data-before="Цена" class="price">50 500₽</td>
+</tr><tr class="details-row">
+	<td><div class="check-field"><input type="checkbox" id="Ноутбук Lenovo ThinkPad Edge E420s NWD4FRT"><label for="Ноутбук Lenovo ThinkPad Edge E420s NWD4FRT"></label></div></td>
+	<td data-before="Название" class="name">Ноутбук Lenovo ThinkPad Edge E420s NWD4FRT</td>
+	<td data-before="Количество" class="count">
+		<a href="" class="counter disabled"><i class="mdi mdi-minus"></i></a>
+		<input type="number" value="1">
+		<a href="" class="counter"><i class="mdi mdi-plus"></i></a>
+	</td>
+	<td data-before="Цена" class="price">35 500₽</td>
+</tr>
+									</tbody>
+								</table>
+								<div class="total">Всего: 0₽</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="similar">
-			<div class="container">
-				<div class="row">
-					<div class="col s12">
-						<div class="underlined header-block">
-							<h2>Похожие товары</h2>
-							<a href="./catalog.html">
-								<span class="hide-m-down">Смотреть все</span>
-								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
-							</a>
+						<div class="row">
+							<div class="col s12">
+								<div class="divider"></div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="row flex">
-					<div class="col xl2 l4 m6 s12">
-	<div class="product-card">
-		<div class="product-image-wrapper">
-			<a class="lazy h" data-src="/img/fish/gastronomy.jpg" href="/product.html"></a>
-		</div>
-		<div class="product-data-wrapper">
-			<a class="title" href="/product.html">Вермишель 60 г Анаком с говяжьим бульоном</a>
-			
-				<div class="remains success  ">В наличии: 108</div>
-			
-			
-			<div class="product-card-footer">
-				<div class="pcf-left card-basket-wrapper">
-					<a href="" class="btn  basket-add">
-						
-						В корзину
-					</a>
-					<div class="basket-count hidden">
-						<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-						<div class="counter-wrapper"><input type="number" value=1></div>
-						<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-					</div>
-				</div>
-				<div class="pcf-right">
-					<div class="fav-wrapper">
-						<input type="checkbox" class="like" id="gas-1"><label for="gas-1"></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><div class="col xl2 l4 m6 s12">
-	<div class="product-card">
-		<div class="product-image-wrapper">
-			<a class="lazy h" data-src="/img/fish/gastronomy.jpg" href="/product.html"></a>
-		</div>
-		<div class="product-data-wrapper">
-			<a class="title" href="/product.html">Вермишель 60 г Анаком с говяжьим бульоном</a>
-			
-				<div class="remains  warning ">В наличии: 50</div>
-			
-			
-			<div class="product-card-footer">
-				<div class="pcf-left card-basket-wrapper">
-					<a href="" class="btn  basket-add">
-						
-						В корзину
-					</a>
-					<div class="basket-count hidden">
-						<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-						<div class="counter-wrapper"><input type="number" value=1></div>
-						<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-					</div>
-				</div>
-				<div class="pcf-right">
-					<div class="fav-wrapper">
-						<input type="checkbox" class="like" id="gas-2"><label for="gas-2"></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><div class="col xl2 l4 m6 s12">
-	<div class="product-card">
-		<div class="product-image-wrapper">
-			<a class="lazy h" data-src="/img/fish/gastronomy.jpg" href="/product.html"></a>
-		</div>
-		<div class="product-data-wrapper">
-			<a class="title" href="/product.html">Вермишель 60 г Анаком с говяжьим бульоном</a>
-			
-				<div class="remains success  ">В наличии: 108</div>
-			
-			
-			<div class="product-card-footer">
-				<div class="pcf-left card-basket-wrapper">
-					<a href="" class="btn disabled basket-add">
-						
-							
-								<div class="limits">
-									<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>
-								</div>
-							
-						
-						Ограничения
-					</a>
-					<div class="basket-count hidden">
-						<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-						<div class="counter-wrapper"><input type="number" value=1></div>
-						<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-					</div>
-				</div>
-				<div class="pcf-right">
-					<div class="fav-wrapper">
-						<input type="checkbox" class="like" id="gas-3"><label for="gas-3"></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><div class="col xl2 l4 m6 s12">
-	<div class="product-card">
-		<div class="product-image-wrapper">
-			<a class="lazy h" data-src="/img/fish/gastronomy.jpg" href="/product.html"></a>
-		</div>
-		<div class="product-data-wrapper">
-			<a class="title" href="/product.html">Вермишель 60 г Анаком с говяжьим бульоном</a>
-			
-				<div class="remains success  ">В наличии: 108</div>
-			
-			
-			<div class="product-card-footer">
-				<div class="pcf-left card-basket-wrapper">
-					<a href="" class="btn  basket-add">
-						
-						В корзину
-					</a>
-					<div class="basket-count hidden">
-						<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-						<div class="counter-wrapper"><input type="number" value=1></div>
-						<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-					</div>
-				</div>
-				<div class="pcf-right">
-					<div class="fav-wrapper">
-						<input type="checkbox" class="like" id="gas-4"><label for="gas-4"></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><div class="col xl2 l4 m6 s12">
-	<div class="product-card">
-		<div class="product-image-wrapper">
-			<a class="lazy h" data-src="/img/fish/gastronomy.jpg" href="/product.html"></a>
-		</div>
-		<div class="product-data-wrapper">
-			<a class="title" href="/product.html">Вермишель 60 г Анаком с говяжьим бульоном</a>
-			
-			
-				<div class="remains error">В наличии: 0</div>
-			
-			<div class="product-card-footer">
-				<div class="pcf-left card-basket-wrapper">
-					<a href="" class="btn disabled basket-add">
-						
-						Нет в наличии
-					</a>
-					<div class="basket-count hidden">
-						<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-						<div class="counter-wrapper"><input type="number" value=1></div>
-						<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-					</div>
-				</div>
-				<div class="pcf-right">
-					<div class="fav-wrapper">
-						<input type="checkbox" class="like" id="gas-5"><label for="gas-5"></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div><div class="col xl2 l4 m6 s12">
-	<div class="product-card">
-		<div class="product-image-wrapper">
-			<a class="lazy h" data-src="/img/fish/gastronomy.jpg" href="/product.html"></a>
-		</div>
-		<div class="product-data-wrapper">
-			<a class="title" href="/product.html">Вермишель 60 г Анаком с говяжьим бульоном</a>
-			
-			
-				<div class="remains error">В наличии: 0</div>
-			
-			<div class="product-card-footer">
-				<div class="pcf-left card-basket-wrapper">
-					<a href="" class="btn disabled basket-add">
-						
-						Нет получателя
-					</a>
-					<div class="basket-count hidden">
-						<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
-						<div class="counter-wrapper"><input type="number" value=1></div>
-						<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
-					</div>
-				</div>
-				<div class="pcf-right">
-					<div class="fav-wrapper">
-						<input type="checkbox" class="like" id="gas-6"><label for="gas-6"></label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+						<div class="row">
+							<div class="col xl2 l4 m6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label><div class="indicator"></div></div>
+							</div>
+							<div class="col xl2 l4 m6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+							</div>
+							<div class="col xl2 l4 m12 s12">
+								<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+							</div>
+							<div class="col xl6 l12 s12">
+								<div class="input-field"><input type="text" placeholder="Причина возврата"><label for="">Причина возврата</label></div>
+							</div>
+							<div class="col xl3 l6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Серия паспорта"><label for="">Серия паспорта</label></div>
+							</div>
+							<div class="col xl3 l6 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Номер паспорта"><label for="">Номер паспорта</label></div>
+							</div>
+							<div class="col xl6 s12">
+								<div class="input-field"><input type="text" placeholder="Кем и когда выдан"><label for="">Кем и когда выдан</label></div>
+							</div>
+							<div class="col xl3 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Контактный телефон"><label for="">Контактный телефон</label></div>
+							</div>
+							<div class="col xl3 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Наименование банка"><label for="">Наименование банка</label></div>
+							</div>
+							<div class="col xl2 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="БИК"><label for="">БИК</label></div>
+							</div>
+							<div class="col xl2 s6 xs12">
+								<div class="input-field"><input type="text" placeholder="Расчётный счёт"><label for="">Расчётный счёт</label></div>
+							</div>
+							<div class="col xl2 s12">
+								<div class="input-field"><input type="text" placeholder="Корреспондентский счёт"><label for="">Корреспондентский счёт</label></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12"><a href="" class="btn">Подать заявку</a></div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</section>

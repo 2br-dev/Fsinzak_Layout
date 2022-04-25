@@ -174,6 +174,11 @@ footer{
 			}
 		}
 	}
+
+	& .input-field{
+		border-bottom: 1px solid #fff;
+		margin-bottom: 0px;
+	}
 	
 	& .footer-copyright{
 		padding: 20px 0;
