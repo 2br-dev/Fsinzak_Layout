@@ -48,7 +48,7 @@
 					</form>
 				</div>
 				<div class="hide-l-down">
-					<a href="" class="geo hide-l-down">
+					<a href="#place-selector" class="geo hide-l-down modal-trigger">
 						<i class="mdi mdi-map-marker-outline"></i>
 						<div class="loc">
 							<span class="location">Хабаровский край</span>
@@ -60,18 +60,46 @@
 			<div class="nav-right">
 				<a href="/favorites.html" class="icon-wrapper"><i class="mdi mdi-heart"></i><span class="label">Избранное</span><span class="indicator">9+</span></a>
 				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">Корзина</span><span class="indicator">9+</span></a>
-				<a href="/profile.html" class="icon-wrapper"><i class="mdi mdi-account"></i><span class="label">Профиль</span><span class="indicator">9+</span></a>
+				<div class="icon-wrapper">
+					<!-- Зарегистрированный пользователь -->
+					<ul class="dropdown-list" id="logged">
+						<li>
+							<a href="/profile.html"><i class="mdi mdi-account"></i><span class="label">Профиль</span><span class="indicator">9+</span></a>
+							<ul>
+								<li><a href="/profile.html">Профиль</a></li>
+								<li><a href="/orders.html">Заказы</a></li>
+								<li><a href="/returns.html">Возвраты</a></li>
+								<li><a href="/recievers.html">Получатели</a></li>
+								<li><a href="/support.html">Поддержка</a></li>
+								<li><div class="divider"></div></li>
+								<li><a href="/">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /Зарегистрированный пользователь -->
+					<!-- Гость -->
+					<ul class="dropdown-list hidden" id="guest">
+						<li>
+							<a href="/profile.html"><i class="mdi mdi-login"></i><span class="label">Вход</span></a>
+							<ul>
+								<li><a class="modal-trigger" href="#login">Авторизация</a></li>
+								<li><a class="modal-trigger" href="#register">Регистрация</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /Гость -->
+				</div>
 			</div>
 		</div>
 		<div class="hide-l-down">
 			<div class="nav-bottom">
 				<ul class="nav-bl">
-					<li><a href="">Правила</a></li>
-					<li><a href="">Доставка</a></li>
-					<li><a href="">Отзывы</a></li>
-					<li><a href="">Контакты</a></li>
+					<li><a href="/rules.html">Правила</a></li>
+					<li><a href="/delivery.html">Доставка</a></li>
+					<li><a href="/comments.html">Отзывы</a></li>
+					<li><a href="/contacts.html">Контакты</a></li>
 				</ul>
-				<ul class="nav-br">
+				<ul class="nav-br dropdown-list">
 					<li>
 						Получатель: <a href="">Иванов Иван Иванович</a>
 						@@include('./recievers.html')
@@ -154,7 +182,7 @@
 	</div>
 	<div class="separator"></div>
 	<div class="right">
-		<a class="white-text">
+		<a class="white-text modal-trigger" href="#place-selector">
 			<span class="icon">
 				<i class="mdi mdi-map-marker"></i>
 			</span>

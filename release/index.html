@@ -58,7 +58,7 @@
 					</form>
 				</div>
 				<div class="hide-l-down">
-					<a href="" class="geo hide-l-down">
+					<a href="#place-selector" class="geo hide-l-down modal-trigger">
 						<i class="mdi mdi-map-marker-outline"></i>
 						<div class="loc">
 							<span class="location">Хабаровский край</span>
@@ -70,18 +70,46 @@
 			<div class="nav-right">
 				<a href="/favorites.html" class="icon-wrapper"><i class="mdi mdi-heart"></i><span class="label">Избранное</span><span class="indicator">9+</span></a>
 				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">Корзина</span><span class="indicator">9+</span></a>
-				<a href="/profile.html" class="icon-wrapper"><i class="mdi mdi-account"></i><span class="label">Профиль</span><span class="indicator">9+</span></a>
+				<div class="icon-wrapper">
+					<!-- Зарегистрированный пользователь -->
+					<ul class="dropdown-list" id="logged">
+						<li>
+							<a href="/profile.html"><i class="mdi mdi-account"></i><span class="label">Профиль</span><span class="indicator">9+</span></a>
+							<ul>
+								<li><a href="/profile.html">Профиль</a></li>
+								<li><a href="/orders.html">Заказы</a></li>
+								<li><a href="/returns.html">Возвраты</a></li>
+								<li><a href="/recievers.html">Получатели</a></li>
+								<li><a href="/support.html">Поддержка</a></li>
+								<li><div class="divider"></div></li>
+								<li><a href="/">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /Зарегистрированный пользователь -->
+					<!-- Гость -->
+					<ul class="dropdown-list hidden" id="guest">
+						<li>
+							<a href="/profile.html"><i class="mdi mdi-login"></i><span class="label">Вход</span></a>
+							<ul>
+								<li><a class="modal-trigger" href="#login">Авторизация</a></li>
+								<li><a class="modal-trigger" href="#register">Регистрация</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /Гость -->
+				</div>
 			</div>
 		</div>
 		<div class="hide-l-down">
 			<div class="nav-bottom">
 				<ul class="nav-bl">
-					<li><a href="">Правила</a></li>
-					<li><a href="">Доставка</a></li>
-					<li><a href="">Отзывы</a></li>
-					<li><a href="">Контакты</a></li>
+					<li><a href="/rules.html">Правила</a></li>
+					<li><a href="/delivery.html">Доставка</a></li>
+					<li><a href="/comments.html">Отзывы</a></li>
+					<li><a href="/contacts.html">Контакты</a></li>
 				</ul>
-				<ul class="nav-br">
+				<ul class="nav-br dropdown-list">
 					<li>
 						Получатель: <a href="">Иванов Иван Иванович</a>
 						<ul>
@@ -130,7 +158,7 @@
 </div>
 		</i>
 	</li>
-	<li><a href="">Добавить</a></li>
+	<li><a href="#add-reciever" class="modal-trigger">Добавить</a></li>
 </ul>
 					</li>
 				</ul>
@@ -252,13 +280,13 @@
 </div>
 		</i>
 	</li>
-	<li><a href="">Добавить</a></li>
+	<li><a href="#add-reciever" class="modal-trigger">Добавить</a></li>
 </ul>
 		</div>
 	</div>
 	<div class="separator"></div>
 	<div class="right">
-		<a class="white-text">
+		<a class="white-text modal-trigger" href="#place-selector">
 			<span class="icon">
 				<i class="mdi mdi-map-marker"></i>
 			</span>
@@ -271,97 +299,101 @@
 </div>
 	<main id="main">
 		<section id="news">
-			<div class="container">
-				<div class="row">
-					<div class="news-wrapper">
-						<div class="news-entry-wrapper">
-							<div class="news-entry">
-								<div class="data-wrapper">
-									<div class="date">16 декабря 2021</div>
-									<div class="title">Предновогоднее расписание!</div>
-									<div class="intro">Уважаемые клиенты! На учреждения Хабаровска СИЗО-1, заказы принимаются до среды (22.12.2021г.) до 9:30. Доставка 27.12.2021г. На учреждения ИК№12, ИК ..</div>
-								</div>
-								<div class="link-wrapper">
-									<a href="" class="btn">Подробнее</a>
-								</div>
-								<div class="lazy" data-src="/img/news-entry.svg"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col s12">
+				<div class="news-wrapper">
+					<div class="news-entry-wrapper hoverable">
+						<div class="news-entry">
+							<div class="data-wrapper">
+								<div class="date">16 декабря 2021</div>
+								<div class="title">Предновогоднее расписание!</div>
+								<div class="intro">Уважаемые клиенты! На учреждения Хабаровска СИЗО-1, заказы принимаются до среды (22.12.2021г.) до 9:30. Доставка 27.12.2021г. На учреждения ИК№12, ИК ..</div>
 							</div>
-						</div>
-						<div class="news-entry-wrapper">
-							<div class="news-entry">
-								<div class="data-wrapper">
-									<div class="date">16 декабря 2021</div>
-									<div class="title">Предновогоднее расписание!</div>
-								</div>
-								<div class="link-wrapper">
-									<a href="" class="btn">Подробнее</a>
-								</div>
-								<div class="lazy" data-src="/img/news-entry.svg"></div>
+							<div class="link-wrapper">
+								<a href="/news-page.html" class="btn">Подробнее</a>
 							</div>
-						</div>
-						<div class="news-entry-wrapper">
-							<div class="news-entry">
-								<div class="data-wrapper">
-									<div class="date">16 декабря 2021</div>
-									<div class="title">Предновогоднее расписание!</div>
-								</div>
-								<div class="link-wrapper">
-									<a href="" class="btn">Подробнее</a>
-								</div>
-								<div class="lazy" data-src="/img/news-entry.svg"></div>
-							</div>
+							<div class="lazy" data-src="https://picsum.photos/600/400?random=1"></div>
 						</div>
 					</div>
-					<div class="swiper" id="news-slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="news-entry-wrapper">
-									<div class="news-entry">
-										<div class="data-wrapper">
-											<div class="date">16 декабря 2021</div>
-											<div class="title">Предновогоднее расписание!</div>
-										</div>
-										<div class="link-wrapper">
-											<a href="" class="btn">Подробнее</a>
-										</div>
-										<div class="lazy" data-src="/img/news-entry.svg"></div>
-									</div>
-								</div>
+					<div class="news-entry-wrapper">
+						<div class="news-entry">
+							<div class="data-wrapper">
+								<div class="date">16 декабря 2021</div>
+								<div class="title">Предновогоднее расписание!</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="news-entry-wrapper">
-									<div class="news-entry">
-										<div class="data-wrapper">
-											<div class="date">16 декабря 2021</div>
-											<div class="title">Предновогоднее расписание!</div>
-										</div>
-										<div class="link-wrapper">
-											<a href="" class="btn">Подробнее</a>
-										</div>
-										<div class="lazy" data-src="/img/news-entry.svg"></div>
-									</div>
-								</div>
+							<div class="link-wrapper">
+								<a href="/news-page.html" class="btn">Подробнее</a>
 							</div>
-							<div class="swiper-slide">
-								<div class="news-entry-wrapper">
-									<div class="news-entry">
-										<div class="data-wrapper">
-											<div class="date">16 декабря 2021</div>
-											<div class="title">Предновогоднее расписание!</div>
-										</div>
-										<div class="link-wrapper">
-											<a href="" class="btn">Подробнее</a>
-										</div>
-										<div class="lazy" data-src="/img/news-entry.svg"></div>
-									</div>
-								</div>
-							</div>
+							<a href="/news-page.html" class="lazy hoverable" data-src="https://picsum.photos/600/400?random=2"></a>
 						</div>
-						<div class="swiper-pagination" id="news-pagination"></div>
+					</div>
+					<div class="news-entry-wrapper">
+						<div class="news-entry">
+							<div class="data-wrapper">
+								<div class="date">16 декабря 2021</div>
+								<div class="title">Предновогоднее расписание!</div>
+							</div>
+							<div class="link-wrapper">
+								<a href="/news-page.html" class="btn">Подробнее</a>
+							</div>
+							<a href="/news-page.html" class="lazy hoverable" data-src="https://picsum.photos/600/400?random=3"></a>
+						</div>
 					</div>
 				</div>
+				<div class="swiper" id="news-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="news-entry-wrapper">
+								<div class="news-entry">
+									<div class="data-wrapper">
+										<div class="date">16 декабря 2021</div>
+										<div class="title">Предновогоднее расписание!</div>
+									</div>
+									<div class="link-wrapper">
+										<a href="/news-page.html" class="btn">Подробнее</a>
+									</div>
+									<div class="lazy" data-src="/img/news-entry.svg"></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="news-entry-wrapper">
+								<div class="news-entry">
+									<div class="data-wrapper">
+										<div class="date">16 декабря 2021</div>
+										<div class="title">Предновогоднее расписание!</div>
+									</div>
+									<div class="link-wrapper">
+										<a href="/news-page.html" class="btn">Подробнее</a>
+									</div>
+									<div class="lazy" data-src="/img/news-entry.svg"></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="news-entry-wrapper">
+								<div class="news-entry">
+									<div class="data-wrapper">
+										<div class="date">16 декабря 2021</div>
+										<div class="title">Предновогоднее расписание!</div>
+									</div>
+									<div class="link-wrapper">
+										<a href="/news-page.html" class="btn">Подробнее</a>
+									</div>
+									<div class="lazy" data-src="/img/news-entry.svg"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination" id="news-pagination"></div>
+				</div>
 			</div>
-		</section>
+			<div class="col s12 center-align"><a href="/news.html" class="btn">Все новости</a></div>
+		</div>
+		
+	</div>
+</section>
 		<section id="service">
 			<div class="container">
 				<div class="row">
@@ -399,6 +431,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -430,6 +463,7 @@
 				<div class="remains  warning ">В наличии: 50</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -461,6 +495,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -498,6 +533,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -529,6 +565,7 @@
 			
 				<div class="remains error">В наличии: 0</div>
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -560,6 +597,7 @@
 			
 				<div class="remains error">В наличии: 0</div>
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -609,6 +647,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -640,6 +679,7 @@
 				<div class="remains  warning ">В наличии: 50</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -671,6 +711,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -708,6 +749,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -739,6 +781,7 @@
 			
 				<div class="remains error">В наличии: 0</div>
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -770,6 +813,7 @@
 			
 				<div class="remains error">В наличии: 0</div>
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -1024,6 +1068,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -1055,6 +1100,7 @@
 				<div class="remains  warning ">В наличии: 50</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -1086,6 +1132,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -1123,6 +1170,7 @@
 				<div class="remains success  ">В наличии: 108</div>
 			
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn  basket-add">
@@ -1154,6 +1202,7 @@
 			
 				<div class="remains error">В наличии: 0</div>
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -1185,6 +1234,7 @@
 			
 				<div class="remains error">В наличии: 0</div>
 			
+			<div class="price">1 900₽</div>
 			<div class="product-card-footer">
 				<div class="pcf-left card-basket-wrapper">
 					<a href="" class="btn disabled basket-add">
@@ -1266,7 +1316,7 @@
 	<div class="footer-main">
 		<div class="container">
 			<div class="row">
-				<div class="col xl9 l8 m12 s12 offset-l2 align-center-l-down align-left-l-up footer-left">
+				<div class="col xl9 l10 m12 s12 offset-l1 align-center-l-down align-left-l-up footer-left">
 					<a href="" class="footer-logo"></a>
 					<ul>
 						<li><a href="">Главная</a></li>
@@ -1276,7 +1326,7 @@
 						<li><a href="">Контакты</a></li>
 					</ul>
 				</div>
-				<div class="col xl3 l8 offset-l2 m10 offset-m1 s12 align-center-l-down align-right-l-up">
+				<div class="col xl3 l10 offset-l1 m10 offset-m1 s12 align-center-l-down align-right-l-up">
 					<form action="" id="contact-form">
 						<div class="input-field">
 							<input type="text" placeholder="Ваш e-mail">
@@ -1290,6 +1340,130 @@
 	</div>
 	<div class="footer-copyright center-align">© 2022</div>
 </footer>
+<div class="modal" id="add-reciever">
+	<div class="modal-content">
+		<a href="javascript:void(0);" class="modal-close closer"><i class="mdi mdi-close"></i></a>
+		<div class="row">
+			<div class="col s12">
+				<h3>Добавить получателя</h3>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Учреждение" readonly id="select-place" class="open-place-selector"><label for="">Учреждение</label></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn-flat modal-close">Отправить</a>
+	</div>
+</div>
+<div class="modal" id="login">
+	<div class="modal-content">
+		<div class="row">
+			<div class="col s12">
+				<h3>Авторизация</h3>
+			</div>
+			<a href="javascript:void(0);" class="closer modal-close"><i class="mdi mdi-close"></i></a>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Логин"><label for="">Логин</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="password" placeholder="Пароль"><label for="">Пароль</label></div>
+			</div>
+			<div class="col l6 m12"><a class="modal-close modal-trigger" href="#register">Нет аккаунта?</a></div>
+			<div class="col l6 m12 align-right-m-up"><a class="modal-close" href="">Забыли пароль?</a></div>
+		</div>
+	</div>
+	<div class="modal-footer"><a href="javascript:void(0);" class="btn-flat modal-close">Отправить</a></div>
+</div>
+<div class="modal" id="register">
+	<div class="modal-content">
+		<a href="javascript:void(0);" class="modal-close closer"><i class="mdi mdi-close"></i></a>
+		<div class="row">
+			<div class="col s12">
+				<h3>Регистрация</h3>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Телефон"><label for="">Телефон</label></div>
+			</div>
+			<div class="col l12">
+				<div class="input-field"><input type="text" placeholder="E-mail"><label for="">E-mail</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Пароль"><label for="">Пароль</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Повтор пароля"><label for="">Повтор пароля</label></div>
+			</div>
+			<div class="col l12 right-align"><a href="#login" class="modal-close modal-trigger">Уже есть аккаунт?</a></div>
+		</div>
+	</div>
+	<div class="modal-footer"><a href="" class="btn-flat">Принять</a></div>
+</div>
+<div class="modal overflow" id="place-selector">
+	<div class="modal-content">
+		<a href="#" class="closer modal-close"><i class="mdi mdi-close"></i></a>
+		<div class="row">
+			<div class="col s12">
+				<h3>Выбор учреждения</h3>
+			</div>
+			<div class="col l6 m12">
+				<div class="list-field">
+					<input type="hidden" name="city"><label for="">Город</label>
+					<ul>
+						<li><a href="">Город 1</a></li>
+						<li><a href="">Город 2</a></li>
+						<li><a href="">Город 3</a></li>
+						<li><a href="">Город 4</a></li>
+						<li><a href="">Город 5</a></li>
+						<li><a href="">Город 6</a></li>
+						<li><a href="">Город 7</a></li>
+						<li><a href="">Город 8</a></li>
+						<li><a href="">Город 9</a></li>
+						<li><a href="">Город 10</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col l6 m12">
+				<div class="list-field">
+					<input type="hidden" name="organization"><label for="">Учреждение</label>
+					<ul>
+						<li><a href="">Учреждение 1</a></li>
+						<li><a href="">Учреждение 2</a></li>
+						<li><a href="">Учреждение 3</a></li>
+						<li><a href="">Учреждение 4</a></li>
+						<li><a href="">Учреждение 5</a></li>
+						<li><a href="">Учреждение 6</a></li>
+						<li><a href="">Учреждение 7</a></li>
+						<li><a href="">Учреждение 8</a></li>
+						<li><a href="">Учреждение 9</a></li>
+						<li><a href="">Учреждение 10</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="javascript:void(0)" class="btn-flat modal-close">Принять</a>
+	</div>
+</div>
 	<script src="/js/jquery.min.js"></script>
 <script src="/js/swiper-bundle.min.js"></script>
 <script src="/js/jquery.lazy.min.js"></script>

@@ -1,0 +1,80 @@
+main#basket{
+
+	& table{
+	
+		&.zebra{
+	
+			border-spacing: 0;
+			width: 100%;
+	
+			& thead{
+	
+				& tr{
+	
+					& th{
+						color: #777;
+						text-align: left;
+						font-size: 10px;
+						font-weight: 500;
+						text-transform: uppercase;
+					}
+				}
+			}
+	
+			& tbody{
+	
+				& tr{
+	
+					&:nth-child(odd){
+						background-color: rgba(black, .05);
+					}
+	
+					& td{
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+	
+	& .total{
+	
+		text-align: right;
+		margin: 20px 0;
+	
+		& .total-sign{
+			font-size: 12px;
+		}
+	
+		& .total-sum{
+			font-weight: 700;
+			font-size: 32px;
+		}
+	}
+
+	& .pm-block{
+
+		width: fit-content;
+		display: flex;
+
+		& a{
+
+			width: 30px;
+			text-align: center;
+		}
+
+
+		& input{
+			border: none;
+			width: 40px;
+			text-align: center;
+			background: transparent;
+
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button{
+				display: none;
+			}
+		}
+
+	}
+}

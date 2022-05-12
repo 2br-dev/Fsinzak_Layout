@@ -12,8 +12,11 @@
 @import './parts/helpers';
 @import './parts/header';
 @import './parts/footer';
+@import './parts/news';
 
 // Import pages
 @import './pages/main';
 @import './pages/product';
 @import './pages/profile';
+@import './pages/basket';
+@import './pages/success';

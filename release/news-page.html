@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ФСИНЗАК – Главная</title>
+<link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+	<header>
+	<div class="container">
+		<div class="nav-top">
+			<div class="nav-left">
+				<a href="#mobile" class="sidenav-trigger hide-l-up burger">
+					<i class="mdi mdi-menu"></i>
+				</a>
+				<a href="/" class="logo"></a>
+				<div class="nav-wrapper hide-l-down">
+					<a href="" class="super-btn">
+						<i class="mdi mdi-menu"></i>
+						<span>Каталог</span>
+					</a>
+					<nav>
+						<ul>
+							<li><a href="">Бакалея</a></li>
+							<li><a href="">Гастрономия</a></li>
+							<li><a href="">Здоровое питание</a></li>
+							<li><a href="">Канцелярские товары</a></li>
+							<li><a href="">Книги и сканворды</a></li>
+							<li><a href="">Кондитерские изделия</a></li>
+							<li><a href="">Красота и здоровье</a></li>
+							<li><a href="">Соусы и специи</a></li>
+							<li><a href="">Молочная продукция</a></li>
+							<li><a href="">Напитки</a></li>
+							<li><a href="">Овощи, фрукты</a></li>
+							<li><a href="">Одежда и постельное бельё</a></li>
+							<li><a href="">Сертификаты</a></li>
+							<li><a href="">Орехи, сухофрукты, цукаты</a></li>
+							<li><a href="">Спортивные товары</a></li>
+							<li><a href="">Хлебобулочные изделия</a></li>
+							<li><a href="">Хозтовары</a></li>
+							<li><a href="">Чай, кофе, сахар, мёд</a></li>
+							<li><a href="">Электроприборы</a></li>
+							<li><a href="">Консервы</a></li>
+							<li><a href="">VIP</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="hide-l-down">
+					<form action="" id="search" class="search-wrapper">
+						<div class="input-wrapper">
+							<input type="text" placeholder="Поиск">
+							<a href="" class="btn">
+								<i class="mdi mdi-magnify"></i>
+							</a>
+						</div>
+					</form>
+				</div>
+				<div class="hide-l-down">
+					<a href="#place-selector" class="geo hide-l-down modal-trigger">
+						<i class="mdi mdi-map-marker-outline"></i>
+						<div class="loc">
+							<span class="location">Хабаровский край</span>
+							<span class="name">СИЗО №1</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="nav-right">
+				<a href="/favorites.html" class="icon-wrapper"><i class="mdi mdi-heart"></i><span class="label">Избранное</span><span class="indicator">9+</span></a>
+				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">Корзина</span><span class="indicator">9+</span></a>
+				<div class="icon-wrapper">
+					<!-- Зарегистрированный пользователь -->
+					<ul class="dropdown-list" id="logged">
+						<li>
+							<a href="/profile.html"><i class="mdi mdi-account"></i><span class="label">Профиль</span><span class="indicator">9+</span></a>
+							<ul>
+								<li><a href="/profile.html">Профиль</a></li>
+								<li><a href="/orders.html">Заказы</a></li>
+								<li><a href="/returns.html">Возвраты</a></li>
+								<li><a href="/recievers.html">Получатели</a></li>
+								<li><a href="/support.html">Поддержка</a></li>
+								<li><div class="divider"></div></li>
+								<li><a href="/">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /Зарегистрированный пользователь -->
+					<!-- Гость -->
+					<ul class="dropdown-list hidden" id="guest">
+						<li>
+							<a href="/profile.html"><i class="mdi mdi-login"></i><span class="label">Вход</span></a>
+							<ul>
+								<li><a class="modal-trigger" href="#login">Авторизация</a></li>
+								<li><a class="modal-trigger" href="#register">Регистрация</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /Гость -->
+				</div>
+			</div>
+		</div>
+		<div class="hide-l-down">
+			<div class="nav-bottom">
+				<ul class="nav-bl">
+					<li><a href="/rules.html">Правила</a></li>
+					<li><a href="/delivery.html">Доставка</a></li>
+					<li><a href="/comments.html">Отзывы</a></li>
+					<li><a href="/contacts.html">Контакты</a></li>
+				</ul>
+				<ul class="nav-br dropdown-list">
+					<li>
+						Получатель: <a href="">Иванов Иван Иванович</a>
+						<ul>
+	<li>
+		<a href="">
+			<span>Иванов Иван Иванович</span>
+		</a>
+		<i class="mdi mdi-information explanation-tooltip-wrapper">
+			<div class="explanation-tooltip">
+	Ограничение:
+	<ul class="browser-default">
+		<li>Не более 1 уп. на руки</li>
+		<li>от 18 лет</li>
+		<li>Не чаще 1р./неделю</li>
+	</ul>
+</div>
+		</i>
+	</li>
+	<li>
+		<a href="">
+			<span>Петров Пётр Петрович</span>
+		</a>
+		<i class="mdi mdi-information explanation-tooltip-wrapper">
+			<div class="explanation-tooltip">
+	Ограничение:
+	<ul class="browser-default">
+		<li>Не более 1 уп. на руки</li>
+		<li>от 18 лет</li>
+		<li>Не чаще 1р./неделю</li>
+	</ul>
+</div>
+		</i>
+	</li>
+	<li>
+		<a href="">
+			<span>Сидоров Сидор Сидорович</span>
+		</a>
+		<i class="mdi mdi-information explanation-tooltip-wrapper">
+			<div class="explanation-tooltip">
+	Ограничение:
+	<ul class="browser-default">
+		<li>Не более 1 уп. на руки</li>
+		<li>от 18 лет</li>
+		<li>Не чаще 1р./неделю</li>
+	</ul>
+</div>
+		</i>
+	</li>
+	<li><a href="#add-reciever" class="modal-trigger">Добавить</a></li>
+</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<ul class="sidenav" id="mobile">
+	<li class="mobile-sticky">
+		<form action="" id="search-mobile" class="search-wrapper">
+			<div class="input-wrapper">
+				<input type="text" placeholder="Поиск">
+				<a href="" class="btn">
+					<i class="mdi mdi-magnify"></i>
+				</a>
+			</div>
+		</form>
+	</li>
+	<li><a href="">Главная</a></li>
+	<li>
+		<ul class="collapsible" id="catalog">
+			<li>
+				<div class="collapsible-header">
+					<a href="#catalog">Каталог</a>
+				</div>
+				<div class="collapsible-body">
+					<ul>
+						<li><a href="">Бакалея</a></li>
+						<li><a href="">Гастрономия</a></li>
+						<li><a href="">Здоровое питание</a></li>
+						<li><a href="">Канцелярские товары</a></li>
+						<li><a href="">Книги и сканворды</a></li>
+						<li><a href="">Кондитерские изделия</a></li>
+						<li><a href="">Красота и здоровье</a></li>
+						<li><a href="">Соусы и специи</a></li>
+						<li><a href="">Молочная продукция</a></li>
+						<li><a href="">Напитки</a></li>
+						<li><a href="">Овощи, фрукты</a></li>
+						<li><a href="">Одежда и постельное бельё</a></li>
+						<li><a href="">Сертификаты</a></li>
+						<li><a href="">Орехи, сухофрукты, цукаты</a></li>
+						<li><a href="">Спортивные товары</a></li>
+						<li><a href="">Хлебобулочные изделия</a></li>
+						<li><a href="">Хозтовары</a></li>
+						<li><a href="">Чай, кофе, сахар, мёд</a></li>
+						<li><a href="">Электроприборы</a></li>
+						<li><a href="">Консервы</a></li>
+						<li><a href="">VIP</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li><a href="">Правила</a></li>
+	<li><a href="">Доставка</a></li>
+	<li><a href="">Отзывы</a></li>
+	<li><a href="">Контакты</a></li>
+</ul>
+<div class="hide-l-up bottom-toolbar">
+	<div class="left name-selector-wrapper">
+		<span class="white-text">
+			<span class="icon">
+				<i class="mdi mdi-clipboard-account"></i>
+			</span>
+			<span class="text">
+				<span class="name-top">
+					<span class="last-name">Сигизмундов</span>
+				</span>
+				<span class="name-bottom explanation-tooltip-wrapper">
+					<span class="first-name">Сигизмунд</span>
+					<span class="middle-name">Сигизмундович</span>
+				</span>
+			</span>
+		</span>
+		<div class="name-selector">
+			<ul>
+	<li>
+		<a href="">
+			<span>Иванов Иван Иванович</span>
+		</a>
+		<i class="mdi mdi-information explanation-tooltip-wrapper">
+			<div class="explanation-tooltip">
+	Ограничение:
+	<ul class="browser-default">
+		<li>Не более 1 уп. на руки</li>
+		<li>от 18 лет</li>
+		<li>Не чаще 1р./неделю</li>
+	</ul>
+</div>
+		</i>
+	</li>
+	<li>
+		<a href="">
+			<span>Петров Пётр Петрович</span>
+		</a>
+		<i class="mdi mdi-information explanation-tooltip-wrapper">
+			<div class="explanation-tooltip">
+	Ограничение:
+	<ul class="browser-default">
+		<li>Не более 1 уп. на руки</li>
+		<li>от 18 лет</li>
+		<li>Не чаще 1р./неделю</li>
+	</ul>
+</div>
+		</i>
+	</li>
+	<li>
+		<a href="">
+			<span>Сидоров Сидор Сидорович</span>
+		</a>
+		<i class="mdi mdi-information explanation-tooltip-wrapper">
+			<div class="explanation-tooltip">
+	Ограничение:
+	<ul class="browser-default">
+		<li>Не более 1 уп. на руки</li>
+		<li>от 18 лет</li>
+		<li>Не чаще 1р./неделю</li>
+	</ul>
+</div>
+		</i>
+	</li>
+	<li><a href="#add-reciever" class="modal-trigger">Добавить</a></li>
+</ul>
+		</div>
+	</div>
+	<div class="separator"></div>
+	<div class="right">
+		<a class="white-text modal-trigger" href="#place-selector">
+			<span class="icon">
+				<i class="mdi mdi-map-marker"></i>
+			</span>
+			<span class="text">
+				<span class="location">Хабаровский край</span>
+				<span class="name">СИЗО №1</span>
+			</span>
+		</a>
+	</div>
+</div>
+	<main id="news">
+		<section id="entry-content">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<img src="" alt="" class="lazy news-image inline-img" data-src="https://picsum.photos/800/600">
+						<h1>Заголовок новости</h1>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae est mollitia veritatis expedita assumenda at consectetur. Iste sint mollitia et voluptatibus, odit rerum incidunt esse adipisci corporis, tenetur maxime suscipit aperiam quos! Quae ad perferendis ipsa similique praesentium dolorum perspiciatis omnis. Temporibus deserunt architecto aliquam nemo, autem inventore error. Autem veniam asperiores explicabo earum atque quas nihil necessitatibus? Aliquid, labore dolorem. Necessitatibus placeat, excepturi vel praesentium veniam quidem provident hic nobis modi facilis labore quis repellat tempora dolorum vitae autem.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="relative-news" class="news-list">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Похожие новости</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col xl3 l4 m6 s12 ">
+	<div class="news-entry">
+		<div class="news-entry-image">
+			<a class="lazy h hoverable" href="/news-page.html" data-src="https://picsum.photos/500/300?random=1"></a>
+		</div>
+		<div class="news-entry-content">
+			<div class="title">Заголовок новости</div>
+			<div class="intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!</div>
+		</div>
+		<div class="news-entry-footer">
+			<a href="/news-page.html">Подробнее</a>
+		</div>
+	</div>
+</div><div class="col xl3 l4 m6 s12 ">
+	<div class="news-entry">
+		<div class="news-entry-image">
+			<a class="lazy h hoverable" href="/news-page.html" data-src="https://picsum.photos/500/300?random=2"></a>
+		</div>
+		<div class="news-entry-content">
+			<div class="title">Заголовок новости</div>
+			<div class="intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!</div>
+		</div>
+		<div class="news-entry-footer">
+			<a href="/news-page.html">Подробнее</a>
+		</div>
+	</div>
+</div><div class="col xl3 l4 m6 s12 ">
+	<div class="news-entry">
+		<div class="news-entry-image">
+			<a class="lazy h hoverable" href="/news-page.html" data-src="https://picsum.photos/500/300?random=3"></a>
+		</div>
+		<div class="news-entry-content">
+			<div class="title">Заголовок новости</div>
+			<div class="intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!</div>
+		</div>
+		<div class="news-entry-footer">
+			<a href="/news-page.html">Подробнее</a>
+		</div>
+	</div>
+</div><div class="col xl3 l4 m6 s12 hide-l-only">
+	<div class="news-entry">
+		<div class="news-entry-image">
+			<a class="lazy h hoverable" href="/news-page.html" data-src="https://picsum.photos/500/300?random=4"></a>
+		</div>
+		<div class="news-entry-content">
+			<div class="title">Заголовок новости</div>
+			<div class="intro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!</div>
+		</div>
+		<div class="news-entry-footer">
+			<a href="/news-page.html">Подробнее</a>
+		</div>
+	</div>
+</div>
+				</div>
+				<div class="row">
+					<div class="col s12 center-align"><a href="/news.html" class="btn">Все новости</a></div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+	<div class="pre-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col l5 m12 s12">
+					<div class="footer-header">Важная информация</div>
+					<ul class="browser-default">
+						<li>Прием заказов 24 часа в сутки</li>
+						<li>Возможность совершения покупок с помощью компьютера, планшета или смартфона с выходом в интернет</li>
+						<li>Большое разнообразие ассортимента товара</li>
+						<li>Только через онлайн-сервис - возможность приобретения Эксклюзивных товаров</li>
+						<li>Гарантированное получение заказа в течение 1-3 рабочих дней, со дня поступления заявки в Учреждение, согласно графика, и обязательным уведомлением покупателя</li>
+						<li>Вы покупаете сертификат, адресат получает сигареты, но в случае отказа имеет право обменять их на продукты питания на эквивалентную сумму</li>
+					</ul>
+				</div>
+				<div class="col l3 m6 s12">
+					<div class="footer-header">Способы оплаты</div>
+					<p>
+						Оплату товара можно осуществить практически всеми современными способами онлайн и оффлайн платежей.
+					</p>
+					<div class="lazy footer-payment" data-src="/img/footer-payment.svg"></div>
+				</div>
+				<div class="col l3 offset-l1 m6 s12">
+					<div class="footer-header">Уважаемые клиенты!</div>
+					<p>
+						По всем интересующим вопросам Вы можете обратиться по электронной почте: info@fsinzak.ru или позвонить: 
+					</p>
+					<div class="kv-table">
+						<div class="kv-pair">
+							<div class="key">Хабаровск:</div>
+							<div class="value">8 (4212) 78-80-21</div>
+						</div>
+						<div class="kv-pair">
+							<div class="key">Новосибирск:</div>
+							<div class="value">8 (383) 383-25-10</div>
+						</div>
+						<div class="kv-pair hide-s-down">
+							<div class="key">&nbsp;</div>
+							<div class="value">&nbsp;</div>
+						</div>
+						<div class="kv-pair">
+							<div class="key">пн-пт: </div>
+							<div class="value">9:00 – 20:00</div>
+						</div>
+						<div class="kv-pair">
+							<div class="key">сб-вс:</div>
+							<div class="value">9:00 – 17:45</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-main">
+		<div class="container">
+			<div class="row">
+				<div class="col xl9 l10 m12 s12 offset-l1 align-center-l-down align-left-l-up footer-left">
+					<a href="" class="footer-logo"></a>
+					<ul>
+						<li><a href="">Главная</a></li>
+						<li><a href="">Правила</a></li>
+						<li><a href="">Доставка</a></li>
+						<li><a href="">Отзывы</a></li>
+						<li><a href="">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="col xl3 l10 offset-l1 m10 offset-m1 s12 align-center-l-down align-right-l-up">
+					<form action="" id="contact-form">
+						<div class="input-field">
+							<input type="text" placeholder="Ваш e-mail">
+							<label for="">Ваш e-mail</label>
+						</div>
+						<a href="" class="btn">Отправить</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright center-align">© 2022</div>
+</footer>
+<div class="modal" id="add-reciever">
+	<div class="modal-content">
+		<a href="javascript:void(0);" class="modal-close closer"><i class="mdi mdi-close"></i></a>
+		<div class="row">
+			<div class="col s12">
+				<h3>Добавить получателя</h3>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Учреждение" readonly id="select-place" class="open-place-selector"><label for="">Учреждение</label></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn-flat modal-close">Отправить</a>
+	</div>
+</div>
+<div class="modal" id="login">
+	<div class="modal-content">
+		<div class="row">
+			<div class="col s12">
+				<h3>Авторизация</h3>
+			</div>
+			<a href="javascript:void(0);" class="closer modal-close"><i class="mdi mdi-close"></i></a>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Логин"><label for="">Логин</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="password" placeholder="Пароль"><label for="">Пароль</label></div>
+			</div>
+			<div class="col l6 m12"><a class="modal-close modal-trigger" href="#register">Нет аккаунта?</a></div>
+			<div class="col l6 m12 align-right-m-up"><a class="modal-close" href="">Забыли пароль?</a></div>
+		</div>
+	</div>
+	<div class="modal-footer"><a href="javascript:void(0);" class="btn-flat modal-close">Отправить</a></div>
+</div>
+<div class="modal" id="register">
+	<div class="modal-content">
+		<a href="javascript:void(0);" class="modal-close closer"><i class="mdi mdi-close"></i></a>
+		<div class="row">
+			<div class="col s12">
+				<h3>Регистрация</h3>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Фамилия"><label for="">Фамилия</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Имя"><label for="">Имя</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Отчество"><label for="">Отчество</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Телефон"><label for="">Телефон</label></div>
+			</div>
+			<div class="col l12">
+				<div class="input-field"><input type="text" placeholder="E-mail"><label for="">E-mail</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Пароль"><label for="">Пароль</label></div>
+			</div>
+			<div class="col l6 m12">
+				<div class="input-field"><input type="text" placeholder="Повтор пароля"><label for="">Повтор пароля</label></div>
+			</div>
+			<div class="col l12 right-align"><a href="#login" class="modal-close modal-trigger">Уже есть аккаунт?</a></div>
+		</div>
+	</div>
+	<div class="modal-footer"><a href="" class="btn-flat">Принять</a></div>
+</div>
+<div class="modal overflow" id="place-selector">
+	<div class="modal-content">
+		<a href="#" class="closer modal-close"><i class="mdi mdi-close"></i></a>
+		<div class="row">
+			<div class="col s12">
+				<h3>Выбор учреждения</h3>
+			</div>
+			<div class="col l6 m12">
+				<div class="list-field">
+					<input type="hidden" name="city"><label for="">Город</label>
+					<ul>
+						<li><a href="">Город 1</a></li>
+						<li><a href="">Город 2</a></li>
+						<li><a href="">Город 3</a></li>
+						<li><a href="">Город 4</a></li>
+						<li><a href="">Город 5</a></li>
+						<li><a href="">Город 6</a></li>
+						<li><a href="">Город 7</a></li>
+						<li><a href="">Город 8</a></li>
+						<li><a href="">Город 9</a></li>
+						<li><a href="">Город 10</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col l6 m12">
+				<div class="list-field">
+					<input type="hidden" name="organization"><label for="">Учреждение</label>
+					<ul>
+						<li><a href="">Учреждение 1</a></li>
+						<li><a href="">Учреждение 2</a></li>
+						<li><a href="">Учреждение 3</a></li>
+						<li><a href="">Учреждение 4</a></li>
+						<li><a href="">Учреждение 5</a></li>
+						<li><a href="">Учреждение 6</a></li>
+						<li><a href="">Учреждение 7</a></li>
+						<li><a href="">Учреждение 8</a></li>
+						<li><a href="">Учреждение 9</a></li>
+						<li><a href="">Учреждение 10</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<a href="javascript:void(0)" class="btn-flat modal-close">Принять</a>
+	</div>
+</div>
+	<script src="/js/jquery.min.js"></script>
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/jquery.lazy.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script src="/js/master.js"></script>
+</body>
+</html>

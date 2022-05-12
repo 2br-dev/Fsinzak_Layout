@@ -122,10 +122,25 @@ $(() => {
 	$('body').on('click', '.list-field label', openList);
 	$('body').on('click', '.list-field a', setList);
 	$('body').on('click', closeList);
+	$('body').on('click', '.open-place-selector', openPlaceSelector);
 	$('body').on('keyup', 'textarea', updateTextarea);
 
 	let tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
+	let modal = M.Modal.init(document.querySelectorAll('.modal'));
 });
+
+function openPlaceSelector(e){
+	e.preventDefault();
+	let targetModal = M.Modal.getInstance(document.querySelector('#place-selector'));
+	targetModal.open();
+	targetModal.options.onCloseEnd = (el) => {
+		let city = el.querySelector("[name=city]").value;
+		let organization = el.querySelector("[name=organization]").value;
+		let summary = `${city}, ${organization}`;
+
+		this.value = summary;
+	};
+}
 
 function updateTextarea(){
 	this.style.height="1px";
@@ -145,12 +160,15 @@ function closeList(e){
 	
 	let el = e.target;
 	let path = composedPath(el);
+
 	let filtered = path.filter((element, index) => {
 		return element.tagName == 'LABEL';
-	})
+	});
 
-	if(!filtered.length){
-		$('.list-field ul').removeClass('shown');
+	$('.list-field ul').removeClass('shown');
+	
+	if(filtered.length){
+		$(filtered).parents('.list-field').find('ul').addClass('shown');
 	}
 }
 

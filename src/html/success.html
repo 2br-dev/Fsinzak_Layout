@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: "Мои заказы"})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="order-proceed">
+		<section>
+			<div class="container">
+				<div class="row flex">
+					<div class="col s12"><h1>Оформление заказа</h1></div>
+					<div class="col m8 s12 order-m1">
+						<div class="info-wrapper">
+							<div class="icon-wrapper">
+								<i class="mdi mdi-check success"></i>
+							</div>
+							<div class="data-wrapper">
+								<div class="success-header">Готово!</div>
+								<p>Мы свяжемся с Вами в ближайшее время. Ваш заказ будет доступен для просмотра и редактирования из секции <a href="/orders.html">«Мои заказы»</a> на странице профиля </p>
+							</div>
+						</div>
+						<p>Заказ мы также продублируем на Ваш e-mail. Вы можете закрыть эту страницу, или <a href="/">продолжить покупки</a></p>
+					</div>
+					<div class="col m4 s12">
+						<div class="details">
+							<div class="details-header">Заказ №46635-4653</div>
+							<div class="order-state">Ожидает оплаты</div>
+							<div class="kv-table" id="details">
+								@@loop('./parts/details-row.html','./data/details.json')
+							</div>
+							<div class="kv-table" id="summary">
+								<div class="kv-pair">
+									<div class="key">Итого</div>
+									<div class="value">120 000₽</div>
+								</div>
+							</div>
+							<div class="right-align">
+								<a href="/orders.html" class="btn">Мои заказы</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/scripts.html')
+	@@include('./parts/footer.html')
+</body>
+</html>

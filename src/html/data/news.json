@@ -1,0 +1,62 @@
+[
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=1"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=2"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=3"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=4"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=5"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=6"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=7"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=8"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=9"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=10"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=11"
+	},
+	{
+		"title": "Заголовок новости",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "https://picsum.photos/500/300?random=12"
+	}
+]

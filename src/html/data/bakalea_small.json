@@ -6,7 +6,8 @@
 		"remains": 108,
 		"limits": "",
 		"buttonText": "В корзину",
-		"class": ""
+		"class": "",
+		"price": "1 900₽"
 	},
 	{
 		"id": "bak-2",
@@ -15,7 +16,8 @@
 		"remains": 50,
 		"limits": "",
 		"buttonText": "В корзину",
-		"class": ""
+		"class": "",
+		"price": "1 900₽"
 	},
 	{
 		"id": "bak-3",
@@ -24,7 +26,8 @@
 		"remains": 108,
 		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
 		"buttonText": "Ограничения",
-		"class": "disabled"
+		"class": "disabled",
+		"price": "1 900₽"
 	},
 	{
 		"id": "bak-4",
@@ -33,7 +36,8 @@
 		"remains": 108,
 		"limits": "",
 		"buttonText": "В корзину",
-		"class": ""
+		"class": "",
+		"price": "1 900₽"
 	},
 	{
 		"id": "bak-5",
@@ -42,7 +46,8 @@
 		"remains": 0,
 		"limits": "",
 		"buttonText": "Нет в наличии",
-		"class": "disabled"
+		"class": "disabled",
+		"price": "1 900₽"
 	},
 	{
 		"id": "bak-6",
@@ -51,6 +56,7 @@
 		"remains": 0,
 		"limits": "",
 		"buttonText": "Нет получателя",
-		"class": "disabled"
+		"class": "disabled",
+		"price": "1 900₽"
 	}
 ]

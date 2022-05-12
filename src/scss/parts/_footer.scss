@@ -37,24 +37,26 @@ footer{
 			
 			& .kv-pair{
 				
-				display: table-row;
+				display: flex;
+				flex-wrap: wrap;
 				
 				@media(max-width: $small){
 					display: block;
 					margin-bottom: 20px;
 				}
-				
-				& .key, & .value{
-					
-					display: table-cell;
-					
-					@media(max-width: $small){
-						display: block;
-					}
+
+				& .key, &.value{
+					flex-grow: 1;
+				}
+
+				& .key{
+					flex-shrink: 0;
+					width: 130px;
 				}
 				
 				& .value{
 					font-weight: 600;
+					white-space: nowrap;
 				}
 			}
 		}
@@ -114,6 +116,7 @@ footer{
 						height: 60px;
 						background: url('/img/logo-footer.svg');
 						background-repeat: no-repeat;
+						background-size: contain;
 					}
 
 					& ul{

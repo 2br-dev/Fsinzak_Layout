@@ -220,60 +220,11 @@ header{
 
 			&.nav-br{
 
-				& > li{
-
-					position: relative;
-
-					& > a{
-						text-decoration: underline;
-						text-underline-offset: 2px;
-						text-decoration-thickness: 1px;
-						text-decoration-style: dashed;
-					}
-					
-					& > ul{
-						
-						position: absolute;
-						right: 0;
-						top: 100%;
-						border-radius: 6px;
-						transform: translateY(-20px);
-						background: #fff;
-						z-index: 1;
-						box-shadow: 0 2px 8px rgba(black, .2);
-						opacity: 0;
-						pointer-events: none;
-						transition: opacity .2s, transform .2s;
-						
-						& > li{
-
-							display: flex;
-							&:hover{
-								background: #efefef;
-							}
-
-							& a{
-
-								display: block;
-								padding: 6px 12px;
-								transition: background-color .2s;
-								width: 100%;
-
-							}
-
-							& i{
-								padding: 6px 12px;
-								color: $link-color;
-							}
-						}
-					}
-
-					&:hover ul{
-
-						opacity: 1;
-						transform: translate(0);
-						pointer-events: all;
-					}
+				& a{
+					text-decoration: dashed;
+					text-decoration: underline;
+					text-decoration-style: dashed;
+					text-decoration-thickness: 1px;
 				}
 			}
 		}

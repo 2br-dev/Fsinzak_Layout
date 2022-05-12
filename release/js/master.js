@@ -78,9 +78,26 @@ $(function () {
   $('body').on('click', '.list-field label', openList);
   $('body').on('click', '.list-field a', setList);
   $('body').on('click', closeList);
+  $('body').on('click', '.open-place-selector', openPlaceSelector);
   $('body').on('keyup', 'textarea', updateTextarea);
   var tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
+  var modal = M.Modal.init(document.querySelectorAll('.modal'));
 });
+
+function openPlaceSelector(e) {
+  var _this = this;
+
+  e.preventDefault();
+  var targetModal = M.Modal.getInstance(document.querySelector('#place-selector'));
+  targetModal.open();
+
+  targetModal.options.onCloseEnd = function (el) {
+    var city = el.querySelector("[name=city]").value;
+    var organization = el.querySelector("[name=organization]").value;
+    var summary = "".concat(city, ", ").concat(organization);
+    _this.value = summary;
+  };
+}
 
 function updateTextarea() {
   this.style.height = "1px";
@@ -103,9 +120,10 @@ function closeList(e) {
   var filtered = path.filter(function (element, index) {
     return element.tagName == 'LABEL';
   });
+  $('.list-field ul').removeClass('shown');
 
-  if (!filtered.length) {
-    $('.list-field ul').removeClass('shown');
+  if (filtered.length) {
+    $(filtered).parents('.list-field').find('ul').addClass('shown');
   }
 }
 
