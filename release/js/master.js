@@ -67,6 +67,7 @@ $(function () {
 
   var tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
   $('.lazy').lazy();
+  setupHeader();
   $('body').on('click', '.disabled', nop);
   $('body').on('click', '.basket-add', showCount);
   $('body').on('click', '.basket-minus', basketMinus);
@@ -80,9 +81,17 @@ $(function () {
   $('body').on('click', closeList);
   $('body').on('click', '.open-place-selector', openPlaceSelector);
   $('body').on('keyup', 'textarea', updateTextarea);
+  $(window).on('scroll', setupHeader);
   var tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
   var modal = M.Modal.init(document.querySelectorAll('.modal'));
 });
+
+function setupHeader() {
+  var st = $('html, body').scrollTop();
+  var className = st >= 80 ? 'fixed' : '';
+  console.log(st);
+  $('body').attr('class', className);
+}
 
 function openPlaceSelector(e) {
   var _this = this;

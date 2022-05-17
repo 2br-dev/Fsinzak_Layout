@@ -110,6 +110,7 @@ $(() => {
 	let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
 
 	$('.lazy').lazy();
+	setupHeader();
 
 	$('body').on('click', '.disabled', nop);
 	$('body').on('click', '.basket-add', showCount);
@@ -124,10 +125,18 @@ $(() => {
 	$('body').on('click', closeList);
 	$('body').on('click', '.open-place-selector', openPlaceSelector);
 	$('body').on('keyup', 'textarea', updateTextarea);
+	$(window).on('scroll', setupHeader);
 
 	let tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
 	let modal = M.Modal.init(document.querySelectorAll('.modal'));
 });
+
+function setupHeader(){
+	let st = $('html, body').scrollTop();
+	let className = st >= 80 ? 'fixed' : '';
+	console.log(st);
+	$('body').attr('class', className);
+}
 
 function openPlaceSelector(e){
 	e.preventDefault();

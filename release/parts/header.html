@@ -62,7 +62,7 @@
 				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">Корзина</span><span class="indicator">9+</span></a>
 				<div class="icon-wrapper">
 					<!-- Зарегистрированный пользователь -->
-					<ul class="dropdown-list" id="logged">
+					<ul class="dropdown-list hidden" id="logged">
 						<li>
 							<a href="/profile.html"><i class="mdi mdi-account"></i><span class="label">Профиль</span><span class="indicator">9+</span></a>
 							<ul>
@@ -78,7 +78,7 @@
 					</ul>
 					<!-- /Зарегистрированный пользователь -->
 					<!-- Гость -->
-					<ul class="dropdown-list hidden" id="guest">
+					<ul class="dropdown-list" id="guest">
 						<li>
 							<a href="/profile.html"><i class="mdi mdi-login"></i><span class="label">Вход</span></a>
 							<ul>
@@ -91,20 +91,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="hide-l-down">
-			<div class="nav-bottom">
-				<ul class="nav-bl">
-					<li><a href="/rules.html">Правила</a></li>
-					<li><a href="/delivery.html">Доставка</a></li>
-					<li><a href="/comments.html">Отзывы</a></li>
-					<li><a href="/contacts.html">Контакты</a></li>
-				</ul>
-				<ul class="nav-br dropdown-list">
-					<li>
-						Получатель: <a href="">Иванов Иван Иванович</a>
-						<ul>
+		<div class="nav-bottom hide-l-down">
+			<ul class="nav-bl">
+				<li><a href="/rules.html">Правила</a></li>
+				<li><a href="/delivery.html">Доставка</a></li>
+				<li><a href="/comments.html">Отзывы</a></li>
+				<li><a href="/contacts.html">Контакты</a></li>
+			</ul>
+			<ul class="nav-br dropdown-list">
+				<li>
+					Получатель: <a href="">Иванов Иван Иванович</a>
+					<ul>
 	<li>
-		<a href="">
+		<a href="#alert" class="modal-trigger">
 			<span>Иванов Иван Иванович</span>
 		</a>
 		<i class="mdi mdi-information explanation-tooltip-wrapper">
@@ -119,7 +118,7 @@
 		</i>
 	</li>
 	<li>
-		<a href="">
+		<a href="#alert" class="modal-trigger">
 			<span>Петров Пётр Петрович</span>
 		</a>
 		<i class="mdi mdi-information explanation-tooltip-wrapper">
@@ -134,7 +133,7 @@
 		</i>
 	</li>
 	<li>
-		<a href="">
+		<a href="#alert" class="modal-trigger">
 			<span>Сидоров Сидор Сидорович</span>
 		</a>
 		<i class="mdi mdi-information explanation-tooltip-wrapper">
@@ -150,9 +149,8 @@
 	</li>
 	<li><a href="#add-reciever" class="modal-trigger">Добавить</a></li>
 </ul>
-					</li>
-				</ul>
-			</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </header>
@@ -226,7 +224,7 @@
 		<div class="name-selector">
 			<ul>
 	<li>
-		<a href="">
+		<a href="#alert" class="modal-trigger">
 			<span>Иванов Иван Иванович</span>
 		</a>
 		<i class="mdi mdi-information explanation-tooltip-wrapper">
@@ -241,7 +239,7 @@
 		</i>
 	</li>
 	<li>
-		<a href="">
+		<a href="#alert" class="modal-trigger">
 			<span>Петров Пётр Петрович</span>
 		</a>
 		<i class="mdi mdi-information explanation-tooltip-wrapper">
@@ -256,7 +254,7 @@
 		</i>
 	</li>
 	<li>
-		<a href="">
+		<a href="#alert" class="modal-trigger">
 			<span>Сидоров Сидор Сидорович</span>
 		</a>
 		<i class="mdi mdi-information explanation-tooltip-wrapper">
