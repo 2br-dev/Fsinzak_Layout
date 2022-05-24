@@ -1,7 +1,7 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
-var sidenav, collapsible, newsSwiper, popularSlider, tooltip;
+var sidenav, collapsible, newsSwiper, popularSlider, tooltip, datepicker;
 $(function () {
   sidenav = M.Sidenav.init(document.querySelectorAll('.sidenav'));
   collapsible = M.Collapsible.init(document.querySelectorAll('.collapsible'));
@@ -52,6 +52,7 @@ $(function () {
 
   if ($('.datepicker').length) {
     $('.datepicker').datepicker({
+      container: document.body,
       i18n: {
         cancel: "Отмена",
         clear: "Очистить",
@@ -65,7 +66,7 @@ $(function () {
     });
   }
 
-  var tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+  tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
   $('.lazy').lazy();
   setupHeader();
   $('body').on('click', '.disabled', nop);

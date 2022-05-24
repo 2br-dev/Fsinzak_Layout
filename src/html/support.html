@@ -12,17 +12,20 @@
 					<div class="col s12">
 						<h1>Управление аккаунтом</h1>
 					</div>
-					<div class="col l2 m12">
+					<div class="col l2 m12 hide-l-down">
 						<ul class="profile-sections">
-							<li><a href="/profile.html"><i class="hide-l-up mdi mdi-account"></i><span class="hide-l-down">Личные данные</span></a></li>
-							<li><a href="/orders.html"><i class="hide-l-up mdi mdi-package"></i><span class="hide-l-down">Заказы</span></a></li>
-							<li><a href="/returns.html"><i class="hide-l-up mdi mdi-history"></i><span class="hide-l-down">Возвраты</span></a></li>
-							<li><a href="/recievers.html"><i class="hide-l-up mdi mdi-card-account-details"></i><span class="hide-l-down">Получатели</span></a></li>
-							<li><a class="active" href="/support.html"><i class="hide-l-up mdi mdi-face-agent"></i><span class="hide-l-down">Поддержка</span></a></li>
+							<li><a href="/profile.html">Личные данные</a></li>
+							<li><a href="/orders.html">Заказы</a></li>
+							<li><a href="/returns.html">Возвраты</a></li>
+							<li><a href="/recievers.html">Получатели</a></li>
+							<li><a class="active" href="/support.html">Поддержка</a></li>
 						</ul>
 					</div>
 					<form class="col l10 m12">
-						<h2>Поддержка</h2>
+						<h2>
+							<a href="#sections" class="sidenav-trigger hide-l-up"><i class="mdi mdi-tune"></i></a>
+							Поддержка
+						</h2>
 						<p class="info">
 							Здесь хранятся Ваши обращения в службу технической поддержки
 						</p>
@@ -71,6 +74,13 @@
 			</div>
 		</section>
 	</main>
+	<ul class="sidenav" id="sections">
+		<li><a href="/profile.html">Личные данные</a></li>
+		<li><a href="/orders.html">Заказы</a></li>
+		<li><a href="/returns.html">Возвраты</a></li>
+		<li><a href="/recievers.html">Получатели</a></li>
+		<li><a href="/support.html">Поддержка</a></li>
+	</ul>
 	@@include('./parts/scripts.html')
 	@@include('./parts/footer.html')
 </body>

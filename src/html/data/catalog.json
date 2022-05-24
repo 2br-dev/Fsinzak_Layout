@@ -2,12 +2,13 @@
 	{
 		"id": "bak-1",
 		"img": "/img/fish/bakalea.jpg",
-		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"title": "Вермишель 60 г Анаком с говяжьим бульоном с говяжьим бульоном",
 		"remains": 108,
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-2",
@@ -17,17 +18,19 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-3",
 		"img": "/img/fish/bakalea.jpg",
-		"title": "Вермишель 60 г Анаком с говяжьим бульоном",
+		"title": "Вермишель 60 г",
 		"remains": 108,
 		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
 		"buttonText": "Ограничения",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-4",
@@ -37,7 +40,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-5",
@@ -47,7 +51,8 @@
 		"limits": "",
 		"buttonText": "Нет в наличии",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-6",
@@ -57,7 +62,8 @@
 		"limits": "",
 		"buttonText": "Нет получателя",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "age"
 	},
 	{
 		"id": "bak-1",
@@ -67,7 +73,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "overflow"
 	},
 	{
 		"id": "bak-2",
@@ -77,7 +84,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-3",
@@ -87,7 +95,8 @@
 		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
 		"buttonText": "Ограничения",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-4",
@@ -97,7 +106,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-5",
@@ -107,7 +117,8 @@
 		"limits": "",
 		"buttonText": "Нет в наличии",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-6",
@@ -117,7 +128,8 @@
 		"limits": "",
 		"buttonText": "Нет получателя",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-1",
@@ -127,7 +139,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-2",
@@ -137,7 +150,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-3",
@@ -147,7 +161,8 @@
 		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
 		"buttonText": "Ограничения",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-4",
@@ -157,7 +172,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-5",
@@ -167,7 +183,8 @@
 		"limits": "",
 		"buttonText": "Нет в наличии",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-6",
@@ -177,7 +194,8 @@
 		"limits": "",
 		"buttonText": "Нет получателя",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-1",
@@ -187,7 +205,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-2",
@@ -197,7 +216,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-3",
@@ -207,7 +227,8 @@
 		"limits": "<ul><li><i class='mdi mdi-home-alert tooltipped' data-position='top' data-tooltip='Ограничение учреждения'></i>Не более 1 уп. на руки</li><li><i class='mdi mdi-account-alert tooltipped' data-position='top' data-tooltip='Ограничение профиля'></i>Не чаще 1р./неделю</li></ul>",
 		"buttonText": "Ограничения",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-4",
@@ -217,7 +238,8 @@
 		"limits": "",
 		"buttonText": "В корзину",
 		"class": "",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-5",
@@ -227,7 +249,8 @@
 		"limits": "",
 		"buttonText": "Нет в наличии",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	},
 	{
 		"id": "bak-6",
@@ -237,6 +260,7 @@
 		"limits": "",
 		"buttonText": "Нет получателя",
 		"class": "disabled",
-		"price": "1 900₽"
+		"price": "1 900₽",
+		"limitType": "none"
 	}
 ]

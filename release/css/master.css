@@ -23045,7 +23045,10 @@ body .product-card {
   box-shadow: 0 0 0 1px #efefef inset;
   padding: 10px;
   border-radius: 12px;
-  transition: box-shadow .2s; }
+  transition: box-shadow .2s;
+  height: calc(100% - 1.5rem);
+  display: flex;
+  flex-direction: column; }
   body .product-card .lazy {
     background-size: contain;
     background-position: center;
@@ -23059,11 +23062,17 @@ body .product-card {
     box-shadow: 0 0 0 1px #efefef inset, 0 2px 12px rgba(0, 0, 0, 0.2); }
     body .product-card:hover .title {
       color: #FF9635; }
-  body .product-card .title {
-    color: #333;
-    margin-bottom: 10px;
-    font-weight: 600;
-    transition: color .2s; }
+  body .product-card .product-data-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; }
+    body .product-card .product-data-wrapper .title {
+      color: #333;
+      margin-bottom: 10px;
+      font-weight: 600;
+      transition: color .2s;
+      display: block;
+      flex-grow: 1; }
   body .product-card .remains {
     margin-bottom: 10px; }
   body .product-card .price {
@@ -23197,6 +23206,38 @@ body .success {
 
 body .warning {
   color: #eb6d33; }
+
+body i.disable-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px; }
+  body i.disable-icon.age, body i.disable-icon.overflow {
+    background: url(/img/age.svg) center center no-repeat;
+    background-size: contain;
+    position: relative; }
+    body i.disable-icon.age:before, body i.disable-icon.overflow:before {
+      content: "Установлено возрастное ограничение";
+      position: absolute;
+      pointer-events: none;
+      font-style: normal;
+      width: 200px;
+      border: 1px solid red;
+      top: 100%;
+      left: 0;
+      transform: translateY(-100%);
+      padding: 5px 10px;
+      background: #fff;
+      border: 1px solid #999999;
+      transition: opacity .4s, transform .4s;
+      border-radius: 8px;
+      opacity: 0; }
+  body i.disable-icon.overflow {
+    background-image: url(/img/overflow.svg); }
+    body i.disable-icon.overflow:before {
+      content: "Исчерпано кол-во товаров в месяц"; }
+  body i.disable-icon:hover:before {
+    opacity: 1;
+    transform: translateY(calc(-100% - 40px)); }
 
 body .error {
   color: #ff153cd8; }
@@ -23492,6 +23533,12 @@ body ul.tabs .tab a {
 body ul.tabs .indicator {
   background: #FF9635; }
 
+body .sidenav {
+  transition: width .4s; }
+  @media (max-width: 575px) {
+    body .sidenav {
+      width: 100%; } }
+
 header {
   z-index: 80;
   background: rgba(255, 255, 255, 0.9);
@@ -23543,7 +23590,7 @@ header {
           @media (min-width: 1600px) {
             header .nav-top .nav-left .nav-wrapper .super-btn i {
               margin-right: 10px; } }
-          @media (max-width: 1600px) {
+          @media (max-width: 1200px) {
             header .nav-top .nav-left .nav-wrapper .super-btn span {
               display: none; } }
         header .nav-top .nav-left .nav-wrapper nav {

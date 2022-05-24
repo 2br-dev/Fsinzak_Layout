@@ -268,7 +268,6 @@ body{
 		}
 	}
 
-
 	& .product-card{
 
 		margin-bottom: 1.5rem;
@@ -276,6 +275,9 @@ body{
 		padding: 10px;
 		border-radius: 12px;
 		transition: box-shadow .2s;
+		height: calc(100% - 1.5rem);
+		display: flex;
+		flex-direction: column;
 
 		& .lazy{
 			
@@ -297,13 +299,23 @@ body{
 				color: $accent;
 			}
 		}
-		
-		& .title{
-			color: $text;
-			margin-bottom: 10px;
-			font-weight: 600;
-			transition: color .2s;
+
+		& .product-data-wrapper{
+
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+
+			& .title{
+				color: $text;
+				margin-bottom: 10px;
+				font-weight: 600;
+				transition: color .2s;
+				display: block;
+				flex-grow: 1;
+			}
 		}
+		
 		
 		& .remains{
 			margin-bottom: 10px;
@@ -524,6 +536,55 @@ body{
 
 	& .warning{
 		color: $warning;
+	}
+
+	& i{
+
+		&.disable-icon{
+
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+
+			&.age{
+				background: url(/img/age.svg) center center no-repeat;
+				background-size: contain;
+				position: relative;
+
+				&:before{
+					content: "Установлено возрастное ограничение";
+					position: absolute;
+					pointer-events: none;
+					font-style: normal;
+					width: 200px;
+					border: 1px solid red;
+					top: 100%;
+					left: 0;
+					transform: translateY(-100%);
+					padding: 5px 10px;
+					background: #fff;
+					border: 1px solid #999999;
+					transition: opacity .4s, transform .4s;
+					border-radius: 8px;
+					opacity: 0;
+				}
+			}
+
+			&.overflow{
+
+				@extend .age;
+				background-image: url(/img/overflow.svg);
+
+				&:before{
+					content: "Исчерпано кол-во товаров в месяц";
+				}
+			}
+
+			&:hover:before{
+				opacity: 1;
+				transform: translateY(calc(-100% - 40px));
+			}
+		}
 	}
 
 	& .error{
@@ -982,6 +1043,15 @@ body{
 
 		& .indicator{
 			background: $accent;
+		}
+	}
+
+	& .sidenav{
+
+		transition: width .4s;
+
+		@media(max-width: 575px){
+			width: 100%;
 		}
 	}
 }

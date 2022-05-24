@@ -1,4 +1,4 @@
-let sidenav, collapsible, newsSwiper, popularSlider, tooltip;
+let sidenav, collapsible, newsSwiper, popularSlider, tooltip, datepicker;
 
 $(() => {
 	
@@ -52,6 +52,7 @@ $(() => {
 
 	if($('.datepicker').length){
 		$('.datepicker').datepicker({
+			container: document.body,
 			i18n:{
 				cancel: "Отмена",
 				clear: "Очистить",
@@ -107,7 +108,7 @@ $(() => {
 		});
 	}
 
-	let tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+	tooltip = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
 
 	$('.lazy').lazy();
 	setupHeader();
