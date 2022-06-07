@@ -23271,12 +23271,12 @@ body .swiper-pagination {
 body *:focus {
   outline: none; }
 
-body .input-field {
+body .input-field:not(.materialize) {
   position: relative;
   flex-grow: 1;
   border-bottom: 1px solid #1D6BD0;
   margin-bottom: 20px; }
-  body .input-field input, body .input-field textarea {
+  body .input-field:not(.materialize) input, body .input-field:not(.materialize) textarea {
     display: block;
     width: 100%;
     min-height: 35px;
@@ -23284,34 +23284,34 @@ body .input-field {
     background: transparent;
     font-family: 'Montserrat';
     font-size: 16px; }
-    body .input-field input::-moz-placeholder, body .input-field textarea::-moz-placeholder {
+    body .input-field:not(.materialize) input::-moz-placeholder, body .input-field:not(.materialize) textarea::-moz-placeholder {
       color: transparent; }
-    body .input-field input:-ms-input-placeholder, body .input-field textarea:-ms-input-placeholder {
+    body .input-field:not(.materialize) input:-ms-input-placeholder, body .input-field:not(.materialize) textarea:-ms-input-placeholder {
       color: transparent; }
-    body .input-field input::placeholder, body .input-field textarea::placeholder {
+    body .input-field:not(.materialize) input::placeholder, body .input-field:not(.materialize) textarea::placeholder {
       color: transparent; }
-    body .input-field input ~ label, body .input-field textarea ~ label {
+    body .input-field:not(.materialize) input ~ label, body .input-field:not(.materialize) textarea ~ label {
       position: absolute;
       left: 1px;
       top: 4px;
       pointer-events: none;
       transition: transform .2s, opacity .2s, font-size .2s;
       font-size: 16px; }
-    body .input-field input:not(:-moz-placeholder-shown) ~ label, body .input-field textarea:not(:-moz-placeholder-shown) ~ label {
+    body .input-field:not(.materialize) input:not(:-moz-placeholder-shown) ~ label, body .input-field:not(.materialize) textarea:not(:-moz-placeholder-shown) ~ label {
       font-size: 12px;
       transform: translate(0px, -20px);
       opacity: .7; }
-    body .input-field input:not(:-ms-input-placeholder) ~ label, body .input-field textarea:not(:-ms-input-placeholder) ~ label {
+    body .input-field:not(.materialize) input:not(:-ms-input-placeholder) ~ label, body .input-field:not(.materialize) textarea:not(:-ms-input-placeholder) ~ label {
       font-size: 12px;
       transform: translate(0px, -20px);
       opacity: .7; }
-    body .input-field input:not(:placeholder-shown) ~ label, body .input-field input:focus ~ label, body .input-field textarea:not(:placeholder-shown) ~ label, body .input-field textarea:focus ~ label {
+    body .input-field:not(.materialize) input:not(:placeholder-shown) ~ label, body .input-field:not(.materialize) input:focus ~ label, body .input-field:not(.materialize) textarea:not(:placeholder-shown) ~ label, body .input-field:not(.materialize) textarea:focus ~ label {
       font-size: 12px;
       transform: translate(0px, -20px);
       opacity: .7; }
-  body .input-field textarea {
+  body .input-field:not(.materialize) textarea {
     resize: vertical; }
-    body .input-field textarea ~ label {
+    body .input-field:not(.materialize) textarea ~ label {
       top: -4px; }
 
 body .check-field {

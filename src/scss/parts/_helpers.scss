@@ -636,50 +636,53 @@ body{
 
 	& .input-field{
 
-		position: relative;
-		flex-grow: 1;
-		border-bottom: 1px solid $primary;
-		margin-bottom: 20px;
-		
-		& input, & textarea{
+		&:not(.materialize){
+
+			position: relative;
+			flex-grow: 1;
+			border-bottom: 1px solid $primary;
+			margin-bottom: 20px;
 			
-			display: block;
-			width: 100%;
-			min-height: 35px;
-			border: 0;
-			background: transparent;
-			font-family: 'Montserrat';
-			font-size: 16px;
-			
-			&::placeholder{
-				color: transparent;
-			}
-			
-			& ~ label{
-				position: absolute;
-				left: 1px;
-				top: 4px;
-				pointer-events: none;
-				transition: transform .2s, opacity .2s, font-size .2s;
+			& input, & textarea{
+				
+				display: block;
+				width: 100%;
+				min-height: 35px;
+				border: 0;
+				background: transparent;
+				font-family: 'Montserrat';
 				font-size: 16px;
-			}
-			
-			&:not(:placeholder-shown), &:focus{
+				
+				&::placeholder{
+					color: transparent;
+				}
 				
 				& ~ label{
-					font-size: 12px;
-					transform: translate(-0px, -20px);
-					opacity: .7;
+					position: absolute;
+					left: 1px;
+					top: 4px;
+					pointer-events: none;
+					transition: transform .2s, opacity .2s, font-size .2s;
+					font-size: 16px;
+				}
+				
+				&:not(:placeholder-shown), &:focus{
+					
+					& ~ label{
+						font-size: 12px;
+						transform: translate(-0px, -20px);
+						opacity: .7;
+					}
 				}
 			}
-		}
-
-		& textarea{
-
-			resize: vertical;
-
-			& ~ label{
-				top: -4px;
+	
+			& textarea{
+	
+				resize: vertical;
+	
+				& ~ label{
+					top: -4px;
+				}
 			}
 		}
 	}

@@ -1,4 +1,4 @@
-let sidenav, collapsible, newsSwiper, popularSlider, tooltip, datepicker;
+let sidenav, collapsible, newsSwiper, popularSlider, tooltip, datepicker, select;
 
 $(() => {
 	
@@ -130,6 +130,7 @@ $(() => {
 
 	let tabs = M.Tabs.init(document.querySelectorAll('.tabs'));
 	let modal = M.Modal.init(document.querySelectorAll('.modal'));
+	select = M.FormSelect.init(document.querySelectorAll('select'));
 });
 
 function setupHeader(){
