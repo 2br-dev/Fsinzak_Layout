@@ -2779,7 +2779,7 @@ body.keyboard-focused .dropdown-content li:focus {
     height: 56px;
     width: 100%;
     text-align: right; }
-    .modal .modal-footer .btn, .modal .modal-footer .btn-flat {
+    .modal .modal-footer .btn, .modal .modal-footer .btn-flat, .modal .modal-footer body .btn-outlined, body .modal .modal-footer .btn-outlined {
       margin: 6px 0; }
 
 .modal-overlay {
@@ -3179,11 +3179,11 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
     padding: 0 32px; }
     .sidenav li > a:hover {
       background-color: rgba(0, 0, 0, 0.05); }
-    .sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav li > a.btn-floating {
+    .sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-flat, .sidenav body li > a.btn-outlined, body .sidenav li > a.btn-outlined, .sidenav li > a.btn-floating {
       margin: 10px 15px; }
     .sidenav li > a.btn, .sidenav li > a.btn-large, .sidenav li > a.btn-floating {
       color: #fff; }
-    .sidenav li > a.btn-flat {
+    .sidenav li > a.btn-flat, .sidenav body li > a.btn-outlined, body .sidenav li > a.btn-outlined {
       color: #343434; }
     .sidenav li > a.btn:hover, .sidenav li > a.btn-large:hover {
       background-color: #2bbbad; }
@@ -22961,7 +22961,7 @@ body .btn {
     background: #fff;
     color: #FF9635; }
 
-body .btn-flat {
+body .btn-flat, body .btn-outlined {
   background: transparent;
   border: 0;
   color: #FF9635;
@@ -22971,8 +22971,11 @@ body .btn-flat {
   display: inline-block;
   cursor: pointer;
   transition: background-color .2s; }
-  body .btn-flat:hover {
+  body .btn-flat:hover, body .btn-outlined:hover {
     background: rgba(0, 0, 0, 0.03); }
+
+body .btn-outlined {
+  border: 1px solid #FF9635; }
 
 body .lazy {
   background-size: cover;
@@ -23310,7 +23313,8 @@ body .input-field:not(.materialize) {
       transform: translate(0px, -20px);
       opacity: .7; }
   body .input-field:not(.materialize) textarea {
-    resize: vertical; }
+    resize: vertical;
+    height: 35px; }
     body .input-field:not(.materialize) textarea ~ label {
       top: -4px; }
 
@@ -23624,18 +23628,22 @@ header {
           pointer-events: all; }
         header .nav-top .nav-left .nav-wrapper:hover .btn {
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); }
-      header .nav-top .nav-left .geo {
-        padding: 10px 20px;
+      header .nav-top .nav-left .geo, header .nav-top .nav-left .restricts {
+        padding: 10px 0;
         display: flex;
         font-size: 14px;
         line-height: 1.4em;
         align-items: center; }
-        header .nav-top .nav-left .geo i {
+        header .nav-top .nav-left .geo i, header .nav-top .nav-left .restricts i {
           font-size: 32px;
-          margin-right: 6px; }
-        header .nav-top .nav-left .geo:hover {
+          color: #FF9635;
+          padding: 0 10px; }
+        header .nav-top .nav-left .geo .loc .location, header .nav-top .nav-left .geo .loc .name, header .nav-top .nav-left .restricts .loc .location, header .nav-top .nav-left .restricts .loc .name {
+          white-space: nowrap;
+          max-width: 100%; }
+        header .nav-top .nav-left .geo:hover, header .nav-top .nav-left .restricts:hover {
           text-decoration: underline; }
-        header .nav-top .nav-left .geo span {
+        header .nav-top .nav-left .geo span, header .nav-top .nav-left .restricts span {
           display: block; }
     header .nav-top .nav-right {
       display: flex; }
@@ -24427,20 +24435,93 @@ main#basket table.zebra {
     text-align: left;
     font-size: 10px;
     font-weight: 500;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 5px; }
   main#basket table.zebra tbody tr:nth-child(odd) {
     background-color: rgba(0, 0, 0, 0.05); }
   main#basket table.zebra tbody tr td {
     padding: 5px; }
 
-main#basket .total {
-  text-align: right;
-  margin: 20px 0; }
-  main#basket .total .total-sign {
-    font-size: 12px; }
-  main#basket .total .total-sum {
-    font-weight: 700;
-    font-size: 32px; }
+@media (max-width: 800px) {
+  main#basket table {
+    display: block; }
+    main#basket table thead {
+      display: none; }
+    main#basket table tbody {
+      display: flex;
+      flex-wrap: wrap; }
+      main#basket table tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: calc(50% - 10px);
+        min-width: 220px;
+        max-width: 100%;
+        margin: 5px;
+        background: #fff !important;
+        border: 1px solid #efefef;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+        border-radius: 4px; }
+        main#basket table tbody tr td {
+          min-width: 45%;
+          flex-grow: 1;
+          text-align: center;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content; }
+          main#basket table tbody tr td:first-child {
+            font-weight: 600; }
+          main#basket table tbody tr td:first-child, main#basket table tbody tr td:last-child {
+            width: 100%; }
+          main#basket table tbody tr td:nth-child(4) {
+            font-weight: 600;
+            font-size: 21px; }
+          main#basket table tbody tr td .pm-block {
+            margin: auto; }
+          main#basket table tbody tr td:not(:last-child) {
+            border-bottom: 1px solid #efefef; }
+          main#basket table tbody tr td:first-child {
+            flex-grow: 1; }
+          main#basket table tbody tr td:last-child {
+            text-align: center; }
+          main#basket table tbody tr td:before {
+            content: attr(data-before);
+            display: block;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: #333;
+            font-weight: 400; } }
+
+main#basket .basket-summary {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px 0;
+  margin-left: auto;
+  flex-wrap: wrap; }
+  @media (max-width: 800px) {
+    main#basket .basket-summary {
+      margin: 20px auto; } }
+  @media (max-width: 600px) {
+    main#basket .basket-summary br {
+      display: none; }
+    main#basket .basket-summary .total {
+      margin-bottom: 20px; } }
+  main#basket .basket-summary .total {
+    text-align: right;
+    padding-left: 40px;
+    flex-grow: 1; }
+    main#basket .basket-summary .total .total-sign {
+      font-size: 12px;
+      line-height: 1.3em;
+      margin-bottom: 10px; }
+    main#basket .basket-summary .total .total-sum {
+      font-weight: 700;
+      font-size: 32px;
+      color: #999999; }
+    main#basket .basket-summary .total:last-of-type .total-sum {
+      color: #333; }
 
 main#basket .pm-block {
   width: -webkit-fit-content;
@@ -24448,7 +24529,6 @@ main#basket .pm-block {
   width: fit-content;
   display: flex; }
   main#basket .pm-block a {
-    width: 30px;
     text-align: center; }
   main#basket .pm-block input {
     border: none;
@@ -24534,3 +24614,38 @@ main#basket .pm-block {
         white-space: nowrap;
         font-weight: bold;
         border-bottom: 1px solid #ccc; }
+
+.subcategories {
+  display: flex;
+  flex-wrap: wrap; }
+  .subcategories > li {
+    position: relative;
+    margin-right: 10px;
+    border: 1px solid #FF9635;
+    border-radius: 4px;
+    margin-bottom: 10px; }
+    .subcategories > li a {
+      display: block;
+      white-space: nowrap;
+      padding: 0 10px;
+      line-height: 30px; }
+    .subcategories > li ul {
+      position: absolute;
+      z-index: 2;
+      transform: translateY(-20px);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .2s, transform .2s;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2); }
+      .subcategories > li ul li a {
+        transition: background-color .2s;
+        line-height: 40px; }
+        .subcategories > li ul li a:hover {
+          background: rgba(0, 0, 0, 0.05); }
+    .subcategories > li:hover ul {
+      opacity: 1;
+      transform: none;
+      pointer-events: all; }

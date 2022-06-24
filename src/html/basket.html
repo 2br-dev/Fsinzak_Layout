@@ -8,10 +8,22 @@
 	<main id="basket">
 		<section>
 			<div class="container">
-				<div class="row">
-					<div class="col s12">
+				<div class="row flex vcenter">
+					<div class="col xs12 s5">
 						<h1>Корзина</h1>
 					</div>
+					<div class="col s7 xs12 right-align align-left-s-down">
+						<a href="" class="btn-outlined">
+							Вернуться 
+							<span class="hide-m-down">к покупкам</span>
+						</a>
+						<a href="" class="btn-outlined">
+							<i class="mdi mdi-cart-remove hide-l-up"></i>
+							<span class="hide-l-down">Очистить корзину</span>
+						</a>
+					</div>
+				</div>
+				<div class="row">
 					<div class="col s12">
 						<h2>Содержание заказа</h2>
 						<p class="info">
@@ -22,7 +34,9 @@
 								<tr class="main-row-header">
 									<th>Наименование</th>
 									<th>Количество</th>
+									<th>Цена за ед.</th>
 									<th>Стоимость</th>
+									<th>&nbsp;</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -31,10 +45,20 @@
 						</table>
 					</div>
 					<div class="col s12">
-						<div class="divider"></div>
-						<div class="total">
-							<div class="total-sign">Итого к оплате</div>
-							<div class="total-sum">120 000₽</div>
+						<div class="divider hide-m-down"></div>
+						<div class="basket-summary">
+							<div class="total">
+								<div class="total-sign">Товаров <br> на сумму</div>
+								<div class="total-sum">320₽</div>
+							</div>
+							<div class="total">
+								<div class="total-sign">Комиссия <br> за оформление заказа</div>
+								<div class="total-sum">132₽</div>
+							</div>
+							<div class="total">
+								<div class="total-sign">Итого <br> к оплате</div>
+								<div class="total-sum">452₽</div>
+							</div>
 						</div>
 					</div>
 					<div class="col l4 m6 s12">

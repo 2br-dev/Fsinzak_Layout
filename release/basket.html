@@ -58,18 +58,29 @@
 					</form>
 				</div>
 				<div class="hide-l-down">
-					<a href="#place-selector" class="geo hide-l-down modal-trigger">
+					<!-- <a href="#place-selector" class="geo hide-l-down modal-trigger">
 						<i class="mdi mdi-map-marker-outline"></i>
 						<div class="loc">
 							<span class="location">Хабаровский край</span>
 							<span class="name">СИЗО №1</span>
 						</div>
-					</a>
+					</a> -->
+					<div class="geo hide-l-down">
+						<i class="mdi mdi-map-marker-outline"></i>
+						<a href="#" class="loc">
+							<span class="location">Хабаровский край</span>
+							<span class="name">СИЗО №1</span>
+						</a>
+						<a href="" class="restricts modal-trigger">
+							<i class="mdi mdi-alert-remove-outline" title="Смотреть ограничения"></i>
+							<span class="hide-xl-down">Смотреть ограничения</span>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="nav-right">
 				<a href="/favorites.html" class="icon-wrapper"><i class="mdi mdi-heart"></i><span class="label">Избранное</span><span class="indicator">9+</span></a>
-				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">Корзина</span><span class="indicator">9+</span></a>
+				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">10 000₽</span><span class="indicator">9+</span></a>
 				<div class="icon-wrapper">
 					<!-- Зарегистрированный пользователь -->
 					<ul class="dropdown-list hidden" id="logged">
@@ -298,10 +309,22 @@
 	<main id="basket">
 		<section>
 			<div class="container">
-				<div class="row">
-					<div class="col s12">
+				<div class="row flex vcenter">
+					<div class="col xs12 s5">
 						<h1>Корзина</h1>
 					</div>
+					<div class="col s7 xs12 right-align align-left-s-down">
+						<a href="" class="btn-outlined">
+							Вернуться 
+							<span class="hide-m-down">к покупкам</span>
+						</a>
+						<a href="" class="btn-outlined">
+							<i class="mdi mdi-cart-remove hide-l-up"></i>
+							<span class="hide-l-down">Очистить корзину</span>
+						</a>
+					</div>
+				</div>
+				<div class="row">
 					<div class="col s12">
 						<h2>Содержание заказа</h2>
 						<p class="info">
@@ -312,7 +335,9 @@
 								<tr class="main-row-header">
 									<th>Наименование</th>
 									<th>Количество</th>
+									<th>Цена за ед.</th>
 									<th>Стоимость</th>
+									<th>&nbsp;</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -322,63 +347,103 @@
 		<div class="pm-block">
 			<a href="" class="minus"><i class="mdi mdi-minus"></i></a>
 			<input type="number" value="1">
-			<a href="" class="plus"><i class="mdi mdi-plus"></i></a></td>
+			<a href="" class="plus"><i class="mdi mdi-plus"></i></a>
 		</div>
+	</td>
+	<td data-before="Цена за единицу" class="count">0₽</td>
 	<td data-before="Цена" class="price">0₽</td>
+	<td>
+		<a href="" class="btn-flat"><i class="mdi mdi-delete hide-m-down"></i><span class="hide-m-up">Удалить</span></a>
+	</td>
 </tr><tr class="details-row">
 	<td data-before="Название" class="name">Ноутбук Asus Eee PC 1015PEM Black</td>
 	<td data-before="Количество" class="count">
 		<div class="pm-block">
 			<a href="" class="minus"><i class="mdi mdi-minus"></i></a>
 			<input type="number" value="1">
-			<a href="" class="plus"><i class="mdi mdi-plus"></i></a></td>
+			<a href="" class="plus"><i class="mdi mdi-plus"></i></a>
 		</div>
+	</td>
+	<td data-before="Цена за единицу" class="count">13 500₽</td>
 	<td data-before="Цена" class="price">13 500₽</td>
+	<td>
+		<a href="" class="btn-flat"><i class="mdi mdi-delete hide-m-down"></i><span class="hide-m-up">Удалить</span></a>
+	</td>
 </tr><tr class="details-row">
 	<td data-before="Название" class="name">Планшет Archos A9 PCtablet 16GB</td>
 	<td data-before="Количество" class="count">
 		<div class="pm-block">
 			<a href="" class="minus"><i class="mdi mdi-minus"></i></a>
 			<input type="number" value="1">
-			<a href="" class="plus"><i class="mdi mdi-plus"></i></a></td>
+			<a href="" class="plus"><i class="mdi mdi-plus"></i></a>
 		</div>
+	</td>
+	<td data-before="Цена за единицу" class="count">15 590₽</td>
 	<td data-before="Цена" class="price">15 590₽</td>
+	<td>
+		<a href="" class="btn-flat"><i class="mdi mdi-delete hide-m-down"></i><span class="hide-m-up">Удалить</span></a>
+	</td>
 </tr><tr class="details-row">
 	<td data-before="Название" class="name">Планшет Samsung Galaxy Tab-P1000 16Gb</td>
 	<td data-before="Количество" class="count">
 		<div class="pm-block">
 			<a href="" class="minus"><i class="mdi mdi-minus"></i></a>
 			<input type="number" value="1">
-			<a href="" class="plus"><i class="mdi mdi-plus"></i></a></td>
+			<a href="" class="plus"><i class="mdi mdi-plus"></i></a>
 		</div>
+	</td>
+	<td data-before="Цена за единицу" class="count">24 680₽</td>
 	<td data-before="Цена" class="price">24 680₽</td>
+	<td>
+		<a href="" class="btn-flat"><i class="mdi mdi-delete hide-m-down"></i><span class="hide-m-up">Удалить</span></a>
+	</td>
 </tr><tr class="details-row">
 	<td data-before="Название" class="name">Моноблок Acer Aspire Z5763</td>
 	<td data-before="Количество" class="count">
 		<div class="pm-block">
 			<a href="" class="minus"><i class="mdi mdi-minus"></i></a>
 			<input type="number" value="1">
-			<a href="" class="plus"><i class="mdi mdi-plus"></i></a></td>
+			<a href="" class="plus"><i class="mdi mdi-plus"></i></a>
 		</div>
+	</td>
+	<td data-before="Цена за единицу" class="count">50 500₽</td>
 	<td data-before="Цена" class="price">50 500₽</td>
+	<td>
+		<a href="" class="btn-flat"><i class="mdi mdi-delete hide-m-down"></i><span class="hide-m-up">Удалить</span></a>
+	</td>
 </tr><tr class="details-row">
 	<td data-before="Название" class="name">Ноутбук Lenovo ThinkPad Edge E420s NWD4FRT</td>
 	<td data-before="Количество" class="count">
 		<div class="pm-block">
 			<a href="" class="minus"><i class="mdi mdi-minus"></i></a>
 			<input type="number" value="1">
-			<a href="" class="plus"><i class="mdi mdi-plus"></i></a></td>
+			<a href="" class="plus"><i class="mdi mdi-plus"></i></a>
 		</div>
+	</td>
+	<td data-before="Цена за единицу" class="count">35 500₽</td>
 	<td data-before="Цена" class="price">35 500₽</td>
+	<td>
+		<a href="" class="btn-flat"><i class="mdi mdi-delete hide-m-down"></i><span class="hide-m-up">Удалить</span></a>
+	</td>
 </tr>
 							</tbody>
 						</table>
 					</div>
 					<div class="col s12">
-						<div class="divider"></div>
-						<div class="total">
-							<div class="total-sign">Итого к оплате</div>
-							<div class="total-sum">120 000₽</div>
+						<div class="divider hide-m-down"></div>
+						<div class="basket-summary">
+							<div class="total">
+								<div class="total-sign">Товаров <br> на сумму</div>
+								<div class="total-sum">320₽</div>
+							</div>
+							<div class="total">
+								<div class="total-sign">Комиссия <br> за оформление заказа</div>
+								<div class="total-sum">132₽</div>
+							</div>
+							<div class="total">
+								<div class="total-sign">Итого <br> к оплате</div>
+								<div class="total-sum">452₽</div>
+							</div>
 						</div>
 					</div>
 					<div class="col l4 m6 s12">

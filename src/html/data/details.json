@@ -2,31 +2,37 @@
 	{
 		"name": "Acer beTouch E400",
 		"count": 1,
+		"unitPrice": "0₽",
 		"price": "0₽"
 	},
 	{
 		"name": "Ноутбук Asus Eee PC 1015PEM Black",
 		"count": 1,
+		"unitPrice": "13 500₽",
 		"price": "13 500₽"
 	},
 	{
 		"name": "Планшет Archos A9 PCtablet 16GB",
 		"count": 1,
+		"unitPrice": "15 590₽",
 		"price": "15 590₽"
 	},
 	{
 		"name": "Планшет Samsung Galaxy Tab-P1000 16Gb",
 		"count": 1,
+		"unitPrice": "24 680₽",
 		"price": "24 680₽"
 	},
 	{
 		"name": "Моноблок Acer Aspire Z5763",
 		"count": 1,
+		"unitPrice": "50 500₽",
 		"price": "50 500₽"
 	},
 	{
 		"name": "Ноутбук Lenovo ThinkPad Edge E420s NWD4FRT",
 		"count": 1,
+		"unitPrice": "35 500₽",
 		"price": "35 500₽"
 	}
 ]

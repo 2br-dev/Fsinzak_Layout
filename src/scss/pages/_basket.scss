@@ -17,6 +17,7 @@ main#basket{
 						font-size: 10px;
 						font-weight: 500;
 						text-transform: uppercase;
+						padding: 5px;
 					}
 				}
 			}
@@ -35,22 +36,134 @@ main#basket{
 				}
 			}
 		}
+
+		@media(max-width: $medium){
+
+			display: block;
+
+			& thead{
+				display: none;
+			}
+
+			& tbody{
+
+				display: flex;
+				flex-wrap: wrap;
+
+				& tr{
+
+					display: flex;
+					flex-wrap: wrap;
+					flex-grow: 1;
+					width: calc(50% - 10px);
+					min-width: 220px;
+					max-width: 100%;
+					margin: 5px;
+					background: #fff !important;
+					border: 1px solid #efefef;
+					box-shadow: 0 2px 4px rgba(black, .2), 0 8px 16px rgba(black, .1);
+					border-radius: 4px;
+
+					& td{
+
+						min-width: 45%;
+						flex-grow: 1;
+						text-align: center;
+						width: fit-content;
+
+						&:first-child{
+							font-weight: 600;
+						}
+
+						&:first-child, &:last-child{
+							width: 100%;
+						}
+
+						&:nth-child(4){
+							font-weight: 600;
+							font-size: 21px;
+						}
+
+						& .pm-block{
+							margin: auto;
+						}
+
+						&:not(:last-child){
+							border-bottom: 1px solid #efefef;
+						}
+
+						&:first-child{
+							flex-grow: 1;
+						}
+
+						&:last-child{
+							text-align: center;
+						}
+
+						&:before{
+							content: attr(data-before);
+							display: block;
+							text-transform: uppercase;
+							font-size: 10px;
+							color: $text;
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
 	}
-	
-	& .total{
-	
-		text-align: right;
+
+	& .basket-summary{
+
+		display: flex;
+		width: fit-content;
 		margin: 20px 0;
-	
-		& .total-sign{
-			font-size: 12px;
+		margin-left: auto;
+		flex-wrap: wrap;
+
+		@media(max-width: $medium){
+			margin: 20px auto;
 		}
-	
-		& .total-sum{
-			font-weight: 700;
-			font-size: 32px;
+
+		@media(max-width: $small){
+
+			& br{
+				display: none;
+			}
+
+			& .total{
+				margin-bottom: 20px;
+			}
+		}
+		
+		& .total{
+			
+			text-align: right;
+			padding-left: 40px;
+			flex-grow: 1;
+		
+			& .total-sign{
+				font-size: 12px;
+				line-height: 1.3em;
+				margin-bottom: 10px;
+			}
+		
+			& .total-sum{
+				font-weight: 700;
+				font-size: 32px;
+				color: $fogged;
+			}
+
+			&:last-of-type{
+
+				& .total-sum{
+					color: $text;
+				}
+			}
 		}
 	}
+	
 
 	& .pm-block{
 
@@ -59,7 +172,7 @@ main#basket{
 
 		& a{
 
-			width: 30px;
+			// width: 30px;
 			text-align: center;
 		}
 
