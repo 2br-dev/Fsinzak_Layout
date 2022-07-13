@@ -1,5 +1,47 @@
 main#product{
 
+	& .product-image-wrapper{
+
+
+		& .slider-wrapper{
+
+			flex-shrink: 0;
+			margin: 20px 0;
+
+			& .swiper-slide{
+
+				& .lazy{
+					transition: box-shadow .2s;
+					cursor: pointer;
+				}
+
+				&.active{
+
+					& .lazy{
+
+						box-shadow: 0 0 0 4px $accent inset;
+					}
+				}
+			}
+		}
+
+		& .image-wrapper{
+
+			flex-grow: 1;
+		}
+
+		@media(max-width: 1300px){
+			flex-direction: column;
+
+			& .image-wrapper{
+				flex-grow: 0;
+			}
+
+			& .slider-wrapper{
+				order: 1;
+			}
+		}
+	}
 	& .product-image{
 		background-size: contain;
 		background-position: center;
@@ -7,19 +49,33 @@ main#product{
 		display: none;
 	}
 
-	& .product-details{
+	& .kv-pair{
+			
+		display: flex;
+		padding: 12px;
 
-		& .kv-pair{
-			
-			display: flex;
-			margin: 12px 0;
-			
-			& .separator{
-				flex-grow: 1;
-				border-bottom: 1px dotted;
-				transform: translateY(-6px);
-			}
+		&:first-child{
+			margin-top: 20px;
 		}
+
+		&:nth-child(odd){
+			background: rgba(black, .03);
+		}
+		
+		& .separator{
+			flex-grow: 1;
+			border-bottom: 1px dotted #aaa;
+			margin: 0 20px;
+			transform: translateY(-6px);
+
+		}
+
+		& .value{
+			font-weight: bold;
+		}
+	}
+
+	& .product-details{
 		
 		& .card-basket-wrapper{
 			
@@ -44,24 +100,132 @@ main#product{
 				}
 			}
 			
-			&:before{
-				content: '';
-				display: block;
-				width: 50%;
-				border-top: 1px solid $fogged;
-				margin-bottom: 40px;
-
-				@media(max-width: $medium){
-					margin-left: auto;
-				}
-			}
-			
 			& .row{
 
 				align-items: center;
 	
 				& .price{
 					font-size: 32px;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	& .stars-1{
+		font-family: 'Material Design Icons';
+		&:before{
+			content: '\F04CE \F04D2 \F04D2 \F04D2 \F04D2';
+		}
+	}
+
+	& .stars-2{
+		font-family: 'Material Design Icons';
+		&:before{
+			content: '\F04CE \F04CE \F04D2 \F04D2 \F04D2';
+		}
+	}
+
+	& .stars-3{
+		font-family: 'Material Design Icons';
+		&:before{
+			content: '\F04CE \F04CE \F04CE \F04D2 \F04D2';
+		}
+	}
+
+	& .stars-4{
+		font-family: 'Material Design Icons';
+		&:before{
+			content: '\F04CE \F04CE \F04CE \F04CE \F04D2';
+		}
+	}
+
+	& .stars-5{
+		font-family: 'Material Design Icons';
+		&:before{
+			content: '\F04CE \F04CE \F04CE \F04CE \F04CE';
+		}
+	}
+
+	& .stats{
+
+		margin: 20px 0;
+		display: flex;
+		border: 1px solid #eee;
+		width: fit-content;
+		padding: 20px;
+		border-radius: 6px;
+		background: rgba(black, .04);
+
+		& .stars-stats{
+
+			padding-right: 20px;
+
+			& > *{
+
+				font-family: 'Montserrat';
+				
+				&:before{
+					color: $primary;
+					font-family: 'Material Design Icons';
+					margin-right: 20px;
+				}
+			}
+			
+		}
+
+		& .rating-stats{
+
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+			& .rating-val{
+				flex-grow: 1;
+				font-weight: bold;
+				font-size: 60px;
+				line-height: 100px;
+			}
+
+			& .rating-description{
+				padding: 0 20px;
+			}
+		}
+
+	}
+
+	& .stats-footer{
+		margin-bottom: 20px;
+	}
+
+	& .responses{
+
+		& .response{
+
+			border: 1px solid #eee;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 6px;
+			box-shadow: 0 1px 3px rgba(black, .1), 0 3px 9px rgba(black, .1);
+
+			& .response-top{
+				margin-bottom: 10px;
+			}
+
+			& .response-bottom{
+
+				display: flex;
+				background: rgba(black, .03);
+				padding: 5px 10px;
+				border-radius: 4px;
+
+				& .stars{
+					flex-grow: 1;
+					color: $primary;
+				}
+
+				& .author{
+
 					font-weight: 500;
 				}
 			}

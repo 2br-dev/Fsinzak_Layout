@@ -5,6 +5,21 @@ body{
 	line-height: 1.6rem;
 	color: $text;
 
+	@media(max-width: $medium){
+		font-size: 14px;
+		line-height: 1.3rem;
+
+		& input{
+			&[type=text],
+			&[type=number],
+			&[type=password]{
+				font-size: 14px;
+				line-height: 1.3rem;
+				height: unset !important;
+			}
+		}
+	}
+
 	& h1{
 		color: $primary;
 		text-transform: uppercase;

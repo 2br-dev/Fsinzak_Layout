@@ -293,7 +293,7 @@ body{
 			background-repeat: no-repeat;
 			background-color: #fff;
 			border-radius: 12px;
-			margin-bottom: 20px;
+			margin-bottom: 20px !important;
 			transition: box-shadow .4s;
 			display: block;
 		}
@@ -312,6 +312,7 @@ body{
 			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
+			width: 100%;
 
 			& .title{
 				color: $text;
@@ -338,6 +339,28 @@ body{
 			
 			display: flex;
 			align-items: center;
+			max-width: 100%;
+			overflow: hidden;
+
+			flex-wrap: wrap;
+			justify-content: center;
+
+			@media(max-width: $small){
+
+				& .pcf-left{
+
+					width: 100%;
+					text-align: center;
+
+					& .btn{
+						width: 100%;
+						margin-bottom: 20px;
+						text-align: center;
+					}
+				}
+
+			}
+
 			
 			& .pcf-left{
 				flex-grow: 1;
@@ -347,11 +370,12 @@ body{
 		@media(max-width: $medium){
 			display: flex;
 			align-items: center;
+			height: calc(100% - 10px);
 
 			& .product-image-wrapper{
 
 				flex-shrink: 0;
-				width: 30%;
+				width: 80%;
 				
 				& .lazy{
 					margin: 0;
@@ -359,9 +383,9 @@ body{
 				}
 			}
 
-			& .product-data-wrapper{
-				padding-left: 20px;
-			}
+			// & .product-data-wrapper{
+				// padding-left: 20px;
+			// }
 		}
 	}
 
@@ -422,6 +446,13 @@ body{
 				
 				&::-webkit-inner-spin-button{
 					display: none;
+				}
+			}
+
+			@media(max-width: $small){
+
+				& .minus-wrapper, & .plus-wrapper{
+					flex-grow: 1;
 				}
 			}
 		}
@@ -552,6 +583,7 @@ body{
 			display: inline-block;
 			width: 32px;
 			height: 32px;
+			margin-bottom: 20px;
 
 			&.age{
 				background: url(/img/age.svg) center center no-repeat;
@@ -1063,6 +1095,24 @@ body{
 
 		@media(max-width: 575px){
 			width: 100%;
+		}
+	}
+
+	& .tabs{
+
+		& .tab{
+
+			& .label{
+				position: absolute;
+				border: 1px solid red;
+				line-height: 1.6em;
+				font-size: 10px;
+				background: red;
+				color: #fff;
+				padding: 0 3px;
+				border-radius: 12px;
+				font-weight: bold;
+			}
 		}
 	}
 }

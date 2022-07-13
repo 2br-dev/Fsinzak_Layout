@@ -4,12 +4,14 @@ header{
 	background: rgba(white, .9);
 	backdrop-filter: blur(8px);
 	position: relative;
+	position: sticky;
+	top: 0;
+	box-shadow: 0 2px 4px rgba(black, .2);
 	
 	& .nav-top{
 		
 		display: flex;
 		margin: 40px 0;
-		position: sticky;
 		z-index: 2;
 		top: 0px;
 
@@ -37,8 +39,8 @@ header{
 				background-size: contain;
 
 				@media(max-width: 500px){
-					width: 60px;
-					background-size: auto 100%;
+					width: 50px;
+					background-size: auto 80%;
 					background-position: left center;
 				}
 			}
@@ -158,6 +160,7 @@ header{
 		& .nav-right{
 
 			display: flex;
+			align-items: center;
 
 			& .icon-wrapper{
 
@@ -170,6 +173,7 @@ header{
 					font-size: 28px;
 					color: $accent;
 					transform: translateY(8px);
+					margin-bottom: 5px;
 				}
 
 				& span{
@@ -274,7 +278,6 @@ header{
 	display: flex;
 	background: $primary-gradient;
 	color: #fff;
-	padding: 10px 0;
 	min-height: 54px;
 	z-index: 3;
 	
@@ -290,11 +293,13 @@ header{
 			flex-shrink: 0;
 			color: #fff;
 			height: 100%;
+			padding-right: 10px;
 			
 			& .icon{
-				width: 40px;
+				width: 25px;
 				font-size: 26px;
 				margin: 0 8px;
+
 			}
 			
 			& .name-top{
@@ -371,11 +376,10 @@ header{
 			}
 			
 		}
-		
-		&:hover{
+
+		&.hover{
 			
 			& .name-selector{
-				// display: block;
 				transform: none;
 				pointer-events: all;
 				transform: none;
