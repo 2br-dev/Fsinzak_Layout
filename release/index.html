@@ -117,6 +117,7 @@
 				<li><a href="/rules.html">Правила</a></li>
 				<li><a href="/delivery.html">Доставка</a></li>
 				<li><a href="/comments.html">Отзывы</a></li>
+				<li><a href="/news.html">Новости</a></li>
 				<li><a href="/contacts.html">Контакты</a></li>
 			</ul>
 			<ul class="nav-br dropdown-list">
@@ -176,6 +177,15 @@
 	</div>
 </header>
 <ul class="sidenav" id="mobile">
+	<li class="sidebar-header">
+		<span class="logo"></span>
+		<span class="region">
+			<span>Хабаровский край, СИЗО №1</span>
+		</span>
+		<span class="sidebar-close">
+			<i class="mdi mdi-close"></i>
+		</span>
+	</li>
 	<li class="mobile-sticky">
 		<form action="" id="search-mobile" class="search-wrapper">
 			<div class="input-wrapper">
@@ -312,6 +322,7 @@
 		<div class="row">
 			<div class="col s12">
 				<div class="news-wrapper">
+					<!-- Если новость одна, для неё добавляем класс full -->
 					<div class="news-entry-wrapper hoverable">
 						<div class="news-entry">
 							<div class="data-wrapper">
@@ -325,6 +336,7 @@
 							<div class="lazy" data-src="https://picsum.photos/600/400?random=1"></div>
 						</div>
 					</div>
+					<!-- Если новостей две, для второй добавляем класс half, при этом у первой новости убираем класс full -->
 					<div class="news-entry-wrapper">
 						<div class="news-entry">
 							<div class="data-wrapper">

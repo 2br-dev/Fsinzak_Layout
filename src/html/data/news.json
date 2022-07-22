@@ -2,61 +2,73 @@
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=1"
+		"image": "https://picsum.photos/500/300?random=1",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=2"
+		"image": "https://picsum.photos/500/300?random=2",
+		"date": "16 июня 2022"
+	},
+	{
+		"title": "Заголовок новости vdghdfglhdkfghdfl dfghdfglhd",
+		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
+		"image": "",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=3"
+		"image": "https://picsum.photos/500/300?random=4",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=4"
+		"image": "https://picsum.photos/500/300?random=5",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=5"
+		"image": "https://picsum.photos/500/300?random=6",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=6"
+		"image": "https://picsum.photos/500/300?random=7",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=7"
+		"image": "https://picsum.photos/500/300?random=8",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=8"
+		"image": "https://picsum.photos/500/300?random=9",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=9"
+		"image": "https://picsum.photos/500/300?random=10",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=10"
+		"image": "https://picsum.photos/500/300?random=11",
+		"date": "16 июня 2022"
 	},
 	{
 		"title": "Заголовок новости",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=11"
-	},
-	{
-		"title": "Заголовок новости",
-		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=12"
+		"image": "https://picsum.photos/500/300?random=12",
+		"date": "16 июня 2022"
 	}
 ]

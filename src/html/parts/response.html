@@ -4,4 +4,17 @@
 		<div class="stars stars-@@stars"></div>
 		<div class="author">@@author</div>
 	</div>
+	@@if(context.answer){
+		<div class="answer">
+			<div class="author">
+				<span class="name">
+					@@answer.author
+				</span>,
+				<i class="date">
+					@@answer.date
+				</i>
+			</div>
+			<div class="body">@@answer.body</div>
+		</div>
+	}
 </div>

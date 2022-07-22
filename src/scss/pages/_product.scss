@@ -229,6 +229,22 @@ main#product{
 					font-weight: 500;
 				}
 			}
+
+			& .answer{
+				border-left: 3px solid $primary;
+				background: #f3f3f3;
+				margin-top: 20px;
+				padding: 10px 20px;
+				margin-left: 20px;
+
+				& .name{
+					font-weight: 500;
+				}
+
+				& .date{
+					color: #777;
+				}
+			}
 		}
 	}
 }

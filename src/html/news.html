@@ -9,7 +9,7 @@
 		@@include("./parts/head-news.html", {showAllButton: false})
 		<section id="regular-news" class="news-list">
 			<div class="container">
-				<div class="row">
+				<div class="row flex">
 					@@loop("./parts/news-entry.html", "./data/news.json")
 				</div>
 				<div class="row">

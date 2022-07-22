@@ -173,6 +173,7 @@ $(() => {
 	$('body').on('click', closeList);
 	$('body').on('click', '.open-place-selector', openPlaceSelector);
 	$('body').on('keyup', 'textarea', updateTextarea);
+	$('body').on('click', '.sidebar-close', closeSideNav);
 	$(window).on('scroll', setupHeader);
 
 	$('body').on('mouseenter', '.name-selector-wrapper', e => { 
@@ -188,6 +189,10 @@ $(() => {
 	let modal = M.Modal.init(document.querySelectorAll('.modal'));
 	select = M.FormSelect.init(document.querySelectorAll('select'));
 });
+
+function closeSideNav(){
+	sidenav[0].close();
+}
 
 function touchstart(e){
 	startY = e.touches[0].clientY;

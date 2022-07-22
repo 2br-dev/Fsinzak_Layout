@@ -24358,8 +24358,15 @@ header {
   position: relative;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+  top: 0; }
+  header:after {
+    content: '';
+    display: block;
+    height: 6px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
+    position: absolute;
+    top: 100%;
+    width: 100%; }
   header .nav-top {
     display: flex;
     margin: 40px 0;
@@ -24507,6 +24514,34 @@ header {
         -webkit-text-decoration-style: dashed;
                 text-decoration-style: dashed;
         text-decoration-thickness: 1px; }
+
+.sidenav > li.sidebar-header {
+  display: flex;
+  border-bottom: 1px solid #ccc; }
+  .sidenav > li.sidebar-header .logo {
+    width: 54px;
+    flex-shrink: 0;
+    background-image: url(/img/logo-header.svg);
+    background-repeat: no-repeat;
+    background-size: auto 80%;
+    background-position: 10px 6px; }
+  .sidenav > li.sidebar-header .region {
+    padding: 0 10px;
+    flex-grow: 1;
+    width: calc(100% - 120px);
+    white-space: nowrap; }
+    .sidenav > li.sidebar-header .region span {
+      display: block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .sidenav > li.sidebar-header .sidebar-close {
+    width: 54px;
+    text-align: center;
+    font-size: 22px;
+    background: #1D6BD0;
+    color: #fff;
+    flex-shrink: 0; }
 
 .sidenav > li > a {
   padding: 0 16px; }
@@ -24799,6 +24834,11 @@ footer .footer-copyright {
               width: 100%; }
             .news-wrapper .news-entry-wrapper:nth-child(n+2) .news-entry .link-wrapper {
               text-align: right; } }
+    .news-wrapper .news-entry-wrapper.full {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3; }
+    .news-wrapper .news-entry-wrapper.half {
+      grid-row: 1 / 3; }
 
 @media (min-width: 1001px) {
   #news-slider {
@@ -24841,20 +24881,30 @@ footer .footer-copyright {
     background-position: left center; }
 
 .news-list .news-entry {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column; }
   .news-list .news-entry .news-entry-image .lazy {
     display: block;
     width: 100%;
     border-radius: 6px; }
-  .news-list .news-entry .news-entry-content .title {
-    margin: 10px 0;
-    font-weight: bold;
-    font-size: 21px; }
+    .news-list .news-entry .news-entry-image .lazy[data-src=""] {
+      background: url("../img/fish/no-image.png") center center no-repeat;
+      background-size: cover; }
+  .news-list .news-entry .news-entry-content {
+    flex-grow: 1; }
+    .news-list .news-entry .news-entry-content .title {
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 21px; }
   .news-list .news-entry .news-entry-footer {
     border-top: 1px solid silver;
     padding: 10px 0;
     margin-top: 10px;
     text-align: right; }
+    .news-list .news-entry .news-entry-footer .date {
+      color: #ccc; }
 
 main#main #popular {
   background: #efefef; }
@@ -25002,6 +25052,16 @@ main#product .responses .response {
       color: #1D6BD0; }
     main#product .responses .response .response-bottom .author {
       font-weight: 500; }
+  main#product .responses .response .answer {
+    border-left: 3px solid #1D6BD0;
+    background: #f3f3f3;
+    margin-top: 20px;
+    padding: 10px 20px;
+    margin-left: 20px; }
+    main#product .responses .response .answer .name {
+      font-weight: 500; }
+    main#product .responses .response .answer .date {
+      color: #777; }
 
 main.profile .profile-sections li a {
   padding-left: 10px; }
@@ -25468,7 +25528,8 @@ main#basket .pm-block {
     width: calc(100% - 200px); }
     #order-proceed .info-wrapper .data-wrapper .success-header {
       font-size: 42px;
-      line-height: 1em; }
+      line-height: 1em;
+      margin-bottom: 10px; }
   #order-proceed .info-wrapper ~ p {
     font-size: 14px;
     text-align: center;
@@ -25519,7 +25580,8 @@ main#basket .pm-block {
         display: table-cell;
         white-space: nowrap;
         font-weight: bold;
-        border-bottom: 1px solid #ccc; }
+        border-bottom: 1px solid #ccc;
+        padding-left: 1.5vmax; }
 
 .subcategories {
   display: flex;
