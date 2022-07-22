@@ -1,0 +1,44 @@
+main#order{
+
+	& .kv-pair{
+		padding: 20px 0;
+
+		&:not(:last-of-type){
+			border-bottom: 1px solid #ccc;
+		}
+
+		& .value{
+			font-weight: 500;
+			font-size: 18px;
+		}
+	}
+
+	& .basket-wrapper{
+
+		margin-top: 20px;
+
+		& .basket-entry{
+	
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 10px;
+	
+	
+			& .name{
+				width: 100%;
+				font-weight: 500;
+			}
+			
+			& .count, & .price{
+				width: 50%;
+				border-bottom: 1px solid #ccc;
+				padding-bottom: 10px;
+			}
+	
+			& .price{
+				text-align: right;
+			}
+		}
+	}
+
+}

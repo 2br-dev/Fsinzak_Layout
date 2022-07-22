@@ -16,11 +16,6 @@
 	}
 }
 
-.col .row {
-	margin-left: (-1 * $gutter-width / 2);
-	margin-right: (-1 * $gutter-width / 2);
-}
-
 .col{
 	@media(max-width: $medium){
 		padding: 0 5px !important;

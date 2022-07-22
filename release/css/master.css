@@ -21686,10 +21686,6 @@ body {
   .container {
     width: 85%; } }
 
-.col .row {
-  margin-left: -20px;
-  margin-right: -20px; }
-
 @media (max-width: 800px) {
   .col {
     padding: 0 5px !important; } }
@@ -25617,3 +25613,27 @@ main#basket .pm-block {
       opacity: 1;
       transform: none;
       pointer-events: all; }
+
+main#order .kv-pair {
+  padding: 20px 0; }
+  main#order .kv-pair:not(:last-of-type) {
+    border-bottom: 1px solid #ccc; }
+  main#order .kv-pair .value {
+    font-weight: 500;
+    font-size: 18px; }
+
+main#order .basket-wrapper {
+  margin-top: 20px; }
+  main#order .basket-wrapper .basket-entry {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px; }
+    main#order .basket-wrapper .basket-entry .name {
+      width: 100%;
+      font-weight: 500; }
+    main#order .basket-wrapper .basket-entry .count, main#order .basket-wrapper .basket-entry .price {
+      width: 50%;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px; }
+    main#order .basket-wrapper .basket-entry .price {
+      text-align: right; }
