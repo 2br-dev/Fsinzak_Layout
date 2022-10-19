@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'О нас'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="about">
+		<section id="hero">
+			<img class="lazy" data-src="/img/hero_about.jpg">
+		</section>
+		<section id="main">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h1>О нас</h1>
+					</div>
+					<div class="col l6 m12 center-align">
+						<div class="row" id="icons">
+							<div class="col m4 xs6 t12">
+								<img class="lazy icon" id="check" data-src="/img/icon_guarantee.svg">
+								<p>Более 7 лет на рынке</p>
+							</div>
+							<div class="col m4 xs6 t12">
+								<img class="lazy icon" id="bottle" data-src="/img/icon_bottle.svg">
+								<p>Широкий ассортимент товаров</p>
+							</div>
+							<div class="col m4 xs6 offset-xs3 t12">
+								<img class="lazy icon" id="basket" data-src="/img/icon_basket.svg">
+								<p>Быстрая обработка заказа</p>
+							</div>
+						</div>
+						<p>Наш сервис начал свою работу в 2014 году и стал первым сервисом в Хабаровском крае для онлайн формирования передач заключённым. Сегодня к нашей системе уже присоединилось 17 регионов России и более 200 учреждений.</p>
+						<p class="accented">ФсинЗак – это сервис онлайн заказа и оплаты передач осуждённым. Наличие товара представлено согласно остаткам тюремного магазина при каждой колонии. Оплата и выдача товара Получателю осуществляется в помещении магазина, находящегося в Учреждении ФСИН России. В момент выдачи заказа Получатель по своему желанию может произвести замену товара.</p>
+					</div>
+					<div class="col xl5 offset-xl1 l6 m12">
+						<div class="contacts-block">
+							<h2>Контакты</h2>
+							<div class="contacts-table">
+								<div class="kv-pair">
+									<div class="key">Горячая линия</div>
+									<div class="value"><strong>8 (800) 333-44-85</strong></div>
+								</div>
+								<div class="kv-pair">
+									<div class="key">Хабаровск</div>
+									<div class="value">8 (4212) 78-80-21</div>
+								</div>
+								<div class="kv-pair">
+									<div class="key">Новосибирск</div>
+									<div class="value">8 (383) 383-25-10</div>
+								</div>
+								<div class="kv-pair">
+									<div class="key">Владивосток</div>
+									<div class="value">8 (423) 202-52-90</div>
+								</div>
+								<div class="kv-pair">
+									<div class="key">E-mail</div>
+									<div class="value"><strong>info@fsinzak.ru</strong></div>
+								</div>
+								<div class="divider"></div>
+								<div class="kv-pair">
+									<div class="key">Звонки принимаются</div>
+									<div class="value"><strong>пн-пт с 9:00 – 18:00 по Хабаровскому времени</strong></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="news">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h2>Новости</h2>
+					</div>
+				</div>
+				<div class="row news-holder">
+					<div class="col l4 m6 s12">
+						<img src="" alt="" class="lazy ih responsive-img" data-src="http://placeimg.com/600/400/?random=1">
+						<div class="date">20.09.2022</div>
+						<div class="title">Флагштоки для школ Комсомольска-На-Амуре изготовили в ИК-8 УФСИН России по Хабаровскому краю	</div>
+					</div>
+					<div class="col l4 m6 s12">
+						<img src="" alt="" class="lazy ih responsive-img" data-src="http://placeimg.com/600/400/?random=2">
+						<div class="date">20.09.2022</div>
+						<div class="title">Богатый урожай, оригинальные рецепты солений и консервирования продемонстрировали ветераны …</div>
+					</div>
+					<div class="col l4 m6 offset-m3 s12">
+						<img src="" alt="" class="lazy ih responsive-img" data-src="http://placeimg.com/600/400/?random=3">
+						<div class="date">20.09.2022</div>
+						<div class="title">Производственный сектор УФСИН России по Хабаровскому краю приглашает к сотрудничеству…</div>
+					</div>
+					<div class="col s12 center-align button-holder"><a href="/news.html" class="btn large">Смотреть все</a></div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

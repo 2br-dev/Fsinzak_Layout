@@ -1,34 +1,252 @@
 main#main{
 
-	& #popular{
-		background: #efefef;
+	& #hero{
 
-		& .pop-card{
+		padding: 0;
 
-			& .data-wrapper{
+		& .row{
+			margin: 0;
+		}
 
-				& .pop-card-bottom{
+		& .col{
+			padding: 0 !important;
+		}
 
-					& .pcb-right{
+		& .lazy{
 
-						& .btn{
+			padding-bottom: 50%;
+			background-size: contain;
+			background-repeat: no-repeat;
 
-							& .limits{
-								left: unset;
-								right: 0;
-								transform: translateY(20px);
-							}
+			@media(max-width: $large){
+				padding-bottom: 75%;
+			}
 
-							&:hover{
+			&#hero-left{
+				background-position: right center;
+				background-color: #BFE2FF;
+				position: relative;
 
-								& .limits{
-									left: unset;
-									right: 0;
-									transform: translateY(0);
-								}
-							}
-						}
+				@media(max-width: $large){
+					background-size: 130% auto;
+					background-position: center center;
+				}
+
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					width: 13vmax;
+					height: 100%;
+					top: 0;
+					left: 0;
+					background-image: url(/img/hero_pattern.svg);
+					background-repeat: no-repeat;
+					background-size: contain;
+					background-position: left center;
+
+					@media(max-width: $large){
+						display: none;
 					}
+				}
+			}
+
+			&#hero-right{
+				background-position: left center;
+				background-color: #71B0E6;
+				position: relative;
+
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 4vmax;
+					height: 100%;
+					background: linear-gradient(to right, rgba(black, .3), transparent 80%);
+
+					@media(max-width: $large){
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	& #popular{
+		
+		background: #efefef;
+		overflow: hidden;
+
+		& .header-row{
+			display: flex;
+			align-items: baseline;
+			flex-wrap: wrap;
+		}
+		
+		& .no-margin{
+			margin: 0;
+		}
+
+		& .slider-container{
+
+			position: relative;
+
+			& .swiper{
+				padding: 10px;
+				width: calc(100% + 20px);
+				transform: translateX(-10px);
+			}
+
+			& .swiper-button-disabled{
+				opacity: .1;
+			}
+
+			& .pop-left{
+				font-size: 75px;
+				line-height: 1em;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				z-index: 2;
+				transform: translate(-110%, -70%);
+				color: $fogged;
+				cursor: pointer;
+				border-radius: 7px;
+				transition: background-color .4s, color .4s, opacity .4s;
+
+				&:hover{
+					background: rgba(black, .06);
+					color: $text;
+				}
+			}
+
+			& .pop-right{
+				@extend .pop-left;
+				left: unset;
+				right: 0;
+				transform: translate(110%, -70%);
+			}
+
+			& .swiper-slide{
+				
+				& .product-card{
+					background: #fff;
+				}
+			}
+		}
+
+
+	}
+
+	& #howto{
+
+		& .howto-wrapper{
+			padding-top: 3vmax;
+			padding-bottom: 1.5vmax;
+			background: $primary-gradient;
+			color: #fff;
+			position: relative;
+			z-index: 2;
+			border-radius: 20px;
+			overflow: hidden;
+
+			& p{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 350px;
+				font-size: 24px;
+				line-height: 1.4em;
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 30%;
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				background: url(/img/pattern.svg);
+				background-size: contain;
+				background-repeat: repeat-x;
+				background-position: top -40px center;
+			}
+
+			& .icon{
+				width: 150px;
+				height: 130px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				margin: auto;
+			}
+
+			& .btn-wrapper{
+				padding-top: 2vmax;
+			}
+		}
+	}
+
+	& #faq{
+
+		background: #BFE2FF;
+
+		& .lazy{
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		& .faq-block{
+		
+			& .question{
+				
+				padding: .6vmax 0;
+				display: flex;
+				align-items: baseline;
+				border-bottom: 1px solid $fogged;
+				cursor: pointer;
+
+				& .text{
+					font-weight: bold;
+					font-size: 1.4rem;
+					line-height: 1.6em;
+					flex-grow: 1;
+				}
+
+				&:not(.collapsed) .action{
+
+					&:before{
+						content:'Свернуть ответ ▴';
+						white-space: nowrap;
+					}
+				}
+
+				&.collapsed .action{
+
+
+					&:before{
+						content: 'Развернуть ответ ▾';
+						white-space: nowrap;
+					}
+				}
+
+				@media(max-width: $medium){
+					flex-wrap: wrap;
+
+					& .action{
+						width: 100%;
+					}
+				}
+	
+	
+				& ~ .answer{
+					display: none;
+					padding-left: 5vmax;
 				}
 			}
 		}

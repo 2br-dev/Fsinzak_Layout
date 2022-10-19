@@ -6,8 +6,76 @@
 <body>
 	@@include('./parts/header.html')
 	<main id="main">
-		@@include('./parts/head-news.html', {showAllButton: true})
-		<section id="service">
+		<section id="hero">
+			<div class="row no-margin">
+				<div class="col m6 s12 no-padding">
+					<div class="lazy" id="hero-left" data-src="/img/hero_left.svg"></div>
+				</div>
+				<div class="col m6 s12 no-padding">
+					<div class="lazy" id="hero-right" data-src="/img/hero_right.jpg"></div>
+				</div>
+			</div>
+		</section>
+		<section id="popular">
+			<div class="container">
+				<div class="row header-row">
+					<div class="col m9 align-center-m-down"><h2>Реко&shy;мен&shy;ду&shy;емые товары</h2></div>
+					<div class="col m3 s12 align-center-m-down align-right-m-up"><a href="/catalog.html">Смотреть все</a></div>
+					<div class="col s12">
+						<div class="divider"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<div class="slider-container">
+							<i class="hide-l-down pop-left mdi mdi-chevron-left"></i>
+							<i class="hide-l-down pop-right mdi mdi-chevron-right"></i>
+							<div class="swiper" id="popular-slider">
+								<div class="swiper-wrapper">
+									@@loop('./parts/product_slide.html', './data/popular.json')
+								</div>
+							</div>
+							<div class="swiper-pagination" id="popular-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="howto">
+			<div class="container">
+				<div class="row">
+					<div class="col s12">
+						<h2>Как заказать?</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<div class="row howto-wrapper">
+							<div class="col center-align l3 m6 s12">
+								<div class="icon lazy" data-src="/img/step1.svg"></div>
+								<p>Выберите регион и учреждение, укажите получателя.</p>
+							</div>
+							<div class="col center-align l3 m6 s12">
+								<div class="icon lazy" data-src="/img/step2.svg"></div>
+								<p>Сформируйте корзину и оплатите заказ удобным для вас способом.</p>
+							</div>
+							<div class="col center-align l3 m6 s12">
+								<div class="icon lazy" data-src="/img/step3.svg"></div>
+								<p>После оплаты ваш заказ будет обработан и собран в магазине в учреждении</p>
+							</div>
+							<div class="col center-align l3 m6 s12">
+								<div class="icon lazy" data-src="/img/step4.svg"></div>
+								<p>Ваш заказ передан адресату <br>(от 1 до 14 суток)</p>
+							</div>
+							<div class="col s12 center-align btn-wrapper"><a href="" class="btn large">Выбрать учреждение</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/head-news.html', {showHeader: true, showFilters: true})
+		<!-- Триггер для отображение тостов – для тестирования -->
+		<!-- <section id="service">
 			<div class="container">
 				<div class="row">
 					<div class="col s12 center-align">
@@ -18,71 +86,22 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section id="bakalea">
+		</section> -->
+		<!-- Триггер для отображение тостов – для тестирования -->
+		<section id="faq">
 			<div class="container">
 				<div class="row">
-					<div class="col s12">
-						<div class="underlined header-block">
-							<h2>Бакалея</h2>
-							<a href="./catalog.html">
-								<span class="hide-m-down">Смотреть все</span>
-								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
-							</a>
-						</div>
+					<div class="col s12 center-align">
+						<h2>Часто задаваемые вопросы</h2>
 					</div>
 				</div>
-				<div class="row flex">
-					@@loop('./parts/product_card.html', './data/bakalea_small.json')
-				</div>
-			</div>
-		</section>
-		<section id="gastronomy">
-			<div class="container">
 				<div class="row">
-					<div class="col s12">
-						<div class="underlined header-block">
-							<h2>Гастрономия</h2>
-							<a href="./catalog.html">
-								<span class="hide-m-down">Смотреть все</span>
-								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
-							</a>
-						</div>
+					<div class="col xl2 l3 m4 offset-m4 s6 offset-s3">
+						<div class="lazy q" data-src="/img/faq.svg"></div>
 					</div>
-				</div>
-				<div class="row flex">
-					@@loop('./parts/product_card.html', './data/gastronomy_small.json')
-				</div>
-			</div>
-		</section>
-		<section id="popular">
-			<div class="container">
-				<div class="col s12 center-align"><h2>Популярные товары</h2></div>
-				<div class="col s12">
-					<div class="swiper" id="popular-slider">
-						<div class="swiper-wrapper">
-							@@loop('./parts/pop-slide.html', './data/popular.json')
-						</div>
+					<div class="col xl10 l9 m12">
+						@@loop('./parts/faq_block.html', './data/faq.json')
 					</div>
-					<div class="swiper-pagination" id="popular-pagination"></div>
-				</div>
-			</div>
-		</section>
-		<section id="healthy">
-			<div class="container">
-				<div class="row">
-					<div class="col s12">
-						<div class="underlined header-block">
-							<h2>Здоровое питание</h2>
-							<a href="./catalog.html">
-								<span class="hide-m-down">Смотреть все</span>
-								<i class="mdi mdi-chevron-double-right hide-m-up"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="row flex">
-					@@loop('./parts/product_card.html', './data/healthy_small.json')
 				</div>
 			</div>
 		</section>

@@ -9,10 +9,10 @@ body{
 			width: 100%;
 
 			& .container{
-
+				
 				& .nav-top{
 					margin: 0;
-					position: relative;
+					padding: 10px 0;
 				}
 
 				& .nav-bottom{
@@ -20,6 +20,44 @@ body{
 				}
 			}
 
+			& nav{
+				top: 85px !important;
+			}
+
+		}
+	}
+
+	& .segmented-control{
+		display: flex;
+		box-shadow: 0 0 0 1px $primary, 0 0 0 1px $primary inset;
+		border-radius: 2em;
+		width: fit-content;
+		margin: 10px auto;
+		overflow: hidden;
+
+		& .segment{
+			display: block;
+			line-height: 2em;
+			padding: 0 16px;
+			color: $primary;
+			transition: background-color .2s;
+
+			&:not(.active){
+
+				&:hover{
+
+					background: rgba($primary, .1);
+				}
+			}
+
+			&.active{
+				background: $primary;
+				color: #fff;
+			}
+
+			@media(max-width: $medium){
+				text-transform: uppercase;
+			}
 		}
 	}
 
@@ -118,6 +156,17 @@ body{
 		top: 0;
 	}
 
+	& .news-filters{
+		
+		& .btn{
+
+			@media(max-width: 650px){
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+	}
+
 	& .btn{
 		line-height: 36px;
 		padding: 0 16px;
@@ -126,6 +175,10 @@ body{
 		background: $accent-gradient;
 		color: #fff;
 		white-space: nowrap;
+
+		&:hover{
+			background: linear-gradient(to bottom, lighten($accent, 10), lighten($accent-dark, 10));
+		}
 		
 		&.disabled{
 			box-shadow: 0 0 0 1px $fogged inset;
@@ -138,6 +191,12 @@ body{
 			box-shadow: 0 0 0 1px $accent inset;
 			background: #fff;
 			color: $accent;
+		}
+
+		&.large{
+			font-size: 18px;
+			line-height: 2.6em;
+			padding: 0 24px;
 		}
 	}
 	
@@ -340,26 +399,26 @@ body{
 			display: flex;
 			align-items: center;
 			max-width: 100%;
-			overflow: hidden;
+			// overflow: hidden;
 
 			flex-wrap: wrap;
 			justify-content: center;
 
-			@media(max-width: $small){
+			// @media(max-width: $small){
 
-				& .pcf-left{
+				// & .pcf-left{
 
-					width: 100%;
-					text-align: center;
+				// 	width: 100%;
+				// 	text-align: center;
 
-					& .btn{
-						width: 100%;
-						margin-bottom: 20px;
-						text-align: center;
-					}
-				}
+				// 	& .btn{
+				// 		// width: 100%;
+				// 		margin-bottom: 20px;
+				// 		text-align: center;
+				// 	}
+				// }
 
-			}
+			// }
 
 			
 			& .pcf-left{
@@ -586,7 +645,7 @@ body{
 			margin-bottom: 20px;
 
 			&.age{
-				background: url(/img/age.svg) center center no-repeat;
+				background: url(../img/age.svg) center center no-repeat;
 				background-size: contain;
 				position: relative;
 
@@ -612,7 +671,7 @@ body{
 			&.overflow{
 
 				@extend .age;
-				background-image: url(/img/overflow.svg);
+				background-image: url(../img/overflow.svg);
 
 				&:before{
 					content: "Исчерпано кол-во товаров в месяц";
@@ -939,6 +998,7 @@ body{
 
 					display: flex;
 					text-align: left;
+					white-space: nowrap;
 					
 					&:hover{
 						background: #efefef;

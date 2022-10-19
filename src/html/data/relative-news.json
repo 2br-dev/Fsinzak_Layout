@@ -3,24 +3,24 @@
 		"title": "Заголовок новости",
 		"class": "",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=1"
+		"image": "http://placeimg.com/500/300?random=1"
 	},
 	{
 		"title": "Заголовок новости",
 		"class": "",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=2"
+		"image": "http://placeimg.com/500/300?random=2"
 	},
 	{
 		"title": "Заголовок новости",
 		"class": "",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=3"
+		"image": "http://placeimg.com/500/300?random=3"
 	},
 	{
 		"title": "Заголовок новости",
 		"class": "hide-l-only",
 		"intro": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque voluptatibus assumenda perferendis ea facere. Necessitatibus atque modi reiciendis ad!",
-		"image": "https://picsum.photos/500/300?random=4"
+		"image": "http://placeimg.com/500/300?random=4"
 	}
 ]

@@ -1,0 +1,49 @@
+<div class="product-card">
+	<div class="product-image-wrapper">
+		<a class="lazy h" data-src="@@img" href="/product.html"></a>
+	</div>
+	<div class="product-data-wrapper">
+		<a class="title" href="/product.html">@@title</a>
+		@@if(context.remains){
+			<div class="remains @@if(remains>100){success} @@if(remains<=100 && remains>0){warning} @@if(remains==0){error}">В наличии: @@remains</div>
+		}
+		@@if(!context.remains){
+			<div class="remains error">В наличии: 0</div>
+		}
+		<div class="price">@@price</div>
+		<div class="product-card-footer">
+			<div class="pcf-left card-basket-wrapper">
+				@@if(context.limitType){
+					@@if(limitType=="age"){
+						<i class="disable-icon age"></i>
+					}
+					@@if(limitType=="overflow"){
+						<i class="disable-icon overflow"></i>
+					}
+					@@if(limitType=="none"){
+						<a href="" class="btn @@class basket-add">
+							@@if(context.limits){
+								@@if(limits!=""){
+									<div class="limits">
+										@@limits
+									</div>
+								}
+							}
+							@@buttonText
+						</a>
+					}
+				}
+				<div class="basket-count hidden">
+					<div class="minus-wrapper"><a href="" class="btn outlined basket-minus"><i class="mdi mdi-minus"></i></a></div>
+					<div class="counter-wrapper"><input type="number" value=1></div>
+					<div class="plus-wrapper"><a href="" class="btn basket-plus"><i class="mdi mdi-plus"></i></a></div>
+				</div>
+			</div>
+			<div class="pcf-right">
+				<div class="fav-wrapper">
+					<input type="checkbox" class="like" id="@@id"><label for="@@id"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

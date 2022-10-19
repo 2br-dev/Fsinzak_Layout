@@ -1,11 +1,11 @@
 header{
 
 	z-index: 80;
-	background: rgba(white, .9);
-	backdrop-filter: blur(8px);
+	background: rgba(white, 1);
 	position: relative;
 	position: sticky;
 	top: 0;
+
 	
 	&:after{
 		content: '';
@@ -32,6 +32,7 @@ header{
 
 			display: flex;
 			flex-grow: 1;
+			align-items: center;
 
 			& .burger{
 				color: $primary;
@@ -46,18 +47,26 @@ header{
 				height: 55px;
 				background: url('/img/logo-header.svg') center center no-repeat;
 				background-size: contain;
+				flex-shrink: 0;
 
-				@media(max-width: 500px){
+				@media(max-width: 1620px){
 					width: 50px;
 					background-size: auto 80%;
 					background-position: left center;
+				}
+
+				@media(max-width: 1200px){
+					width: 200px;
+				}
+
+				@media(max-width: 600px){
+					width: 50px;
 				}
 			}
 
 			& .nav-wrapper{
 
 				display: inline-block;
-				position: relative;
 				height: 55px;
 				padding: 10px 15px;
 
@@ -78,62 +87,127 @@ header{
 
 					& span{
 
-						@media(max-width: 1200px){
+						@media(max-width: 1620px){
 							display: none;
 						}
 					}
-				}
 
-				& nav{
-					position: absolute;
-					width: 900px;
-					column-count: 3;
-					z-index: 2;
-					background: #fff;
-					padding: 10px;
-					border-left: 4px solid $accent;
-					border-radius: 6px;
-					pointer-events: none;
-					top: calc(100% - 20px);
-					box-shadow: 0 4px 12px rgba(black, .2);
-					opacity: 0;
-					transition: top .2s, opacity .2s;
+					& ~ nav{
+						position: absolute;
+						top: 100px;
+						background: #fff;
+						z-index: 2;
+						left: 0;
+						width: 100%;
+						transition: opacity .4s, transform .4s;
+						transform: translateY(-20px);
+						opacity: 0;
+						pointer-events: none;
 
-					& ul{
-						margin: 0;
+						& .levels{
+							margin: 20px 0;
+							display: flex;
+						}
 
-						& li{
-							
-							& a{
-								display: block;
-								line-height: 1.8rem;
-								border-radius: 4px;
-								padding: 0 6px;
-								color: $text;
+						& ul{
+							margin: 0;
+							max-height: 300px;
+							width: fit-content;
+							overflow-x: hidden;
+							min-width: 400px;
 
-								&:hover{
-									background: #efefef;
+							&::-webkit-scrollbar{
+								width: 6px;
+								border: 0;
+								background: #efefef;
+								border-radius: 3px;
+							}
+
+							&::-webkit-scrollbar-thumb{
+								background: $fogged;
+								border-radius: 3px;
+							}
+
+							& li{
+
+								& .lazy{
+									background-size: contain;
+									background-repeat: no-repeat;
+									background-size: auto calc(100% - 20px);
+									background-position: left 10px center;
+								}
+
+								&.here > a{
+									color: $accent;
+								}
+
+								& a{
+									color: $text;
+									display: block;
+									line-height: 2em;
+									padding: 10px 55px;
+									transition: background-color;
+
+									&.hover{
+										background-color: #efefef;
+									}
+								}
+								
+								& ul{
+									display: none;
+								}
+							}
+
+							&#l2{
+
+								& li{
+
+									& a{
+										&:hover{
+											background: #efefef;
+										}
+									}
 								}
 							}
 						}
 					}
-				}
 
-				&:hover{
-
-					& nav{
-						top: 100%;
+					&.opened ~ nav{
+						transform: none;
 						opacity: 1;
 						pointer-events: all;
-					}
-
-					& .btn{
-						box-shadow: 0 2px 6px rgba(black, .3);
 					}
 				}
 			}
 
-			& .geo, & .restricts{
+			& .restrictions{
+				display: inline-flex;
+				align-items: center;
+				background: $critical;
+				color: #fff;
+				font-size: 12px;
+				line-height: 1.2em;
+				padding: 4px;
+				border-radius: 5px;
+				margin-right: 8px;
+				font-weight: 700;
+				
+				& *{
+					color: #fff;
+				}
+
+				& i{
+					font-size: 32px;
+					margin-right: 10px;
+				}
+				
+				& span{
+					width: min-content;
+					padding-right: 6px;
+				}
+			}
+
+			& .geo{
 
 				padding: 10px 0;
 				display: flex;
@@ -141,24 +215,21 @@ header{
 				line-height: 1.4em;
 				align-items: center;
 
-				& i{
-					font-size: 32px;
-					color: $accent;
-					padding: 0 10px;
-				}
-
 				& .loc{
+
+					margin: 0 20px;
 
 					& .location, & .name{
 						white-space: nowrap;
 						max-width: 100%;
 					}
+
+					&:hover{
+						text-decoration: underline;
+					}
 				}
 
 
-				&:hover{
-					text-decoration: underline;
-				}
 
 				& span{
 					display: block;
@@ -171,11 +242,26 @@ header{
 			display: flex;
 			align-items: center;
 
+			& .phone{
+				font-weight: bold;
+				font-size: 21px;
+				margin: 0 20px;
+				white-space: nowrap;
+
+				& i{
+					display: none;
+				}
+			}
+
 			& .icon-wrapper{
 
 				text-align: center;
 				position: relative;
 				margin-left: 10px;
+
+				@media(max-width: 1200px){
+					display: none;
+				}
 				
 				& .mdi{
 					display: block;
@@ -189,6 +275,7 @@ header{
 
 					&.label{
 						font-size: 12px;
+						white-space: nowrap;
 
 						@media(max-width: $medium){
 							font-size: 10px;
@@ -269,7 +356,7 @@ header{
 
 				width: 54px;
 				flex-shrink: 0;
-				background-image: url(/img/logo-header.svg);
+				background-image: url(../img/logo-header.svg);
 				background-repeat: no-repeat;
 				background-size: auto 80%;
 				background-position: 10px 6px;
@@ -321,10 +408,8 @@ header{
 	}
 }
 
-.bottom-toolbar{
+.top-toolbar{
 
-	position: fixed;
-	bottom: 0;
 	width: 100%;
 	display: flex;
 	background: $primary-gradient;
@@ -387,7 +472,7 @@ header{
 			background: #fff;
 			position: absolute;
 			width: fit-content;
-			bottom: 100%;
+			top: 100%;
 			border-radius: 6px;
 			box-shadow: 0 2px 8px rgba(black, .3);
 			left: 5px;
@@ -395,6 +480,7 @@ header{
 			transition: opacity .2s, transform .2s;
 			pointer-events: none;
 			transform: translateY(20px);
+			z-index: 10;
 			// overflow: hidden;
 			
 			& ul{
@@ -438,4 +524,15 @@ header{
 			}
 		}
 	}
+}
+
+#shadow{
+	position: fixed;
+	top: 60px;
+	left: 0;
+	width: 100vw;
+	height: calc(100vh - 60px);
+
+	background: rgba(black, .4);
+	z-index: 2;
 }

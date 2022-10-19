@@ -1,0 +1,128 @@
+main#about{
+	
+	& section{
+		
+		&#hero{
+			margin: 0;
+			padding: 0;
+			& img{
+				width: 100%;
+				height: 32vmax;
+				object-fit: contain;
+				background-color: #8FB8EC;
+				
+				@media(max-width: $medium){
+					object-fit: cover;
+				}
+			}
+		}
+		
+		&#main{
+			
+			& #icons{
+				
+				border-bottom: 1px solid $fogged;
+				
+				& .col{
+					
+					& img{
+						margin: auto;
+					}
+				}
+				
+				& ~ .accented{
+					display: block;
+					
+					@media(max-width: $medium){
+						padding: 20px 10px;
+						color: #fff;
+						background: $primary-gradient;
+						border-radius: 8px;
+					}
+				}
+			}
+			
+			& .contacts-block{
+				
+				padding: 2.5vmax;
+				background: $primary-gradient;
+				color: #fff;
+				border-radius: 8px;
+				
+				& h2{
+					margin: 0;
+					margin-bottom: .5em;
+					color: #fff;
+					
+					@media(max-width: $medium){
+						text-align: center;
+					}
+				}
+				
+				& .contacts-table{
+					
+					margin-left: 2vmax;
+					
+					@media(max-width: $medium){
+						margin: 0;
+					}
+				   
+					& .kv-pair{
+						
+						display: flex;
+						flex-wrap: wrap;
+						
+						& .key, & .value{
+							width: 40%;
+							flex-grow: 1;
+							padding: 4px 0;
+						}
+						
+						@media(max-width: $medium){
+							
+							margin-bottom: 20px;
+							
+							& .key, & .value{
+								width: 100%;
+								padding: 0;
+							}
+						}
+						
+					}
+					
+					& .divider{
+						margin: 8px 0;
+					}
+				}
+			}
+		}
+		
+		&#news{
+
+			& .row{
+
+				&.news-holder{
+
+					& .col{
+						margin-bottom: 4vmax;
+					}
+				}
+			}
+			
+			& .lazy{
+				border-radius: 8px;
+			}
+			
+			& .date{
+				margin: 1vmax 0;
+			}
+			
+			& .title{
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 1.3rem;
+				line-height: 1.4em;
+			}
+		}
+	}
+}

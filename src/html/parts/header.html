@@ -12,29 +12,12 @@
 						<span>Каталог</span>
 					</a>
 					<nav>
-						<ul>
-							<li><a href="">Бакалея</a></li>
-							<li><a href="">Гастрономия</a></li>
-							<li><a href="">Здоровое питание</a></li>
-							<li><a href="">Канцелярские товары</a></li>
-							<li><a href="">Книги и сканворды</a></li>
-							<li><a href="">Кондитерские изделия</a></li>
-							<li><a href="">Красота и здоровье</a></li>
-							<li><a href="">Соусы и специи</a></li>
-							<li><a href="">Молочная продукция</a></li>
-							<li><a href="">Напитки</a></li>
-							<li><a href="">Овощи, фрукты</a></li>
-							<li><a href="">Одежда и постельное бельё</a></li>
-							<li><a href="">Сертификаты</a></li>
-							<li><a href="">Орехи, сухофрукты, цукаты</a></li>
-							<li><a href="">Спортивные товары</a></li>
-							<li><a href="">Хлебобулочные изделия</a></li>
-							<li><a href="">Хозтовары</a></li>
-							<li><a href="">Чай, кофе, сахар, мёд</a></li>
-							<li><a href="">Электроприборы</a></li>
-							<li><a href="">Консервы</a></li>
-							<li><a href="">VIP</a></li>
-						</ul>
+						<div class="container">
+							<div class="levels">
+								@@include('./mega-menu.html')
+								<ul id="l2"></ul>
+							</div>
+						</div>
 					</nav>
 				</div>
 				<div class="hide-l-down">
@@ -48,27 +31,20 @@
 					</form>
 				</div>
 				<div class="hide-l-down">
-					<!-- <a href="#place-selector" class="geo hide-l-down modal-trigger">
-						<i class="mdi mdi-map-marker-outline"></i>
-						<div class="loc">
-							<span class="location">Хабаровский край</span>
-							<span class="name">СИЗО №1</span>
-						</div>
-					</a> -->
 					<div class="geo hide-l-down">
-						<i class="mdi mdi-map-marker-outline"></i>
+						<a class="restrictions modal-trigger" href="#restrictions">
+							<i class="mdi mdi-alert-remove-outline"></i>
+							<span>Внимание, ограничения!</span>
+						</a>
 						<a href="#" class="loc">
 							<span class="location">Хабаровский край</span>
 							<span class="name">СИЗО №1</span>
-						</a>
-						<a href="" class="restricts modal-trigger">
-							<i class="mdi mdi-alert-remove-outline" title="Смотреть ограничения"></i>
-							<span class="hide-xl-down">Смотреть ограничения</span>
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="nav-right">
+				<a href="tel://+78003334485" class="phone"><i class="mdi mdi-phone"></i><span>8 (800) 333-4485</span></a>
 				<a href="/favorites.html" class="icon-wrapper"><i class="mdi mdi-heart"></i><span class="label">Избранное</span><span class="indicator">9+</span></a>
 				<a href="/basket.html" class="icon-wrapper"><i class="mdi mdi-cart"></i><span class="label">10 000₽</span><span class="indicator">9+</span></a>
 				<div class="icon-wrapper">
@@ -105,9 +81,9 @@
 		<div class="nav-bottom hide-l-down">
 			<ul class="nav-bl">
 				<li><a href="/rules.html">Правила</a></li>
-				<li><a href="/delivery.html">Доставка</a></li>
-				<li><a href="/comments.html">Отзывы</a></li>
+				<li><a href="/delivery.html">Доставка и оплата</a></li>
 				<li><a href="/news.html">Новости</a></li>
+				<li><a href="/about.html">О нас</a></li>
 				<li><a href="/contacts.html">Контакты</a></li>
 			</ul>
 			<ul class="nav-br dropdown-list">
@@ -116,6 +92,39 @@
 					@@include('./recievers.html')
 				</li>
 			</ul>
+		</div>
+	</div>
+	<div class="hide-l-up top-toolbar">
+		<div class="left name-selector-wrapper">
+			<span class="white-text">
+				<span class="icon">
+					<i class="mdi mdi-clipboard-account"></i>
+				</span>
+				<span class="text">
+					<span class="name-top">
+						<span class="last-name">Получатель:</span>
+					</span>
+					<span class="name-bottom explanation-tooltip-wrapper">
+						<span class="first-name">Сигизмунд</span>
+						<span class="middle-name">С. С.</span>
+					</span>
+				</span>
+			</span>
+			<div class="name-selector">
+				@@include('./recievers.html')
+			</div>
+		</div>
+		<div class="separator"></div>
+		<div class="right">
+			<a class="white-text modal-trigger" href="#place-selector">
+				<span class="icon">
+					<i class="mdi mdi-map-marker"></i>
+				</span>
+				<span class="text">
+					<span class="location">Хабаровский край</span>
+					<span class="name">СИЗО №1</span>
+				</span>
+			</a>
 		</div>
 	</div>
 </header>
@@ -139,7 +148,8 @@
 			</div>
 		</form>
 	</li>
-	<li><a href="">Главная</a></li>
+	<li><a href="/">Главная</a></li>
+	<li><a href="">Правила</a></li>
 	<li>
 		<ul class="collapsible" id="catalog">
 			<li>
@@ -147,68 +157,12 @@
 					<a href="#catalog">Каталог</a>
 				</div>
 				<div class="collapsible-body">
-					<ul>
-						<li><a href="">Бакалея</a></li>
-						<li><a href="">Гастрономия</a></li>
-						<li><a href="">Здоровое питание</a></li>
-						<li><a href="">Канцелярские товары</a></li>
-						<li><a href="">Книги и сканворды</a></li>
-						<li><a href="">Кондитерские изделия</a></li>
-						<li><a href="">Красота и здоровье</a></li>
-						<li><a href="">Соусы и специи</a></li>
-						<li><a href="">Молочная продукция</a></li>
-						<li><a href="">Напитки</a></li>
-						<li><a href="">Овощи, фрукты</a></li>
-						<li><a href="">Одежда и постельное бельё</a></li>
-						<li><a href="">Сертификаты</a></li>
-						<li><a href="">Орехи, сухофрукты, цукаты</a></li>
-						<li><a href="">Спортивные товары</a></li>
-						<li><a href="">Хлебобулочные изделия</a></li>
-						<li><a href="">Хозтовары</a></li>
-						<li><a href="">Чай, кофе, сахар, мёд</a></li>
-						<li><a href="">Электроприборы</a></li>
-						<li><a href="">Консервы</a></li>
-						<li><a href="">VIP</a></li>
-					</ul>
+					@@include('./catalog-navigation.html')
 				</div>
 			</li>
 		</ul>
 	</li>
-	<li><a href="">Правила</a></li>
-	<li><a href="">Доставка</a></li>
-	<li><a href="">Отзывы</a></li>
-	<li><a href="">Контакты</a></li>
+	<li><a href="/delivery.html">Доставка и оплата</a></li>
+	<li><a href="/news.html">Новости</a></li>
+	<li><a href="/contacts.html">Контакты</a></li>
 </ul>
-<div class="hide-l-up bottom-toolbar">
-	<div class="left name-selector-wrapper">
-		<span class="white-text">
-			<span class="icon">
-				<i class="mdi mdi-clipboard-account"></i>
-			</span>
-			<span class="text">
-				<span class="name-top">
-					<span class="last-name">Получатель:</span>
-				</span>
-				<span class="name-bottom explanation-tooltip-wrapper">
-					<span class="first-name">Сигизмунд</span>
-					<span class="middle-name">С. С.</span>
-				</span>
-			</span>
-		</span>
-		<div class="name-selector">
-			@@include('./recievers.html')
-		</div>
-	</div>
-	<div class="separator"></div>
-	<div class="right">
-		<a class="white-text modal-trigger" href="#place-selector">
-			<span class="icon">
-				<i class="mdi mdi-map-marker"></i>
-			</span>
-			<span class="text">
-				<span class="location">Хабаровский край</span>
-				<span class="name">СИЗО №1</span>
-			</span>
-		</a>
-	</div>
-</div>

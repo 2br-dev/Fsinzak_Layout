@@ -77,16 +77,26 @@ $(() => {
 				type: 'bullets',
 				clickable: true
 			},
+			navigation: {
+				nextEl: '.pop-right',
+				prevEl: '.pop-left'
+			},
 			spaceBetween: 20,
 			breakpoints:{
 				600: {
-					slidesPerView: 1
-				},
-				1400: {
 					slidesPerView: 2
 				},
-				1800: {
+				900: {
 					slidesPerView: 3
+				},
+				1400: {
+					slidesPerView: 4
+				},
+				1600: {
+					slidesPerView: 5
+				},
+				1800: {
+					slidesPerView: 6
 				}
 			},
 			on: {
@@ -160,6 +170,8 @@ $(() => {
 	$('.lazy').lazy();
 	setupHeader();
 
+	runTimer();
+
 	$('body').on('click', '.disabled', nop);
 	$('body').on('click', '.basket-add', showCount);
 	$('body').on('click', '.basket-minus', basketMinus);
@@ -175,6 +187,12 @@ $(() => {
 	$('body').on('keyup', 'textarea', updateTextarea);
 	$('body').on('click', '.sidebar-close', closeSideNav);
 	$(window).on('scroll', setupHeader);
+	$('body').on('click', '.question', toggleAnswer);
+	$('body').on('click', '.catalog-navi .folder > a', toggleFolder);
+	$('body').on('click', '.close-sidenav', closeSidenav);
+	$('body').on('click', '.view-switcher', switchView);
+	$('body').on('click', '.super-btn', toggleMegaMenu);
+	$('body').on('mouseenter', '#l1 a', openSubLevel);
 
 	$('body').on('mouseenter', '.name-selector-wrapper', e => { 
 		$(e.currentTarget).addClass('hover'); 
@@ -189,6 +207,149 @@ $(() => {
 	let modal = M.Modal.init(document.querySelectorAll('.modal'));
 	select = M.FormSelect.init(document.querySelectorAll('select'));
 });
+
+function runTimer(){
+
+	let HabarovskDate = calcTime(10);
+
+	let hours = HabarovskDate.getHours() > 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
+	let minutes = HabarovskDate.getMinutes() > 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
+
+	let h1 = hours[0];
+	let h2 = hours[1];
+	let m1 = minutes[0];
+	let m2 = minutes[1];
+
+	$('#h1').text(h1);
+	$('#h2').text(h2);
+	$('#m1').text(m1);
+	$('#m2').text(m2);
+
+
+	requestAnimationFrame(runTimer);
+}
+
+function calcTime(offset) {
+    // create Date object for current location
+    var d = new Date();
+
+    // convert to msec
+    // subtract local time zone offset
+    // get UTC time in msec
+    var utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+    // create new Date object for different city
+    // using supplied offset
+    var nd = new Date(utc + (3600000*offset));
+
+    // return time as a string
+    return nd;
+}
+
+function openSubLevel(){
+	$(this).parents('ul').find('a').removeClass('hover');
+	$(this).addClass('hover');
+	$('#l2').empty();
+	let $subLevel = $(this).next();
+	if( $subLevel.length ){
+		$('#l2').html($subLevel.html());
+	}	
+}
+
+function toggleMegaMenu(e){
+
+	e.preventDefault();
+	let already = $(this).hasClass('opened');
+
+	if(already){
+		$(this).removeClass('opened');
+		$('#shadow').animate({
+			opacity: 0
+		}, 400, () => {
+			$('#shadow').remove();
+		});
+	}else{
+		$(this).addClass('opened');
+		let shadow = document.createElement('div');
+		shadow.id = 'shadow';
+		$('body').append(shadow);
+		$('body').on('click', '#shadow', () => {
+			$(this).removeClass('opened');
+			$('#shadow').animate({
+				opacity: 0
+			}, 400, () => {
+				$('#shadow').remove();
+			});
+		})
+	}
+}
+
+function switchView(e){
+	e.preventDefault();
+	let id = this.id;
+
+	switch(id){
+		case "list": $('#catalog-content').addClass('list'); break;
+		case "card": $('#catalog-content').removeClass('list'); break;
+	}
+
+	$('.view-switcher').removeClass('active');
+	$(this).addClass('active');
+}
+
+function closeSidenav(e){
+	e.preventDefault();
+	let instance = M.Sidenav.getInstance(document.querySelector('#cat-nav'));
+	instance.close();
+}
+
+function toggleFolder(e){
+	
+	let $li = $(this).parent();
+	let $sub = $li.find('> ul');
+	let opened = $li.hasClass('opened');
+
+
+	if( !opened ){
+		e.preventDefault();
+		$('.folder').removeClass('opened');
+		$('.catalog-navi .folder ul').slideUp('fast');
+		$li.addClass('opened');
+		$sub.slideDown('fast');
+	}
+
+}
+
+function toggleAnswer(){
+
+	let collapsed = $(this).hasClass('collapsed');
+	let $el = $(this);
+
+	let speed = $(window).innerWidth > 3000 ? 0: 'fast';
+
+	if(collapsed){
+		$('.question').addClass('collapsed');
+		$('.answer').slideUp(speed);
+		$(this).removeClass('collapsed');
+		$(this).next().slideDown(speed, () => {
+			let st = $el.position().top;
+			$('html, body').animate({
+				scrollTop: st - 170
+			}, 400);
+		});
+	}else{
+		$('.question').addClass('collapsed');
+		$(this).next().slideUp(speed, () => {
+			let st = $el.position().top;
+			$('html, body').animate({
+				scrollTop: st - 170
+			}, 400);
+		});
+	}
+
+
+
+}
 
 function closeSideNav(){
 	sidenav[0].close();
