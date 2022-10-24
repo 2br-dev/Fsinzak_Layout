@@ -247,4 +247,48 @@ main#product{
 			}
 		}
 	}
+
+	& .sets-wrapper{
+
+		margin: 2vmax 0;
+		width: fit-content;
+
+		& .sets-title{
+			font-weight: 500;
+			border-bottom: 1px solid #efefef;
+			margin-bottom: 10px;
+		}
+
+		& .sets{
+	
+			display: flex;
+			flex-wrap: wrap;
+			width: fit-content;
+	
+			& .set{
+	
+				& input{
+					display: none;
+	
+					&:checked ~ label{
+						background: $primary-gradient;
+						color: #fff;
+					}
+				}
+	
+				& label{
+					padding: 0 10px;
+					display: block;
+					text-align: center;
+					font-size: calc(18px + .05vmax);
+					line-height: 2em;
+					background-color: #efefef;
+					margin: calc(2px + .1vmax);
+					border-radius: 4px;
+					color: $text;
+					cursor: pointer;
+				}
+			}
+		}
+	}
 }

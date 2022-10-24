@@ -16,7 +16,7 @@ footer{
 	
 	& .pre-footer{
 		
-		background: $primary url(/img/pattern.svg);
+		background: $primary url(../img/pattern.svg);
 		background-repeat: repeat-x;
 		background-position: bottom -40px center;
 		color: #fff;
@@ -295,38 +295,38 @@ footer{
 			}
 
 			& #home{
-				background-image: url(/img/fsinzak_home.svg);
+				background-image: url(../img/fsinzak_home.svg);
 			}
 			&.active #home{
-				background-image: url(/img/fsinzak_home_active.svg)
+				background-image: url(../img/fsinzak_home_active.svg)
 			}
 
 			& #catalog{
-				background-image: url(/img/catalog.svg);
+				background-image: url(../img/catalog.svg);
 			}
 			&.active #catalog{
-				background-image: url(/img/catalog_active.svg)
+				background-image: url(../img/catalog_active.svg)
 			}
 
 			& #basket{
-				background-image: url(/img/basket.svg);
+				background-image: url(../img/basket.svg);
 			}
 			&.active #basket{
-				background-image: url(/img/basket_active.svg)
+				background-image: url(../img/basket_active.svg)
 			}
 
 			& #heart{
-				background-image: url(/img/heart.svg);
+				background-image: url(../img/heart.svg);
 			}
 			&.active #heart{
-				background-image: url(/img/heart_active.svg)
+				background-image: url(../img/heart_active.svg)
 			}
 
 			& #profile{
-				background-image: url(/img/profile.svg);
+				background-image: url(../img/profile.svg);
 			}
 			&.active #profile{
-				background-image: url(/img/profile_active.svg)
+				background-image: url(../img/profile_active.svg)
 			}
 
 			

@@ -24702,7 +24702,7 @@ footer .footer-header {
   margin: 1vmax 0; }
 
 footer .pre-footer {
-  background: #1D6BD0 url(/img/pattern.svg);
+  background: #1D6BD0 url(../img/pattern.svg);
   background-repeat: repeat-x;
   background-position: bottom -40px center;
   color: #fff;
@@ -24894,25 +24894,25 @@ footer .footer-copyright {
         line-height: 20px;
         text-align: center; }
     .bottom-toolbar li a #home {
-      background-image: url(/img/fsinzak_home.svg); }
+      background-image: url(../img/fsinzak_home.svg); }
     .bottom-toolbar li a.active #home {
-      background-image: url(/img/fsinzak_home_active.svg); }
+      background-image: url(../img/fsinzak_home_active.svg); }
     .bottom-toolbar li a #catalog {
-      background-image: url(/img/catalog.svg); }
+      background-image: url(../img/catalog.svg); }
     .bottom-toolbar li a.active #catalog {
-      background-image: url(/img/catalog_active.svg); }
+      background-image: url(../img/catalog_active.svg); }
     .bottom-toolbar li a #basket {
-      background-image: url(/img/basket.svg); }
+      background-image: url(../img/basket.svg); }
     .bottom-toolbar li a.active #basket {
-      background-image: url(/img/basket_active.svg); }
+      background-image: url(../img/basket_active.svg); }
     .bottom-toolbar li a #heart {
-      background-image: url(/img/heart.svg); }
+      background-image: url(../img/heart.svg); }
     .bottom-toolbar li a.active #heart {
-      background-image: url(/img/heart_active.svg); }
+      background-image: url(../img/heart_active.svg); }
     .bottom-toolbar li a #profile {
-      background-image: url(/img/profile.svg); }
+      background-image: url(../img/profile.svg); }
     .bottom-toolbar li a.active #profile {
-      background-image: url(/img/profile_active.svg); }
+      background-image: url(../img/profile_active.svg); }
     @media (max-width: 800px) {
       .bottom-toolbar li a .title {
         font-size: 10px; } }
@@ -25100,7 +25100,7 @@ main#main #hero {
         height: 100%;
         top: 0;
         left: 0;
-        background-image: url(/img/hero_pattern.svg);
+        background-image: url(../img/hero_pattern.svg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left center; }
@@ -25188,7 +25188,7 @@ main#main #howto .howto-wrapper {
     z-index: -1;
     top: 0;
     left: 0;
-    background: url(/img/pattern.svg);
+    background: url(../img/pattern.svg);
     background-size: contain;
     background-repeat: repeat-x;
     background-position: top -40px center; }
@@ -25379,6 +25379,38 @@ main#product .responses .response {
       font-weight: 500; }
     main#product .responses .response .answer .date {
       color: #777; }
+
+main#product .sets-wrapper {
+  margin: 2vmax 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+  main#product .sets-wrapper .sets-title {
+    font-weight: 500;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 10px; }
+  main#product .sets-wrapper .sets {
+    display: flex;
+    flex-wrap: wrap;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+    main#product .sets-wrapper .sets .set input {
+      display: none; }
+      main#product .sets-wrapper .sets .set input:checked ~ label {
+        background: linear-gradient(to bottom, #4299FF, #1D6BD0);
+        color: #fff; }
+    main#product .sets-wrapper .sets .set label {
+      padding: 0 10px;
+      display: block;
+      text-align: center;
+      font-size: calc(18px + .05vmax);
+      line-height: 2em;
+      background-color: #efefef;
+      margin: calc(2px + .1vmax);
+      border-radius: 4px;
+      color: #333;
+      cursor: pointer; }
 
 main.profile .profile-sections li a {
   padding-left: 10px; }
