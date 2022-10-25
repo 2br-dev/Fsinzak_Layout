@@ -1,0 +1,132 @@
+main#rules{
+
+	& section{
+
+		&#header{
+
+			& .col{
+
+				& img{
+					filter: drop-shadow(4px 8px 16px rgba(black, .4));
+				}
+			}
+		}
+
+		&#rur{
+			background-color: #BFE2FF;
+			padding: 4vmax 0;
+			position: relative;
+
+			& .container{
+				position: relative;
+				z-index: 2;
+
+				& img{
+					margin: auto;
+				}
+			}
+
+			&:before{
+				content: '';
+				display: block;
+				width: 200px;
+				height: 100%;
+				top: 0;
+				left: 0;
+				position: absolute;
+				background-image: url(../img/rules/pattern.svg);
+				background-repeat: repeat-y;
+				background-size: contain;
+				background-position: left center;
+				opacity: .1;
+			}
+
+			&:after{
+				@extend:before;
+				left: unset;
+				right: 0;
+				pointer-events: none;
+			}
+		}
+
+		&#important{
+			background-color: #EEF5FF;
+		}
+
+		&#additional-info{
+
+			& #infographics{
+
+				& .col{
+					margin: 1vmax 0;
+				}
+			}
+
+			& .col{
+
+				& .sticky{
+					border-left: 3px solid $primary;
+					padding: 1vmax 20px;
+					position: -webkit-sticky;
+					top: 130px;
+					position: sticky;
+				}
+
+				& .responsive-img{
+					width: 100%;
+					aspect-ratio: 16 / 9;
+					object-fit: contain;
+					filter: sepia(1) hue-rotate(202deg) saturate(1.5);
+				}
+
+				& .infogra{
+
+					display: flex;
+					align-items: center;
+					padding: 10px 0;;
+
+					& p{
+						margin: 0;
+						font-size: 16px;
+						line-height: 1.4em;
+					}
+
+					&.light .point{
+						background: $primary-gradient;
+					}
+
+					&.common .point{
+						background: $primary;
+					}
+
+					&.strict .point{
+						background: $text;
+					}
+					
+					& .point{
+						flex-shrink: 0;
+						width: calc(83px + .05vmax);
+						height: calc(83px + .05vmax);
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						justify-content: center;
+						margin-right: 20px;
+						border-radius: 6px;
+						color: #fff;
+
+						& .val{
+							font-size: 3.5rem;
+							line-height: 1em;
+							font-weight: bold;
+						}
+
+						& .description{
+							line-height: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}

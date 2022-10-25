@@ -212,8 +212,8 @@ function runTimer(){
 
 	let HabarovskDate = calcTime(10);
 
-	let hours = HabarovskDate.getHours() > 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
-	let minutes = HabarovskDate.getMinutes() > 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
+	let hours = HabarovskDate.getHours() >= 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
+	let minutes = HabarovskDate.getMinutes() >= 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
 
 	let h1 = hours[0];
 	let h2 = hours[1];

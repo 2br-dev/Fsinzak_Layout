@@ -99,6 +99,10 @@
 		&.vcenter{
 			align-items: center;
 		}
+
+		&.hcenter{
+			justify-content: center;
+		}
 	}
 
 	// Clear floating children

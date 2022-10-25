@@ -162,8 +162,8 @@ $(function () {
 
 function runTimer() {
   var HabarovskDate = calcTime(10);
-  var hours = HabarovskDate.getHours() > 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
-  var minutes = HabarovskDate.getMinutes() > 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
+  var hours = HabarovskDate.getHours() >= 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
+  var minutes = HabarovskDate.getMinutes() >= 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
   var h1 = hours[0];
   var h2 = hours[1];
   var m1 = minutes[0];

@@ -98,7 +98,6 @@ footer{
 		font-size: 42px;
 
 		& .m, & .h{
-			border: 1px solid green;
 			background: #fff;
 			color: $primary;
 			margin: 2px;
@@ -106,7 +105,12 @@ footer{
 			padding: 0 4px;
 			border-radius: 4px;
 			font-weight: normal;
+			min-width: 36px;
+			text-align: center;
+		}
 
+		& .separator{
+			animation: pulse 1s linear infinite;
 		}
 	}
 	
@@ -337,5 +341,17 @@ footer{
 				}
 			}
 		}
+	}
+}
+
+@keyframes pulse{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
 	}
 }
