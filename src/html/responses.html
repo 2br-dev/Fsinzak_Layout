@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Отзывы'})
+</head>
+<body>
+	@@include('./parts/header.html')
+	<main id="responses">
+		<section>
+			<div class="container">
+				<div class="row flex">
+					<div class="col s12">
+						<ul class="breadcrumbs">
+							<li><a href="">Главная</a></li>
+							<li><a href="">О нас</a></li>
+							<li><span>Отзывы</span></li>
+						</ul>
+						<h1>
+							<span>Отзывы</span>
+						</h1>
+					</div>
+					<div class="col xl9 l9 m8 s12 responses-wrapper">
+						<div class="responses">
+							@@loop('./parts/response.html', './data/responses.json')
+						</div>
+					</div>
+					<div class="col xl3 l3 m4 s12">
+						<div class="responses-sidebar">
+							<div class="rs-block" id="rating-value">
+								<p>Общий рейтинг</p>
+								<p class="rating-value">9.6</p>
+							</div>
+							<div class="rs-block" id="rating-filters">
+								<p>Фильтр по рейтингу</p>
+								<a class="rs-filter" href="javascript:void(0);">
+									<span class="stars">
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star-outline"></i>
+									</span>
+									<span class="val">Все оценки</span>
+								</a>
+								<a class="rs-filter" href="javascript:void(0);">
+									<span class="stars">
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+									</span>
+									<span class="val">12k</span>
+								</a>
+								<a class="rs-filter" href="javascript:void(0);">
+									<span class="stars">
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star-outline"></i>
+									</span>
+									<span class="val">800</span>
+								</a>
+								<a class="rs-filter" href="javascript:void(0);">
+									<span class="stars">
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star-outline"></i>
+									</span>
+									<span class="val">0</span>
+								</a>
+								<a class="rs-filter" href="javascript:void(0);">
+									<span class="stars">
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star-outline"></i>
+									</span>
+									<span class="val">0</span>
+								</a>
+								<a class="rs-filter" href="javascript:void(0);">
+									<span class="stars">
+										<i class="mdi mdi-star"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star-outline"></i>
+										<i class="mdi mdi-star-outline"></i>
+									</span>
+									<span class="val">0</span>
+								</a>
+							</div>
+							<div class="rs-block" id="rating-action">
+								<a href="" class="btn">Отправить отзыв</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

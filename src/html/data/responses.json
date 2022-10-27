@@ -19,5 +19,68 @@
 		"author": "Геннадий",
 		"stars": 4,
 		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
+	},
+	{
+		"author": "Артём",
+		"stars": 5,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?",
+		"answer":
+			{
+				"author": "Админ",
+				"date": "16 июля 2022",
+				"body": "Спасибо за Ваш отзыв!"
+			}
+	},
+	{
+		"author": "Марина",
+		"stars": 2,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
+	},
+	{
+		"author": "Геннадий",
+		"stars": 4,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
+	},
+	{
+		"author": "Артём",
+		"stars": 5,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?",
+		"answer":
+			{
+				"author": "Админ",
+				"date": "16 июля 2022",
+				"body": "Спасибо за Ваш отзыв!"
+			}
+	},
+	{
+		"author": "Марина",
+		"stars": 2,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
+	},
+	{
+		"author": "Геннадий",
+		"stars": 4,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
+	},
+	{
+		"author": "Артём",
+		"stars": 5,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?",
+		"answer":
+			{
+				"author": "Админ",
+				"date": "16 июля 2022",
+				"body": "Спасибо за Ваш отзыв!"
+			}
+	},
+	{
+		"author": "Марина",
+		"stars": 2,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
+	},
+	{
+		"author": "Геннадий",
+		"stars": 4,
+		"body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi earum quis aspernatur repudiandae, quasi magnam! Iure doloremque necessitatibus dignissimos dolore temporibus quis nobis, dolores suscipit cum sed incidunt, cupiditate nam quaerat minima est ad nostrum repudiandae? Maxime ratione optio excepturi obcaecati deserunt, illo est porro aut ipsa hic? Ab nesciunt repellat explicabo repudiandae, exercitationem quisquam iure distinctio recusandae, nihil corporis voluptas, iusto repellendus voluptatibus labore aperiam illum eveniet culpa velit asperiores totam! Qui maiores iure accusamus nam eligendi et cupiditate aspernatur earum, voluptate dicta deserunt rem eaque totam nobis fugit corrupti voluptas magni incidunt, tenetur minima illum. Quasi, aperiam?"
 	}
 ]

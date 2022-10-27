@@ -26343,3 +26343,100 @@ main#rules section#additional-info .col .infogra {
       font-weight: bold; }
     main#rules section#additional-info .col .infogra .point .description {
       line-height: 1em; }
+
+main#responses .responses .response {
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 3px 9px rgba(0, 0, 0, 0.1); }
+  main#responses .responses .response .response-top {
+    margin-bottom: 10px; }
+  main#responses .responses .response .response-bottom {
+    display: flex;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 5px 10px;
+    border-radius: 4px; }
+    main#responses .responses .response .response-bottom .stars {
+      flex-grow: 1;
+      color: #1D6BD0; }
+    main#responses .responses .response .response-bottom .author {
+      font-weight: 500; }
+  main#responses .responses .response .answer {
+    border-left: 3px solid #1D6BD0;
+    background: #f3f3f3;
+    margin-top: 20px;
+    padding: 10px 20px;
+    margin-left: 20px; }
+    main#responses .responses .response .answer .name {
+      font-weight: 500; }
+    main#responses .responses .response .answer .date {
+      color: #777; }
+
+main#responses .responses .stars-1 {
+  font-family: 'Material Design Icons'; }
+  main#responses .responses .stars-1:before, main#responses .responses main#rules section.stars-1#rur:after, main#rules main#responses .responses section.stars-1#rur:after {
+    content: '\F04CE \F04D2 \F04D2 \F04D2 \F04D2'; }
+
+main#responses .responses .stars-2 {
+  font-family: 'Material Design Icons'; }
+  main#responses .responses .stars-2:before, main#responses .responses main#rules section.stars-2#rur:after, main#rules main#responses .responses section.stars-2#rur:after {
+    content: '\F04CE \F04CE \F04D2 \F04D2 \F04D2'; }
+
+main#responses .responses .stars-3 {
+  font-family: 'Material Design Icons'; }
+  main#responses .responses .stars-3:before, main#responses .responses main#rules section.stars-3#rur:after, main#rules main#responses .responses section.stars-3#rur:after {
+    content: '\F04CE \F04CE \F04CE \F04D2 \F04D2'; }
+
+main#responses .responses .stars-4 {
+  font-family: 'Material Design Icons'; }
+  main#responses .responses .stars-4:before, main#responses .responses main#rules section.stars-4#rur:after, main#rules main#responses .responses section.stars-4#rur:after {
+    content: '\F04CE \F04CE \F04CE \F04CE \F04D2'; }
+
+main#responses .responses .stars-5 {
+  font-family: 'Material Design Icons'; }
+  main#responses .responses .stars-5:before, main#responses .responses main#rules section.stars-5#rur:after, main#rules main#responses .responses section.stars-5#rur:after {
+    content: '\F04CE \F04CE \F04CE \F04CE \F04CE'; }
+
+@media (max-width: 800px) {
+  main#responses .responses-wrapper {
+    order: 1; } }
+
+main#responses .responses-sidebar {
+  border-left: 1px solid #333;
+  padding: 20px 0;
+  padding-left: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 120px; }
+  main#responses .responses-sidebar .rs-block {
+    margin-bottom: 2vmax; }
+    main#responses .responses-sidebar .rs-block p {
+      margin: 0; }
+    main#responses .responses-sidebar .rs-block#rating-value p {
+      margin: 0; }
+      main#responses .responses-sidebar .rs-block#rating-value p.rating-value {
+        font-weight: bold;
+        font-size: 6rem;
+        line-height: 1em; }
+    main#responses .responses-sidebar .rs-block#rating-filters .rs-filter {
+      display: flex; }
+      main#responses .responses-sidebar .rs-block#rating-filters .rs-filter .stars {
+        margin-right: 20px;
+        white-space: nowrap; }
+      main#responses .responses-sidebar .rs-block#rating-filters .rs-filter .val {
+        white-space: nowrap; }
+  @media (max-width: 800px) {
+    main#responses .responses-sidebar {
+      border: 0;
+      display: flex;
+      flex-wrap: wrap; }
+      main#responses .responses-sidebar .rs-block {
+        min-width: 45%; }
+        main#responses .responses-sidebar .rs-block:last-of-type {
+          width: 100%;
+          text-align: center; } }
+
+main#responses .sidenav .responses-sidebar {
+  top: unset;
+  border: 0; }

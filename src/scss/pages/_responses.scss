@@ -1,0 +1,172 @@
+main#responses{
+
+	& .responses{
+
+		& .response{
+
+			border: 1px solid #eee;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 6px;
+			box-shadow: 0 1px 3px rgba(black, .1), 0 3px 9px rgba(black, .1);
+
+			& .response-top{
+				margin-bottom: 10px;
+			}
+
+			& .response-bottom{
+
+				display: flex;
+				background: rgba(black, .03);
+				padding: 5px 10px;
+				border-radius: 4px;
+
+				& .stars{
+					flex-grow: 1;
+					color: $primary;
+				}
+
+				& .author{
+
+					font-weight: 500;
+				}
+			}
+
+			& .answer{
+				border-left: 3px solid $primary;
+				background: #f3f3f3;
+				margin-top: 20px;
+				padding: 10px 20px;
+				margin-left: 20px;
+
+				& .name{
+					font-weight: 500;
+				}
+
+				& .date{
+					color: #777;
+				}
+			}
+		}
+
+		& .stars-1{
+			font-family: 'Material Design Icons';
+			&:before{
+				content: '\F04CE \F04D2 \F04D2 \F04D2 \F04D2';
+			}
+		}
+	
+		& .stars-2{
+			font-family: 'Material Design Icons';
+			&:before{
+				content: '\F04CE \F04CE \F04D2 \F04D2 \F04D2';
+			}
+		}
+	
+		& .stars-3{
+			font-family: 'Material Design Icons';
+			&:before{
+				content: '\F04CE \F04CE \F04CE \F04D2 \F04D2';
+			}
+		}
+	
+		& .stars-4{
+			font-family: 'Material Design Icons';
+			&:before{
+				content: '\F04CE \F04CE \F04CE \F04CE \F04D2';
+			}
+		}
+	
+		& .stars-5{
+			font-family: 'Material Design Icons';
+			&:before{
+				content: '\F04CE \F04CE \F04CE \F04CE \F04CE';
+			}
+		}
+	}
+
+	@media(max-width: $medium){
+
+		& .responses-wrapper{
+			order: 1;
+		}
+	}
+
+	& .responses-sidebar{
+
+		border-left: 1px solid $text;
+		padding: 20px 0;
+		padding-left: 20px;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 120px;
+
+		& .rs-block{
+
+			margin-bottom: 2vmax;
+
+			& p{
+				margin: 0;
+			}
+
+			&#rating-value{
+				
+				& p{
+					margin: 0;
+
+					&.rating-value{
+						font-weight: bold;
+						font-size: 6rem;
+						line-height: 1em;
+					}
+				}
+			}
+
+			&#rating-filters{
+				
+				
+				& .rs-filter{
+
+					display: flex;
+
+					& .stars{
+						margin-right: 20px;
+						white-space: nowrap;
+					}
+
+					& .val{
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+
+		@media(max-width: $medium){
+
+			border: 0;
+			display: flex;
+			flex-wrap: wrap;
+
+			& .rs-block{
+
+				min-width: 45%;
+
+				&:last-of-type{
+					width: 100%;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	& .sidenav{
+
+		& .responses-sidebar{
+
+			top: unset;
+			border: 0;
+			
+		}
+	}
+
+}
