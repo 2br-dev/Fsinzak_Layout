@@ -107,5 +107,34 @@
 	<li><a class="" href="/catalog.html"><i class="icon" id="catalog"></i><span class="title">Каталог</span></a></li>
 	<li><a class="" href="/basket.html"><i class="icon" id="basket"><span class="label">9+</span></i><span class="title">Корзина</span></a></li>
 	<li><a class="" href="/catalog.html"><i class="icon" id="heart"><span class="label">9+</span></i><span class="title">Избранное</span></a></li>
-	<li><a class="" href="/profile.html"><i class="icon" id="profile"><span class="label">9+</span></i><span class="title">Профиль</span></a></li>
+	<li id="profile-menu">
+		<a class="" href="javascript:void(0);">
+			<i class="icon" id="profile">
+				<span class="label">9+</span>
+			</i>
+			<span class="title">Профиль</span>
+		</a>
+		<!-- Зарегистрированный пользователь -->
+		<ul class="z-depth-1">
+			<li><a href="/profile.html">Профиль</a></li>
+			<li><a href="/orders.html">Заказы</a></li>
+			<li><a href="/returns.html">Возвраты</a></li>
+			<li><a href="/recievers.html">Получатели</a></li>
+			<li><a href="/support.html">Поддержка</a></li>
+			<li><div class="divider"></div></li>
+			<li><a href="/">Выход</a></li>
+		</ul>
+		<!-- /Зарегистрированный пользователь -->
+		<!-- Гость -->
+		<!-- <ul>
+			<li>
+				<a href="/profile.html"><i class="mdi mdi-login"></i><span class="label">Вход</span></a>
+				<ul>
+					<li><a class="modal-trigger" href="#login">Авторизация</a></li>
+					<li><a class="modal-trigger" href="#register">Регистрация</a></li>
+				</ul>
+			</li>
+		</ul> -->
+		<!-- /Гость -->
+	</li>
 </ul>

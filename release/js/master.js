@@ -162,8 +162,8 @@ $(function () {
 
 function runTimer() {
   var HabarovskDate = calcTime(10);
-  var hours = HabarovskDate.getHours() >= 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
-  var minutes = HabarovskDate.getMinutes() >= 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
+  var hours = HabarovskDate.getHours() >= 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString();
+  var minutes = HabarovskDate.getMinutes() >= 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString();
   var h1 = hours[0];
   var h2 = hours[1];
   var m1 = minutes[0];
@@ -293,8 +293,13 @@ function toggleAnswer() {
   }
 }
 
-function closeSideNav() {
-  sidenav[0].close();
+function closeSideNav(e) {
+  e.preventDefault(); // Close sidenav
+
+  $('.sidenav').each(function (index, el) {
+    var sidenav = M.Sidenav.getInstance(el);
+    sidenav.close();
+  });
 }
 
 function touchstart(e) {

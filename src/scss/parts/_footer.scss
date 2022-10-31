@@ -257,6 +257,7 @@ footer{
 		display: block;
 		text-align: center;
 		width: 20%;
+		position: relative;
 
 		& a{
 
@@ -340,6 +341,40 @@ footer{
 					font-size: 10px;
 				}
 			}
+		}
+
+		& ul{
+
+			position: absolute;
+			bottom: 100%;
+			right: 10px;
+			margin: 0;
+			border-radius: 4px;
+			overflow: hidden;
+			transition: transform .2s, opacity .2s;
+			transform: translateY(20px);
+			pointer-events: none;
+			opacity: 0;
+			z-index: 2;
+			
+			& li{
+				background: #fff;
+				display: block;
+				width: 100%;
+				text-align: left;
+				
+				& a{
+					display: block;
+					padding: 0 16px;
+					line-height: 2.4em;
+				}
+			}
+		}
+
+		&:hover > ul{
+			opacity: 1;
+			pointer-events: all;
+			transform: none;
 		}
 	}
 }

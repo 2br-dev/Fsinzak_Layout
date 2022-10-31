@@ -212,8 +212,8 @@ function runTimer(){
 
 	let HabarovskDate = calcTime(10);
 
-	let hours = HabarovskDate.getHours() >= 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString;
-	let minutes = HabarovskDate.getMinutes() >= 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString;
+	let hours = HabarovskDate.getHours() >= 10 ? HabarovskDate.getHours().toString() : "0" + HabarovskDate.getHours().toString();
+	let minutes = HabarovskDate.getMinutes() >= 10 ? HabarovskDate.getMinutes().toString() : "0" + HabarovskDate.getMinutes().toString();
 
 	let h1 = hours[0];
 	let h2 = hours[1];
@@ -351,8 +351,16 @@ function toggleAnswer(){
 
 }
 
-function closeSideNav(){
-	sidenav[0].close();
+function closeSideNav(e){
+
+	e.preventDefault();
+	
+	// Close sidenav
+	$('.sidenav').each((index, el) => {
+		let sidenav = M.Sidenav.getInstance( el );
+		sidenav.close();
+	});
+
 }
 
 function touchstart(e){

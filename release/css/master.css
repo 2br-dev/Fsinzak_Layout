@@ -24875,7 +24875,8 @@ footer .footer-copyright {
   .bottom-toolbar li {
     display: block;
     text-align: center;
-    width: 20%; }
+    width: 20%;
+    position: relative; }
     .bottom-toolbar li a i.icon {
       display: block;
       margin: auto;
@@ -24930,6 +24931,31 @@ footer .footer-copyright {
     @media (max-width: 800px) {
       .bottom-toolbar li a .title {
         font-size: 10px; } }
+    .bottom-toolbar li ul {
+      position: absolute;
+      bottom: 100%;
+      right: 10px;
+      margin: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform .2s, opacity .2s;
+      transform: translateY(20px);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 2; }
+      .bottom-toolbar li ul li {
+        background: #fff;
+        display: block;
+        width: 100%;
+        text-align: left; }
+        .bottom-toolbar li ul li a {
+          display: block;
+          padding: 0 16px;
+          line-height: 2.4em; }
+    .bottom-toolbar li:hover > ul {
+      opacity: 1;
+      pointer-events: all;
+      transform: none; }
 
 @-webkit-keyframes pulse {
   0% {
