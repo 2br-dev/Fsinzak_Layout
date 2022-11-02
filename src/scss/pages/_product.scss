@@ -2,6 +2,11 @@ main#product{
 
 	& .product-image-wrapper{
 
+		&.product-page-image{
+			position: -webkit-sticky;
+			position: sticky;
+			top: 140px;
+		}
 
 		& .slider-wrapper{
 
@@ -103,6 +108,10 @@ main#product{
 			& .row{
 
 				align-items: center;
+
+				& .col{
+					padding: 0;
+				}
 	
 				& .price{
 					font-size: 32px;
@@ -110,6 +119,11 @@ main#product{
 				}
 			}
 		}
+	}
+
+	& .description-divider{
+		border-bottom: 1px solid $fogged;
+		margin: 6vmax 0;
 	}
 
 	& .stars-1{

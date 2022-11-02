@@ -25290,6 +25290,11 @@ main#main #faq {
       display: none;
       padding-left: 5vmax; }
 
+main#product .product-image-wrapper.product-page-image {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 140px; }
+
 main#product .product-image-wrapper .slider-wrapper {
   flex-shrink: 0;
   margin: 20px 0; }
@@ -25345,9 +25350,15 @@ main#product .product-details .price-wrapper {
       margin-top: 40px; } }
   main#product .product-details .price-wrapper .row {
     align-items: center; }
+    main#product .product-details .price-wrapper .row .col {
+      padding: 0; }
     main#product .product-details .price-wrapper .row .price {
       font-size: 32px;
       font-weight: 500; }
+
+main#product .description-divider {
+  border-bottom: 1px solid #999999;
+  margin: 6vmax 0; }
 
 main#product .stars-1 {
   font-family: 'Material Design Icons'; }
