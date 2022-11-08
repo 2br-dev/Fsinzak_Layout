@@ -248,6 +248,10 @@ header{
 				margin: 0 20px;
 				white-space: nowrap;
 
+				@media(max-width: $medium){
+					font-size: 18px;
+				}
+
 				& i{
 					display: none;
 				}

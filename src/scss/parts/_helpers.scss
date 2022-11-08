@@ -27,6 +27,24 @@ body{
 		}
 	}
 
+	& .exclamination-message{
+		padding: 10px 20px;
+		background: $accent-gradient;
+		color: #fff;
+		border-radius: 8px;
+		display: flex;
+
+		& i{
+			padding-right: 18px;
+		}
+
+		& a{
+			color: #fff;
+			text-decoration: underline;
+		}
+
+	}
+
 	& .segmented-control{
 		display: flex;
 		box-shadow: 0 0 0 1px $primary, 0 0 0 1px $primary inset;

@@ -23623,6 +23623,18 @@ body.fixed {
     body.fixed header nav {
       top: 85px !important; }
 
+body .exclamination-message {
+  padding: 10px 20px;
+  background: linear-gradient(to bottom, #FF6B35, #f7571d);
+  color: #fff;
+  border-radius: 8px;
+  display: flex; }
+  body .exclamination-message i {
+    padding-right: 18px; }
+  body .exclamination-message a {
+    color: #fff;
+    text-decoration: underline; }
+
 body .segmented-control {
   display: flex;
   box-shadow: 0 0 0 1px #1D6BD0, 0 0 0 1px #1D6BD0 inset;
@@ -24518,6 +24530,9 @@ header {
         font-size: 21px;
         margin: 0 20px;
         white-space: nowrap; }
+        @media (max-width: 800px) {
+          header .nav-top .nav-right .phone {
+            font-size: 18px; } }
         header .nav-top .nav-right .phone i {
           display: none; }
       header .nav-top .nav-right .icon-wrapper {
@@ -26477,3 +26492,76 @@ main#responses .responses-sidebar {
 main#responses .sidenav .responses-sidebar {
   top: unset;
   border: 0; }
+
+main#delivery .huge-icon {
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4)); }
+
+main#delivery .shop-text {
+  border-left: 1px solid #333; }
+  @media (max-width: 800px) {
+    main#delivery .shop-text {
+      order: 1; } }
+  main#delivery .shop-text .text-wrapper {
+    padding-left: 20px; }
+
+main#delivery .calendar-text {
+  border-right: 1px solid #333; }
+  @media (max-width: 800px) {
+    main#delivery .calendar-text {
+      border-right: 0;
+      border-left: 1px solid #333; } }
+  main#delivery .calendar-text .text-wrapper {
+    padding-right: 20px; }
+    @media (max-width: 800px) {
+      main#delivery .calendar-text .text-wrapper {
+        padding-right: 0;
+        padding-left: 20px; } }
+
+main#delivery section#money {
+  background-color: #F5F5F5; }
+  main#delivery section#money .payment-methods {
+    display: flex;
+    justify-content: space-between; }
+    main#delivery section#money .payment-methods .lazy {
+      height: 80px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; }
+      main#delivery section#money .payment-methods .lazy#mastercard {
+        width: 35%; }
+      main#delivery section#money .payment-methods .lazy#mir, main#delivery section#money .payment-methods .lazy#visa {
+        width: 25%; }
+    @media (max-width: 800px) {
+      main#delivery section#money .payment-methods {
+        flex-wrap: wrap; }
+        main#delivery section#money .payment-methods .lazy {
+          margin: 2vmax 0; }
+          main#delivery section#money .payment-methods .lazy#mastercard {
+            width: 100%; }
+          main#delivery section#money .payment-methods .lazy#visa, main#delivery section#money .payment-methods .lazy#mir {
+            width: 45%; } }
+  main#delivery section#money .importance {
+    border: 1px solid #FF6B35;
+    display: flex;
+    align-items: center;
+    padding: .4vmax 0;
+    padding-right: 20px;
+    border-radius: 8px; }
+    main#delivery section#money .importance .exclamination-wrapper {
+      width: 180px;
+      flex-shrink: 0;
+      text-align: center; }
+      main#delivery section#money .importance .exclamination-wrapper i {
+        font-size: 5rem;
+        color: #FF6B35; }
+    @media (max-width: 800px) {
+      main#delivery section#money .importance {
+        flex-direction: column;
+        padding-left: 20px; }
+        main#delivery section#money .importance .exclamination-wrapper {
+          width: 100%; }
+          main#delivery section#money .importance .exclamination-wrapper i {
+            line-height: 1em; } }

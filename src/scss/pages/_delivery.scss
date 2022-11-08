@@ -1,0 +1,121 @@
+main#delivery{
+
+	& .huge-icon{
+		background-size: 90% auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		filter: drop-shadow(0 8px 12px rgba(black, .4));
+	}
+
+	& .shop-text{
+
+		border-left: 1px solid $text;
+
+		@media(max-width: $medium){
+			order: 1;
+		}
+
+		& .text-wrapper{
+			padding-left: 20px;
+		}
+	}
+
+	& .calendar-text{
+
+		border-right: 1px solid $text;
+
+		@media(max-width: $medium){
+			border-right: 0;
+			border-left: 1px solid $text;
+		}
+
+		& .text-wrapper{
+			padding-right: 20px;
+
+			@media(max-width: $medium){
+				padding-right: 0;
+				padding-left: 20px;
+			}
+		}
+	}
+
+	& section#money{
+
+		background-color: #F5F5F5;
+
+		& .payment-methods{
+
+			display: flex;
+			justify-content: space-between;
+
+			& .lazy{
+
+				height: 80px;
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+
+				&#mastercard{
+					width: 35%;
+				}
+
+				&#mir, &#visa{
+					width: 25%;
+				}
+			}
+
+			@media(max-width: $medium){
+				flex-wrap: wrap;
+
+				& .lazy{
+					margin: 2vmax 0;
+
+					&#mastercard{
+						width: 100%;
+					}
+
+					&#visa, &#mir{
+						width: 45%;
+					}
+				}
+			}
+		}
+
+		& .importance{
+			border: 1px solid $accent;
+			display: flex;
+			align-items: center;
+			padding: .4vmax 0;
+			padding-right: 20px;
+			border-radius: 8px;
+
+			& .exclamination-wrapper{
+				width: 180px;
+				flex-shrink: 0;
+				text-align: center;
+
+				& i{
+					font-size: 5rem;
+					color: $accent;
+				}
+			}
+
+			@media(max-width: $medium){
+
+				flex-direction: column;
+				padding-left: 20px;
+
+				& .exclamination-wrapper{
+
+					width: 100%;
+					
+					& i{
+						line-height: 1em;
+					}
+
+
+				}
+			}
+		}
+	}
+}
